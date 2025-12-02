@@ -40,7 +40,7 @@ export const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/src/assets/flex.png" 
+              src="/flex.png" 
               alt="FlexCredit Logo" 
               className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl object-contain"
             />

@@ -9,7 +9,7 @@ export const FooterSection = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
-                src="/src/assets/flex.png" 
+                src="/flex.png" 
                 alt="FlexCredit Logo" 
                 className="w-12 h-12 rounded-xl object-contain"
               />
