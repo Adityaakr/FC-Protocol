@@ -23,14 +23,15 @@ export const FlexCreditBanner = () => {
           <div className="flex items-center justify-center gap-8 mt-8">
             <a
               href="#"
-              className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-400 transition-colors cursor-not-allowed opacity-60"
               aria-label="Docs"
+              onClick={(e) => e.preventDefault()}
             >
               <FileText className="w-5 h-5" />
-              <span className="text-sm font-medium">Docs</span>
+              <span className="text-sm font-medium">Docs (Coming Soon)</span>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/FC-Protocol-building-flexcredit"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
@@ -40,7 +41,7 @@ export const FlexCreditBanner = () => {
               <span className="text-sm font-medium">GitHub</span>
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/flexcreditin"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"

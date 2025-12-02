@@ -65,8 +65,8 @@ export const Navbar = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Read Docs
+            <Button variant="ghost" size="sm" disabled className="cursor-not-allowed">
+              Docs (Coming Soon)
             </Button>
             <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md">
               Join Waitlist
@@ -97,8 +97,8 @@ export const Navbar = () => {
               </button>
             ))}
             <div className="pt-4 space-y-2">
-              <Button variant="outline" size="sm" className="w-full">
-                Read Docs
+              <Button variant="outline" size="sm" className="w-full" disabled>
+                Docs (Coming Soon)
               </Button>
               <Button size="sm" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                 Join Waitlist

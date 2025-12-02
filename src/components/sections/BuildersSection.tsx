@@ -110,44 +110,35 @@ export const BuildersSection = () => {
             <div className="space-y-3 font-mono text-xs leading-relaxed">
               <div className="text-gray-500">
                 <span className="text-purple-400">import</span>{" "}
-                <span className="text-gray-400">{"{"}</span>{" "}
-                <span className="text-cyan-300">ethers</span>{" "}
-                <span className="text-gray-400">{"}"}</span>{" "}
+                <span className="text-gray-400">{'{'}</span>{" "}
+                <span className="text-cyan-300">FlexCreditSDK</span>
+                <span className="text-gray-400">,</span>{" "}
+                <span className="text-cyan-300">CreditAccount</span>
+                <span className="text-gray-400">{'}'}</span>{" "}
                 <span className="text-purple-400">from</span>{" "}
-                <span className="text-green-300">'ethers'</span>
-              </div>
-              <div className="text-gray-500">
-                <span className="text-purple-400">import</span>{" "}
-                <span className="text-gray-400">{"{"}</span>{" "}
-                <span className="text-cyan-300">FCProtocol__factory</span>{" "}
-                <span className="text-gray-400">{"}"}</span>{" "}
-                <span className="text-purple-400">from</span>{" "}
-                <span className="text-green-300">'./types'</span>
+                <span className="text-green-300">'@flexcredit/sdk'</span>
               </div>
               
               <div className="pt-2 space-y-2">
                 <div className="text-gray-500">
-                  <span className="text-gray-400">//</span> 1. Query user's credit history & limits
+                  <span className="text-gray-400">//</span> 1. Initialize SDK & query credit account
                 </div>
                 <div>
                   <span className="text-purple-400">const</span>{" "}
-                  <span className="text-cyan-300">fc</span>{" "}
+                  <span className="text-cyan-300">sdk</span>{" "}
                   <span className="text-gray-400">=</span>{" "}
-                  <span className="text-yellow-300">FCProtocol__factory</span>
-                  <span className="text-gray-400">.</span>
-                  <span className="text-green-400">connect</span>
+                  <span className="text-purple-400">new</span>{" "}
+                  <span className="text-yellow-300">FlexCreditSDK</span>
                   <span className="text-gray-400">(</span>
-                  <span className="text-orange-300">contractAddr</span>
-                  <span className="text-gray-400">,</span>{" "}
-                  <span className="text-orange-300">signer</span>
+                  <span className="text-orange-300">provider</span>
                   <span className="text-gray-400">)</span>
                 </div>
                 <div>
                   <span className="text-purple-400">const</span>{" "}
-                  <span className="text-cyan-300">creditData</span>{" "}
+                  <span className="text-cyan-300">account</span>{" "}
                   <span className="text-gray-400">=</span>{" "}
                   <span className="text-purple-400">await</span>{" "}
-                  <span className="text-yellow-300">fc</span>
+                  <span className="text-yellow-300">sdk</span>
                   <span className="text-gray-400">.</span>
                   <span className="text-green-400">getCreditAccount</span>
                   <span className="text-gray-400">(</span>
@@ -155,102 +146,106 @@ export const BuildersSection = () => {
                   <span className="text-gray-400">)</span>
                 </div>
                 <div>
-                  <span className="text-purple-400">const</span>{" "}
-                  <span className="text-cyan-300">available</span>{" "}
-                  <span className="text-gray-400">=</span>{" "}
-                  <span className="text-orange-300">creditData</span>
+                  <span className="text-yellow-300">console</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-cyan-300">limit</span>{" "}
-                  <span className="text-gray-400">-</span>{" "}
-                  <span className="text-orange-300">creditData</span>
+                  <span className="text-green-400">log</span>
+                  <span className="text-gray-400">(</span>
+                  <span className="text-orange-300">account</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-cyan-300">used</span>
+                  <span className="text-cyan-300">limit</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-orange-300">account</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-cyan-300">available</span>
+                  <span className="text-gray-400">)</span>
                 </div>
               </div>
               
               <div className="pt-2 space-y-2">
                 <div className="text-gray-500">
-                  <span className="text-gray-400">//</span> 2. Allocate funds to delta-neutral yield strategy
+                  <span className="text-gray-400">//</span> 2. Get realized PNL from strategies
                 </div>
                 <div>
                   <span className="text-purple-400">const</span>{" "}
-                  <span className="text-cyan-300">strategyId</span>{" "}
-                  <span className="text-gray-400">=</span>{" "}
-                  <span className="text-orange-300">1</span>{" "}
-                  <span className="text-gray-500">
-                    <span className="text-gray-400">//</span> AI delta-neutral
-                  </span>
-                </div>
-                <div>
-                  <span className="text-purple-400">const</span>{" "}
-                  <span className="text-cyan-300">tx</span>{" "}
+                  <span className="text-cyan-300">pnl</span>{" "}
                   <span className="text-gray-400">=</span>{" "}
                   <span className="text-purple-400">await</span>{" "}
-                  <span className="text-yellow-300">fc</span>
+                  <span className="text-yellow-300">sdk</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-green-400">allocateToStrategy</span>
+                  <span className="text-green-400">getRealizedPnL</span>
                   <span className="text-gray-400">(</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-orange-300">userAddr</span>
+                  <span className="text-gray-400">,</span>
                 </div>
                 <div className="pl-4">
                   <span className="text-orange-300">strategyId</span>
-                  <span className="text-gray-400">,</span>
                 </div>
-                <div className="pl-4">
-                  <span className="text-yellow-300">ethers</span>
+                <div>
+                  <span className="text-gray-400">)</span>
+                </div>
+                <div>
+                  <span className="text-yellow-300">console</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-green-400">parseUnits</span>
+                  <span className="text-green-400">log</span>
                   <span className="text-gray-400">(</span>
-                  <span className="text-green-300">'1000'</span>
-                  <span className="text-gray-400">,</span>{" "}
-                  <span className="text-orange-300">6</span>
-                  <span className="text-gray-400">)</span>
-                </div>
-                <div>
-                  <span className="text-gray-400">)</span>
-                </div>
-                <div>
-                  <span className="text-purple-400">await</span>{" "}
-                  <span className="text-orange-300">tx</span>
+                  <span className="text-green-300">`Total PNL: $</span>
+                  <span className="text-gray-400">${'{'}</span>
+                  <span className="text-orange-300">pnl</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-green-400">wait</span>
-                  <span className="text-gray-400">()</span>
+                  <span className="text-cyan-300">total</span>
+                  <span className="text-gray-400">{'}'}</span>
+                  <span className="text-green-300">`</span>
+                  <span className="text-gray-400">)</span>
                 </div>
               </div>
               
               <div className="pt-2 space-y-2">
                 <div className="text-gray-500">
-                  <span className="text-gray-400">//</span> 3. Deploy custom Aave lending strategy
+                  <span className="text-gray-400">//</span> 3. Track strategy performance & allocations
                 </div>
                 <div>
                   <span className="text-purple-400">const</span>{" "}
-                  <span className="text-cyan-300">customStrategy</span>{" "}
+                  <span className="text-cyan-300">strategies</span>{" "}
                   <span className="text-gray-400">=</span>{" "}
                   <span className="text-purple-400">await</span>{" "}
-                  <span className="text-yellow-300">fc</span>
+                  <span className="text-yellow-300">sdk</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-green-400">registerStrategy</span>
+                  <span className="text-green-400">getUserStrategies</span>
                   <span className="text-gray-400">(</span>
-                </div>
-                <div className="pl-4">
-                  <span className="text-orange-300">aaveAdapterAddr</span>
-                  <span className="text-gray-400">,</span>
-                </div>
-                <div className="pl-4">
-                  <span className="text-orange-300">1500</span>
-                  <span className="text-gray-400">,</span>{" "}
-                  <span className="text-gray-500">
-                    <span className="text-gray-400">//</span> 15% risk cap
-                  </span>
-                </div>
-                <div className="pl-4">
-                  <span className="text-gray-400">[</span>
-                  <span className="text-orange-300">usdcAddr</span>
-                  <span className="text-gray-400">,</span>{" "}
-                  <span className="text-orange-300">usdtAddr</span>
-                  <span className="text-gray-400">]</span>
+                  <span className="text-orange-300">userAddr</span>
+                  <span className="text-gray-400">)</span>
                 </div>
                 <div>
+                  <span className="text-orange-300">strategies</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">forEach</span>
+                  <span className="text-gray-400">(</span>
+                  <span className="text-cyan-300">s</span>{" "}
+                  <span className="text-purple-400">=&gt;</span>{" "}
+                  <span className="text-gray-400">{'{'}</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-yellow-300">console</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">log</span>
+                  <span className="text-gray-400">(</span>
+                  <span className="text-orange-300">s</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-cyan-300">name</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-orange-300">s</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-cyan-300">apy</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-orange-300">s</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-cyan-300">allocated</span>
                   <span className="text-gray-400">)</span>
+                </div>
+                <div>
+                  <span className="text-gray-400">{'}'})</span>
                 </div>
               </div>
             </div>
