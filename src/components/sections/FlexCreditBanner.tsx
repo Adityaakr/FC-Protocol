@@ -15,8 +15,8 @@ export const FlexCreditBanner = () => {
           transition={{ duration: 0.8 }}
           className="text-center overflow-hidden"
         >
-          <h2 className="text-[6rem] sm:text-[9rem] lg:text-[12rem] font-serif font-light italic leading-none whitespace-nowrap mb-8 text-black/50" style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '0.02em' }}>
-            FlexCredit<span className="text-[3rem] sm:text-[4.5rem] lg:text-[6rem]">.in</span>
+          <h2 className="text-[3.5rem] sm:text-[6rem] md:text-[9rem] lg:text-[12rem] font-serif font-light italic leading-none mb-8 text-black/50 break-words" style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '0.02em' }}>
+            FlexCredit<span className="text-[1.75rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem]">.in</span>
           </h2>
           
           {/* Footer Links */}

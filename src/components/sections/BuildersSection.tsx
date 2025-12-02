@@ -90,59 +90,175 @@ export const BuildersSection = () => {
             </div>
           </motion.div>
 
-          {/* Right: Architecture Diagram */}
+          {/* Right: Code Example */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-gray-50 rounded-3xl p-8 border-2 border-gray-200"
+            className="bg-gray-900 rounded-3xl p-8 border-2 border-gray-700 shadow-2xl"
           >
-            <div className="space-y-6">
-              {/* FlexCredit App - Top Layer */}
-              <div className="flex justify-center">
-                <div className="bg-blue-50 border-2 border-blue-300 rounded-2xl px-8 py-6 text-center">
-                  <h3 className="text-xl font-bold text-blue-600 mb-1">FlexCredit App</h3>
-                  <p className="text-sm text-gray-600">User Interface Layer</p>
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span className="text-sm text-gray-400 font-mono">fc-sdk.ts</span>
+            </div>
+            
+            <div className="space-y-3 font-mono text-xs leading-relaxed">
+              <div className="text-gray-500">
+                <span className="text-purple-400">import</span>{" "}
+                <span className="text-gray-400">{"{"}</span>{" "}
+                <span className="text-cyan-300">ethers</span>{" "}
+                <span className="text-gray-400">{"}"}</span>{" "}
+                <span className="text-purple-400">from</span>{" "}
+                <span className="text-green-300">'ethers'</span>
+              </div>
+              <div className="text-gray-500">
+                <span className="text-purple-400">import</span>{" "}
+                <span className="text-gray-400">{"{"}</span>{" "}
+                <span className="text-cyan-300">FCProtocol__factory</span>{" "}
+                <span className="text-gray-400">{"}"}</span>{" "}
+                <span className="text-purple-400">from</span>{" "}
+                <span className="text-green-300">'./types'</span>
+              </div>
+              
+              <div className="pt-2 space-y-2">
+                <div className="text-gray-500">
+                  <span className="text-gray-400">//</span> 1. Query user's credit history & limits
+                </div>
+                <div>
+                  <span className="text-purple-400">const</span>{" "}
+                  <span className="text-cyan-300">fc</span>{" "}
+                  <span className="text-gray-400">=</span>{" "}
+                  <span className="text-yellow-300">FCProtocol__factory</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">connect</span>
+                  <span className="text-gray-400">(</span>
+                  <span className="text-orange-300">contractAddr</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-orange-300">signer</span>
+                  <span className="text-gray-400">)</span>
+                </div>
+                <div>
+                  <span className="text-purple-400">const</span>{" "}
+                  <span className="text-cyan-300">creditData</span>{" "}
+                  <span className="text-gray-400">=</span>{" "}
+                  <span className="text-purple-400">await</span>{" "}
+                  <span className="text-yellow-300">fc</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">getCreditAccount</span>
+                  <span className="text-gray-400">(</span>
+                  <span className="text-orange-300">userAddr</span>
+                  <span className="text-gray-400">)</span>
+                </div>
+                <div>
+                  <span className="text-purple-400">const</span>{" "}
+                  <span className="text-cyan-300">available</span>{" "}
+                  <span className="text-gray-400">=</span>{" "}
+                  <span className="text-orange-300">creditData</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-cyan-300">limit</span>{" "}
+                  <span className="text-gray-400">-</span>{" "}
+                  <span className="text-orange-300">creditData</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-cyan-300">used</span>
                 </div>
               </div>
-
-              {/* Connector */}
-              <div className="flex justify-center">
-                <div className="w-0.5 h-12 bg-blue-300"></div>
-              </div>
-
-              {/* FC Protocol - Middle Layer */}
-              <div className="bg-gray-100 border-2 border-gray-300 rounded-3xl p-6">
-                <h3 className="text-2xl font-bold text-black text-center mb-6">FC Protocol</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white border border-gray-200 rounded-xl px-4 py-4 text-center">
-                    <p className="font-bold text-black">Credit Engine</p>
-                  </div>
-                  <div className="bg-white border border-gray-200 rounded-xl px-4 py-4 text-center">
-                    <p className="font-bold text-black">Treasury Engine</p>
-                  </div>
-                  <div className="bg-white border border-gray-200 rounded-xl px-4 py-4 text-center">
-                    <p className="font-bold text-black">Risk Layer</p>
-                  </div>
-                  <div className="bg-white border border-gray-200 rounded-xl px-4 py-4 text-center">
-                    <p className="font-bold text-black">Strategy Adapters</p>
-                  </div>
+              
+              <div className="pt-2 space-y-2">
+                <div className="text-gray-500">
+                  <span className="text-gray-400">//</span> 2. Allocate funds to delta-neutral yield strategy
+                </div>
+                <div>
+                  <span className="text-purple-400">const</span>{" "}
+                  <span className="text-cyan-300">strategyId</span>{" "}
+                  <span className="text-gray-400">=</span>{" "}
+                  <span className="text-orange-300">1</span>{" "}
+                  <span className="text-gray-500">
+                    <span className="text-gray-400">//</span> AI delta-neutral
+                  </span>
+                </div>
+                <div>
+                  <span className="text-purple-400">const</span>{" "}
+                  <span className="text-cyan-300">tx</span>{" "}
+                  <span className="text-gray-400">=</span>{" "}
+                  <span className="text-purple-400">await</span>{" "}
+                  <span className="text-yellow-300">fc</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">allocateToStrategy</span>
+                  <span className="text-gray-400">(</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-orange-300">strategyId</span>
+                  <span className="text-gray-400">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-yellow-300">ethers</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">parseUnits</span>
+                  <span className="text-gray-400">(</span>
+                  <span className="text-green-300">'1000'</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-orange-300">6</span>
+                  <span className="text-gray-400">)</span>
+                </div>
+                <div>
+                  <span className="text-gray-400">)</span>
+                </div>
+                <div>
+                  <span className="text-purple-400">await</span>{" "}
+                  <span className="text-orange-300">tx</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">wait</span>
+                  <span className="text-gray-400">()</span>
                 </div>
               </div>
-
-              {/* Connector */}
-              <div className="flex justify-center">
-                <div className="w-0.5 h-12 bg-blue-300"></div>
-              </div>
-
-              {/* External DeFi - Bottom Layer */}
-              <div className="flex justify-center">
-                <div className="bg-gray-100 border-2 border-gray-300 rounded-2xl px-8 py-6 text-center max-w-md">
-                  <h3 className="text-xl font-bold text-black mb-2">External DeFi</h3>
-                  <p className="text-sm text-gray-600">Lending • Perps • DEXs • State Channels</p>
+              
+              <div className="pt-2 space-y-2">
+                <div className="text-gray-500">
+                  <span className="text-gray-400">//</span> 3. Deploy custom Aave lending strategy
+                </div>
+                <div>
+                  <span className="text-purple-400">const</span>{" "}
+                  <span className="text-cyan-300">customStrategy</span>{" "}
+                  <span className="text-gray-400">=</span>{" "}
+                  <span className="text-purple-400">await</span>{" "}
+                  <span className="text-yellow-300">fc</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">registerStrategy</span>
+                  <span className="text-gray-400">(</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-orange-300">aaveAdapterAddr</span>
+                  <span className="text-gray-400">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-orange-300">1500</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-gray-500">
+                    <span className="text-gray-400">//</span> 15% risk cap
+                  </span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-gray-400">[</span>
+                  <span className="text-orange-300">usdcAddr</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-orange-300">usdtAddr</span>
+                  <span className="text-gray-400">]</span>
+                </div>
+                <div>
+                  <span className="text-gray-400">)</span>
                 </div>
               </div>
+            </div>
+            
+            <div className="mt-6 pt-6 border-t border-gray-700">
+              <p className="text-xs text-gray-400 leading-relaxed">
+                Build credit-enabled apps with portable history, AI strategies, and custom DeFi integrations
+              </p>
             </div>
           </motion.div>
         </div>
