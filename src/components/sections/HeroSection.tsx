@@ -90,7 +90,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed"
               >
-FlexCredit turns your income into an onchain bank account with balances, payments, cashflow, and an income-backed, under-collateralized credit line. On top, it runs an automated treasury that allocates idle funds into strategies with progressive liquidation protection.          </motion.p>
+FlexCredit turns your income into an onchain bank account with balances, payments, cashflow, and an income-backed, under-collateralized credit line. On top, it runs an AI powered automated treasury that allocates idle funds into strategies with progressive liquidation protection.          </motion.p>
             </div>
 
             {/* Premium CTAs */}
