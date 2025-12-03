@@ -68,7 +68,11 @@ export const Navbar = () => {
             <Button variant="ghost" size="sm" disabled className="cursor-not-allowed">
               Docs (Coming Soon)
             </Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md">
+            <Button 
+              size="sm" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
+              onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
+            >
               Join Waitlist
             </Button>
           </div>
@@ -100,7 +104,11 @@ export const Navbar = () => {
               <Button variant="outline" size="sm" className="w-full" disabled>
                 Docs (Coming Soon)
               </Button>
-              <Button size="sm" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button 
+                size="sm" 
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
+              >
                 Join Waitlist
               </Button>
             </div>
