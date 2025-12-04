@@ -103,6 +103,7 @@ FlexCredit turns your income into an onchain bank account with balances, payment
               <Button
                 size="lg"
                 className="group relative bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-600/90 text-white shadow-lg hover:shadow-2xl hover:shadow-primary/25 transition-all duration-300 text-base sm:text-lg h-14 sm:h-16 px-8 sm:px-10 rounded-2xl font-semibold overflow-hidden"
+                onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
               >
                 <span className="relative z-10 flex items-center">
                   Join Waitlist
