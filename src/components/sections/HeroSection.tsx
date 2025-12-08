@@ -208,7 +208,7 @@ export const HeroSection = () => {
             className="relative flex items-center justify-center max-w-full overflow-hidden"
           >
             {/* iPhone 15 Pro Frame - Realistic */}
-            <div className="relative w-[360px] max-w-full mx-auto overflow-hidden">
+            <div className="relative w-[320px] max-w-full mx-auto overflow-hidden">
               {/* Phone Frame/Bezel - More realistic */}
               <div className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 rounded-[3rem] p-[5px] shadow-none ring-1 ring-gray-200">
                 {/* Screen Glass Effect */}
@@ -248,7 +248,7 @@ export const HeroSection = () => {
                   {/* Main Dashboard Container - Glassmorphism Design */}
                   <div
                     className="relative overflow-y-auto [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-corner]:bg-transparent"
-                    style={{ height: '600px', scrollbarWidth: 'none' as const }}
+                    style={{ height: '560px', scrollbarWidth: 'none' as const }}
                   >
                     {/* Full-bleed Nature Wallpaper Background */}
                     <div className="absolute inset-0">
@@ -438,10 +438,10 @@ export const HeroSection = () => {
               </div>
             </div>
             {/* Bottom shadow base and Floating Dock */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-[360px] max-w-full h-16 bg-gradient-to-t from-white via-white/80 to-transparent rounded-full blur-lg z-10 pointer-events-none"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-[320px] max-w-full h-16 bg-gradient-to-t from-white via-white/80 to-transparent rounded-full blur-lg z-10 pointer-events-none"></div>
             <div className="absolute left-1/2 -translate-x-1/2 bottom-4 z-30 flex justify-center">
               <FloatingDock
-                desktopClassName="w-[300px] max-w-full h-14 items-center justify-around bg-white border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-2"
+                desktopClassName="w-[260px] max-w-full h-14 items-center justify-around bg-white border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-2"
                 mobileClassName="translate-y-4"
                 items={dockItems}
               />
