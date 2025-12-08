@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexCredit — The Autopilot Money OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-warm: #F6F4EE;
+            --accent-blue: #001A5C;
+            --text-dark: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Space Mono', 'IBM Plex Mono', 'Courier New', ui-monospace, monospace;
+            background: var(--bg-warm);
+            color: var(--text-dark);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        /* Console snippets - scattered around edges */
+        .snippet {
+            position: absolute;
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            max-width: 200px;
+            line-height: 1.4;
+            opacity: 0.7;
+            pointer-events: none;
+            font-weight: 400;
+        }
+
+        .snippet.italic {
+            font-style: italic;
+        }
+
+        .snippet.uppercase {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .snippet.spaced {
+            letter-spacing: 0.15em;
+        }
+
+        .snippet.small {
+            font-size: 0.65rem;
+        }
+
+        .snippet.large {
+            font-size: 0.9rem;
+        }
+
+        /* Position classes */
+        .snippet.top-left { top: 8%; left: 5%; }
+        .snippet.top-right { top: 10%; right: 6%; text-align: right; }
+        .snippet.bottom-left { bottom: 12%; left: 4%; }
+        .snippet.bottom-right { bottom: 8%; right: 5%; text-align: right; }
+        .snippet.left-edge { left: 3%; top: 35%; }
+        .snippet.right-edge { right: 4%; top: 40%; text-align: right; }
+        .snippet.top-center { top: 5%; left: 50%; transform: translateX(-50%); text-align: center; }
+        .snippet.bottom-center { bottom: 5%; left: 50%; transform: translateX(-50%); text-align: center; }
+
+        /* Center content */
+        .center-content {
+            text-align: center;
+            z-index: 10;
+            max-width: 900px;
+            padding: 2rem 1rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        h2 {
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent-blue);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent-blue);
+            color: var(--bg-warm);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: 2px solid var(--accent-blue);
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background: transparent;
+            color: var(--accent-blue);
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Stats pills */
+        .stats-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-pill {
+            background: transparent;
+            border: 1px solid var(--accent-blue);
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .stat-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Blinking cursor animation */
+        .cursor-blink {
+            animation: blink 1.2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Responsive: hide some snippets on mobile */
+        @media (max-width: 768px) {
+            .snippet {
+                font-size: 0.6rem;
+                max-width: 150px;
+            }
+
+            .snippet.left-edge,
+            .snippet.right-edge,
+            .snippet.top-center {
+                display: none;
+            }
+
+            .snippet.top-left { top: 5%; left: 3%; }
+            .snippet.top-right { top: 5%; right: 3%; }
+            .snippet.bottom-left { bottom: 8%; left: 3%; }
+            .snippet.bottom-right { bottom: 8%; right: 3%; }
+
+            .stats-container {
+                gap: 1rem;
+                margin-top: 3rem;
+            }
+
+            .stat-pill {
+                min-width: 110px;
+                padding: 0.6rem 1rem;
+            }
+
+            h1 {
+                letter-spacing: 0.15em;
+            }
+
+            h2 {
+                letter-spacing: 0.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .snippet.bottom-center {
+                display: none;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Ensure center content is always readable */
+        @media (min-width: 769px) {
+            .center-content {
+                padding: 3rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <!-- Console snippets scattered around -->
+        <div class="snippet top-left uppercase spaced">SOVEREIGN CASHFLOW...</div>
+        <div class="snippet top-right italic">future-backed credit...</div>
+        <div class="snippet left-edge uppercase small">POLICIES DECIDE RISK / AI EXECUTES...</div>
+        <div class="snippet right-edge spaced">USDC / USDT / DAI</div>
+        <div class="snippet bottom-left uppercase">EPOCH 001 — FLEX</div>
+        <div class="snippet bottom-right italic small">M0 > CASH</div>
+        
+        <div class="snippet top-left" style="top: 15%; left: 8%; font-size: 0.7rem;">M1 > LIQUID</div>
+        <div class="snippet top-right" style="top: 18%; right: 10%; font-size: 0.7rem; text-align: right;">M2 > CREDIT</div>
+        <div class="snippet bottom-left" style="bottom: 18%; left: 8%; font-size: 0.7rem;">M3 > AUTOMATION</div>
+        
+        <div class="snippet left-edge" style="top: 55%; left: 2%; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em;">RISK ZONES: SAFE / WATCH / SHIELD</div>
+        <div class="snippet right-edge" style="top: 60%; right: 3%; font-size: 0.65rem; text-align: right;">DELTA-NEUTRAL MODULES (OPT-IN)</div>
+        
+        <div class="snippet top-center small uppercase" style="top: 3%;">CREDIT LIMIT / UTILIZATION / CASHFLOW</div>
+        
+        <!-- ASCII blocks -->
+        <div class="snippet bottom-left" style="bottom: 25%; left: 2%; font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.5;">$$$$$$$</div>
+        <div class="snippet top-right" style="top: 25%; right: 2%; font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.5; text-align: right;">>>>>>>></div>
+        <div class="snippet bottom-right" style="bottom: 30%; right: 2%; font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.5; text-align: right;">######</div>
+        <div class="snippet top-left" style="top: 30%; left: 2%; font-size: 0.8rem; letter-spacing: 0.2em; opacity: 0.5;">||||||</div>
+
+        <!-- Center content -->
+        <div class="center-content">
+            <h1>THE AUTOPILOT MONEY OS</h1>
+            <h2>CREDIT • TREASURY • MARKET-NEUTRAL YIELD</h2>
+            <a href="#waitlist" class="cta-button">[ GET EARLY ACCESS ]</a>
+            
+            <!-- Stats pills -->
+            <div class="stats-container">
+                <div class="stat-pill">
+                    <div class="stat-label">CREDIT VOLUME</div>
+                    <div class="stat-value">$12.4M</div>
+                </div>
+                <div class="stat-pill">
+                    <div class="stat-label">TREASURY AUM</div>
+                    <div class="stat-value">$3.8M</div>
+                </div>
+                <div class="stat-pill">
+                    <div class="stat-label cursor-blink">NET YIELD (NEUTRAL)</div>
+                    <div class="stat-value">9.6%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

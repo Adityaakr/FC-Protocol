@@ -1,9 +1,52 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { ArrowRight, TrendingUp, Shield, Wallet, Sparkles, BarChart3, PieChart } from "lucide-react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { ArrowRight, TrendingUp, Shield, Wallet, Sparkles, PieChart, Activity, Send, Receipt, Clock, CheckCircle2, AlertCircle, Settings, Bell, ChevronDown, Play, Pause, Power, ToggleLeft, ToggleRight, QrCode, Home, Building2, Users, Eye, EyeOff, Download, CreditCard, BarChart3, Plus, ArrowDownCircle, ArrowUpCircle } from "lucide-react";
+import { IconHome, IconCreditCard, IconChartBar, IconShield, IconActivity } from "@tabler/icons-react";
+import { useState, useEffect } from "react";
 import dashboardHero from "@/assets/dashboard-hero.png";
+import { FloatingDock } from "@/components/ui/floating-dock";
 
 export const HeroSection = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const progress = useMotionValue(251.2);
+  const smoothProgress = useSpring(progress, { 
+    stiffness: 50,
+    damping: 30,
+    mass: 1
+  });
+
+  const dockItems = [
+    {
+      title: "Home",
+      href: "#",
+      icon: <IconHome className="w-full h-full text-slate-900" />,
+    },
+    {
+      title: "Credit",
+      href: "#",
+      icon: <IconCreditCard className="w-full h-full text-slate-900" />,
+    },
+    {
+      title: "Treasury",
+      href: "#",
+      icon: <IconChartBar className="w-full h-full text-slate-900" />,
+    },
+    {
+      title: "Shield",
+      href: "#",
+      icon: <IconShield className="w-full h-full text-slate-900" />,
+    },
+    {
+      title: "Activity",
+      href: "#",
+      icon: <IconActivity className="w-full h-full text-slate-900" />,
+    },
+  ];
+
+  useEffect(() => {
+    progress.set(isHovered ? 62.8 : 251.2);
+  }, [isHovered, progress]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
       {/* Premium gradient background with mesh */}
@@ -34,8 +77,8 @@ export const HeroSection = () => {
         backgroundSize: '100px 100px'
       }} />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -64,7 +107,7 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-foreground leading-[1.05] tracking-tight"
+                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold text-foreground leading-[1.05] tracking-tight"
               >
                 Banking meets{" "}
                 <span className="relative inline-block">
@@ -77,10 +120,10 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-1xl sm:text-2xl lg:text-3xl xl:text-4xl font-display font-semibold leading-tight tracking-tight"
+                className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold leading-tight tracking-tight"
               >
                 <span className="bg-gradient-to-r from-primary via-cyan-500 to-primary bg-clip-text text-transparent animate-gradient">
-                  Income, cashflow backed Credit Lines & AI that earns delta-neutral yield for YOU
+                  Borrow against the future. Autopilot Money OS 
                 </span>
               </motion.h2>
               
@@ -88,9 +131,9 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+                className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed"
               >
-FlexCredit turns your income into an onchain bank account with balances, payments, cashflow, and an income-backed, under-collateralized credit line. On top, it runs an AI powered automated treasury that allocates idle funds into strategies with progressive liquidation protection.          </motion.p>
+              </motion.p>
             </div>
 
             {/* Premium CTAs */}
@@ -144,7 +187,7 @@ FlexCredit turns your income into an onchain bank account with balances, payment
                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                   <TrendingUp className="w-4 h-4 text-primary" />
                 </div>
-                <span className="text-sm font-medium text-foreground">AI earns delta-neutral DeFi yield</span>
+                <span className="text-sm font-medium text-foreground">AI earns market-neutral DeFi yield</span>
               </div>
               <ArrowRight className="text-primary w-5 h-5" />
               <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
@@ -156,185 +199,252 @@ FlexCredit turns your income into an onchain bank account with balances, payment
             </div>
           </motion.div>
 
-          {/* Right: Premium Dashboard Mockup */}
+          {/* Right: iPhone 15 Pro Mobile Dashboard */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 30, rotateY: -5 }}
+            animate={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative lg:scale-105"
+            className="relative flex items-center justify-center max-w-full overflow-hidden"
           >
-            {/* Main Dashboard Card - Glassmorphism */}
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-card/95 via-card/90 to-card/95 backdrop-blur-xl">
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-cyan-500/[0.03] pointer-events-none" />
-              
-              {/* Dashboard Header */}
-              <div className="relative bg-gradient-to-r from-primary/[0.08] via-cyan-500/[0.05] to-primary/[0.08] border-b border-white/5 px-6 py-5 flex items-center justify-between backdrop-blur-sm">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/20 to-cyan-500/20 flex items-center justify-center ring-1 ring-primary/20">
-                    <Wallet className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-foreground tracking-tight">Earning</div>
-                    <div className="text-xs text-muted-foreground">Main Account</div>
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary via-cyan-500 to-primary shadow-lg" />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-cyan-500 blur-md opacity-50" />
-                </div>
-              </div>
-
-              {/* Balance Section */}
-              <div className="relative p-6 space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Total Balance - Enhanced */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                    className="group relative bg-gradient-to-br from-primary/[0.08] via-primary/[0.04] to-transparent rounded-2xl p-5 border border-primary/10 hover:border-primary/20 transition-all duration-300 overflow-hidden"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="relative">
-                      <div className="text-xs text-muted-foreground mb-2 flex items-center justify-between">
-                        <span className="font-medium">Total balance</span>
-                        <span className="text-primary text-[10px] font-semibold px-2 py-0.5 rounded-full bg-primary/10">+Keep on savings</span>
-                      </div>
-                      <div className="text-3xl font-display font-bold text-foreground mb-2 tracking-tight">$12,450</div>
-                      <div className="flex items-center gap-2 text-[11px] text-muted-foreground">
-                        <span className="font-medium">$500 UTTS</span>
-                        <ArrowRight className="w-3 h-3 text-primary" />
-                        <span className="font-medium">$000 OUTTS</span>
-                      </div>
+            {/* iPhone 15 Pro Frame - Realistic */}
+            <div className="relative w-full max-w-[360px] sm:w-[320px] mx-auto overflow-hidden">
+              {/* Phone Frame/Bezel - More realistic */}
+              <div className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 rounded-[3rem] p-[5px] shadow-none ring-1 ring-gray-200">
+                {/* Screen Glass Effect */}
+                <div className="relative bg-gradient-to-b from-white via-slate-50 to-slate-100 rounded-[2.8rem] overflow-hidden shadow-inner">
+                  {/* iPhone Status Bar / Dynamic Island */}
+                  <div className="relative h-12 flex items-center justify-center border-b border-slate-200 bg-white">
+                    {/* Dynamic Island - iPhone 15 Pro */}
+                    <div className="absolute top-2.5 w-[110px] h-5 bg-black rounded-full flex items-center justify-center gap-1.5 px-3.5 shadow-lg">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-sm"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 shadow-sm"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-sm"></div>
                     </div>
-                  </motion.div>
-
-                  {/* Credit Line - Enhanced */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.35 }}
-                    className="group relative bg-gradient-to-br from-cyan-500/[0.08] via-cyan-500/[0.04] to-transparent rounded-2xl p-5 border border-cyan-500/10 hover:border-cyan-500/20 transition-all duration-300 overflow-hidden"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="relative">
-                      <div className="text-xs text-muted-foreground mb-2 flex items-center justify-between">
-                        <span className="font-medium">Credit line</span>
-                        <span className="text-cyan-600 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-cyan-500/10">Borrow available</span>
-                      </div>
-                      <div className="text-3xl font-display font-bold text-foreground mb-2 tracking-tight">$1,000</div>
-                      <div className="flex items-center gap-2 text-[11px] text-muted-foreground">
-                        <span className="font-medium">$00 UTTS</span>
-                        <ArrowRight className="w-3 h-3 text-cyan-600" />
-                        <span className="font-medium">$0000 UTTS</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Charts Section - Premium */}
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Delta-neutral yield chart - Refined */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                    className="relative bg-gradient-to-br from-muted/40 to-muted/20 rounded-2xl p-5 border border-white/5 backdrop-blur-sm overflow-hidden group"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative">
-                      <div className="flex items-center gap-2 mb-1">
-                        <PieChart className="w-3.5 h-3.5 text-primary" />
-                        <div className="text-xs font-bold text-foreground tracking-tight">Delta-neutral yield</div>
-                      </div>
-                      <div className="text-[10px] text-muted-foreground mb-4 font-medium">Managed risk profile</div>
-                      <div className="flex items-center justify-center h-24 relative">
-                        <svg className="w-24 h-24 -rotate-90" viewBox="0 0 100 100">
-                          <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="6" className="text-muted-foreground/10" />
-                          <circle cx="50" cy="50" r="40" fill="none" stroke="url(#gradient1)" strokeWidth="6" strokeDasharray="251.2" strokeDashoffset="62.8" strokeLinecap="round" className="drop-shadow-lg" />
-                          <defs>
-                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                              <stop offset="0%" stopColor="rgb(59, 130, 246)" />
-                              <stop offset="100%" stopColor="rgb(6, 182, 212)" />
-                            </linearGradient>
-                          </defs>
+                    {/* Status Bar Info */}
+                    <div className="absolute top-2.5 left-4 right-4 flex items-center justify-between text-slate-700 text-[10px] font-semibold">
+                      <div>1:20 PM</div>
+                      <div className="flex items-center gap-1">
+                        {/* Signal bars */}
+                        <div className="flex items-end gap-0.5">
+                          <div className="w-1 h-1 bg-slate-700 rounded-sm"></div>
+                          <div className="w-1 h-1.5 bg-slate-700 rounded-sm"></div>
+                          <div className="w-1 h-2 bg-slate-700 rounded-sm"></div>
+                          <div className="w-1 h-2.5 bg-slate-700 rounded-sm"></div>
+                        </div>
+                        {/* WiFi */}
+                        <svg className="w-3.5 h-2.5" viewBox="0 0 20 14" fill="none">
+                          <path d="M10 0C6 0 2.5 1.5 0 4L10 14L20 4C17.5 1.5 14 0 10 0Z" fill="#1f2937"/>
                         </svg>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="text-xl font-display font-bold text-primary">75%</div>
-                          </div>
+                        {/* Battery */}
+                        <div className="w-5 h-2.5 border border-slate-700 rounded-sm relative">
+                          <div className="absolute right-0 top-0.5 w-0.5 h-1.5 bg-slate-700 rounded-r"></div>
+                          <div className="w-full h-full bg-slate-700 rounded-sm" style={{ width: '90%' }}></div>
                         </div>
                       </div>
-                      <div className="text-center mt-3">
-                        <div className="text-[11px] text-muted-foreground font-medium">Responsible yield</div>
+                    </div>
+                  </div>
+
+                  {/* Main Dashboard Container - Glassmorphism Design */}
+                  <div
+                    className="relative overflow-y-auto [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-corner]:bg-transparent"
+                    style={{ height: '600px', maxHeight: '80vh', scrollbarWidth: 'none' as const }}
+                  >
+                    {/* Full-bleed Nature Wallpaper Background */}
+                    <div className="absolute inset-0">
+                      {/* Light gradient background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-teal-50"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+                      {/* Soft overlay for readability */}
+                      <div className="absolute inset-0 bg-white/60"></div>
+                      {/* Subtle texture overlay - Enhanced */}
+                      <div className="absolute inset-0 opacity-[0.12]" style={{
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                      }}></div>
+                      {/* Additional depth layer */}
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.03),transparent_70%)]"></div>
+                    </div>
+
+                  {/* Bottom gradient fill to avoid blank space */}
+                  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-white/80 to-white pointer-events-none" />
+
+                    {/* Top Header - Glassmorphism */}
+                    <div className="sticky top-0 z-20 px-4 pt-2 pb-2 flex items-center justify-between backdrop-blur-2xl bg-white/92 border-b border-slate-200/70 shadow-sm">
+                      <div className="flex items-center gap-3">
+                        <div className="text-[13px] font-semibold text-slate-900 leading-none">james@fc</div>
+                        <span className="text-[11px] text-slate-300">•</span>
+                        <button className="text-[11px] text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline transition-colors leading-none">
+                          Toggle Balance
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-2.5">
+                        <motion.div 
+                          whileHover={{ scale: 1.08 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="px-3 py-1 bg-emerald-50/95 backdrop-blur-md rounded-full border border-emerald-200 shadow-sm"
+                        >
+                          <span className="text-[10px] font-semibold text-emerald-700 tracking-wide">SAFE</span>
+                        </motion.div>
+                        <motion.button
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="w-8 h-8 rounded-full bg-white/96 backdrop-blur-md flex items-center justify-center border border-slate-200/80 shadow-sm hover:bg-white transition-all"
+                        >
+                          <QrCode className="w-3.5 h-3.5 text-slate-700" />
+                        </motion.button>
+                      </div>
+                    </div>
+
+                    {/* Dashboard Content - Glassmorphism */}
+                    <div className="relative px-4 pt-7 pb-28 space-y-5">
+                      {/* Hero Center - Large Balance */}
+                      <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="text-center"
+                      >
+                        <div className="text-4xl font-semibold text-slate-900 mb-1.5 tracking-tight">$687,180.00</div>
+                        <div className="flex items-center justify-center gap-2">
+                          <span className="text-xs text-slate-700 font-medium">687,180.00 USDC</span>
+                          <motion.button
+                            whileHover={{ scale: 1.08 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-2 py-0.5 bg-white border border-slate-200 rounded-full shadow hover:bg-slate-50 transition-all"
+                          >
+                            <span className="text-[9px] font-semibold text-slate-800">USDC</span>
+                          </motion.button>
+                    </div>
+                  </motion.div>
+
+                      {/* Quick Actions Row - 3 Circular Buttons */}
+                  <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="flex items-center justify-center gap-7"
+                      >
+                        {[
+                          { icon: ArrowDownCircle, label: 'Deposit' },
+                          { icon: ArrowUpCircle, label: 'Borrow' },
+                          { icon: BarChart3, label: 'Allocate' },
+                        ].map((action, i) => (
+                          <motion.button
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                            whileHover={{ scale: 1.12, y: -6 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex flex-col items-center gap-2"
+                          >
+                            <div className="w-14 h-14 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center hover:bg-slate-50 transition">
+                              <action.icon className="w-6 h-6 text-slate-700" strokeWidth={2.4} />
+                      </div>
+                            <span className="text-[10px] font-semibold text-slate-800">{action.label}</span>
+                          </motion.button>
+                        ))}
+                  </motion.div>
+
+                      {/* Account Snapshot - Glass Card */}
+                  <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        whileHover={{ scale: 1.01 }}
+                        className="backdrop-blur-xl bg-white/90 rounded-3xl border border-slate-200 shadow-xl p-4 hover:bg-white transition-all"
+                      >
+                        <div className="text-[10px] font-bold text-slate-800 mb-3 uppercase tracking-widest">Account Snapshot</div>
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-between py-0.5">
+                            <span className="text-[10px] text-slate-500 uppercase tracking-wide font-medium">Available to Borrow</span>
+                            <span className="text-sm font-bold text-slate-900">$17,000</span>
+                      </div>
+                          <div className="flex items-center justify-between py-0.5">
+                            <span className="text-[10px] text-slate-500 uppercase tracking-wide font-medium">Treasury Deployed</span>
+                            <span className="text-sm font-bold text-slate-900">32%</span>
+                          </div>
+                          <div className="flex items-center justify-between py-0.5">
+                            <span className="text-[10px] text-slate-500 uppercase tracking-wide font-medium">Net Cashflow (30d)</span>
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm font-bold text-emerald-600">+$2,400</span>
+                              <div className="h-7 w-20 flex items-end gap-0.5">
+                                {[40, 50, 45, 60, 55, 70, 65, 75, 80, 85].map((height, i) => (
+                                  <motion.div
+                                    key={i}
+                                    initial={{ height: 0 }}
+                                    animate={{ height: `${height}%` }}
+                                    transition={{ duration: 0.3, delay: 0.4 + i * 0.05 }}
+                                    className="flex-1 bg-gradient-to-t from-emerald-400 via-cyan-400 to-sky-400 rounded-t shadow-sm"
+                                  ></motion.div>
+                                ))}
+                        </div>
+                      </div>
                       </div>
                     </div>
                   </motion.div>
 
-                  {/* Money-to-Fuel Shield chart - Refined */}
+                      {/* Recent Activity - Glass Card */}
                   <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.45 }}
-                    className="relative bg-gradient-to-br from-muted/40 to-muted/20 rounded-2xl p-5 border border-white/5 backdrop-blur-sm overflow-hidden group"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="relative">
-                      <div className="flex items-center gap-2 mb-1">
-                        <BarChart3 className="w-3.5 h-3.5 text-cyan-600" />
-                        <div className="text-xs font-bold text-foreground tracking-tight">Money-to-Fuel Shield</div>
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                        whileHover={{ scale: 1.01 }}
+                        className="backdrop-blur-xl bg-white rounded-3xl border border-slate-200 shadow-lg p-4 hover:bg-slate-50 transition-all"
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="text-[10px] font-bold text-slate-800 uppercase tracking-widest">Recent Activity</div>
+                          <motion.button
+                            whileHover={{ scale: 1.08, x: 2 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="text-[9px] text-slate-600 hover:text-slate-800 font-semibold flex items-center gap-1 transition-colors"
+                          >
+                            View all <ArrowRight className="w-2.5 h-2.5" />
+                          </motion.button>
+                        </div>
+                        <div className="space-y-3">
+                          {[
+                            { icon: TrendingUp, label: 'Income received', amount: '+$5000', time: '2h ago' },
+                            { icon: CreditCard, label: 'Credit drawn', amount: '-$150', time: '5h ago' },
+                            { icon: Sparkles, label: 'Strategy yield', amount: '+$45', time: '1d ago' },
+                            { icon: Send, label: 'Payment sent', amount: '-$1200', time: '2d ago' },
+                          ].map((item, i) => (
+                            <motion.div
+                              key={i}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.5 + i * 0.1 }}
+                              whileHover={{ x: 4, scale: 1.02 }}
+                              className="flex items-center justify-between py-1 rounded-lg hover:bg-slate-100 transition-all cursor-pointer"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center">
+                                  <item.icon className="w-4 h-4 text-slate-700" />
+                                </div>
+                                <div>
+                                  <div className="text-[11px] font-semibold text-slate-900">{item.label}</div>
+                                  <div className="text-[9px] text-slate-500 font-medium">{item.time}</div>
+                                </div>
+                              </div>
+                              <span className="text-xs font-bold text-slate-800">{item.amount}</span>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </motion.div>
                       </div>
-                      <div className="flex items-end justify-between h-32 gap-1.5 mt-6">
-                        <div className="flex-1 bg-gradient-to-t from-primary/40 to-primary/60 rounded-t-xl shadow-sm" style={{ height: '40%' }}></div>
-                        <div className="flex-1 bg-gradient-to-t from-primary/50 to-primary/70 rounded-t-xl shadow-sm" style={{ height: '60%' }}></div>
-                        <div className="flex-1 bg-gradient-to-t from-primary/60 to-primary/80 rounded-t-xl shadow-sm" style={{ height: '75%' }}></div>
-                        <div className="flex-1 bg-gradient-to-t from-primary/70 to-primary/90 rounded-t-xl shadow-sm" style={{ height: '90%' }}></div>
-                        <div className="flex-1 bg-gradient-to-t from-primary/80 to-primary rounded-t-xl shadow-lg" style={{ height: '100%' }}></div>
-                      </div>
-                      <div className="flex justify-between text-[9px] text-muted-foreground mt-3 font-medium">
-                        <span>Mar</span>
-                        <span>Apr</span>
-                        <span>May</span>
-                        <span>Jun</span>
-                        <span className="text-primary font-semibold">Storm shielded</span>
-                      </div>
-                    </div>
-                  </motion.div>
+
+                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Floating Active Strategies Card - Premium */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6, type: "spring", stiffness: 200 }}
-              className="absolute -top-6 -right-6 bg-gradient-to-br from-card/95 to-card/90 border border-white/10 rounded-2xl p-6 shadow-2xl backdrop-blur-xl hover:scale-105 transition-transform duration-300"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl" />
-              <div className="relative">
-                <div className="text-xs text-muted-foreground mb-2 font-semibold tracking-wide">Active Strategies</div>
-                <div className="text-5xl font-display font-bold bg-gradient-to-br from-primary to-cyan-600 bg-clip-text text-transparent">3</div>
-              </div>
-            </motion.div>
-
-            {/* Floating Credit Utilization Card - Premium */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7, type: "spring", stiffness: 200 }}
-              className="absolute -bottom-6 -left-6 bg-gradient-to-br from-card/95 to-card/90 border border-white/10 rounded-2xl p-6 shadow-2xl backdrop-blur-xl hover:scale-105 transition-transform duration-300"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-2xl" />
-              <div className="relative">
-                <div className="text-xs text-muted-foreground mb-2 font-semibold tracking-wide">Credit Utilization</div>
-                <div className="flex items-baseline gap-1">
-                  <div className="text-5xl font-display font-bold text-foreground">30</div>
-                  <div className="text-2xl font-display font-bold text-muted-foreground">%</div>
-                </div>
-              </div>
-            </motion.div>
+            {/* Bottom shadow base and Floating Dock */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-[90vw] max-w-[360px] h-16 bg-gradient-to-t from-white via-white/80 to-transparent rounded-full blur-lg z-10 pointer-events-none"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-4 z-30 flex justify-center">
+              <FloatingDock
+                desktopClassName="w-[82vw] max-w-[300px] h-14 items-center justify-around bg-white border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-2"
+                mobileClassName="translate-y-4"
+                items={dockItems}
+              />
+            </div>
           </motion.div>
         </div>
       </div>

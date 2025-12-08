@@ -20,7 +20,7 @@ const problems = [
   },
   {
     icon: Bot,
-    text: "AI that earns delta-neutral DeFi yield.",
+    text: "AI that earns market-neutral DeFi yield.",
   },
 ];
 
@@ -102,12 +102,12 @@ export const ProblemSection = () => {
                 <div className="space-y-6 text-gray-800">
                   <p className="text-lg leading-relaxed font-medium text-gray-700">
                     People already earn, save, and spend in stablecoins. Freelancers, onchain teams, and
-                    crypto-native users handle thousands—sometimes millions—in stablecoins monthly.
+                    crypto-native users handle thousands sometimes millions in stablecoins monthly.
                   </p>
                   
                   <p className="text-lg leading-relaxed text-gray-800">
-                    But there is <strong className="text-black font-bold bg-yellow-100/50 px-1 rounded">no bank + credit & automated treasury mechanism + risk OS + standard for Agentic finance</strong>{" "}
-                    on top of Finance:
+                    But there is <strong className="text-black font-bold bg-yellow-100/50 px-1 rounded">No bank-like experience, no fair credit, no automated treasury, no risk OS, and no standard layer for agentic finance</strong>{" "}
+                    on top of payments.
                   </p>
                   
                   <ul className="space-y-4 text-gray-900 pt-2">
@@ -127,8 +127,7 @@ export const ProblemSection = () => {
                   
                   <div className="pt-6 mt-8 border-t-2 border-gray-200">
                     <p className="text-black font-bold text-lg leading-relaxed tracking-tight">
-                      FlexCredit aim to fix this — turning your income into a complete financial
-                      operating system.
+                    FlexCredit fixes this by turning your income into a full financial operating system.
                     </p>
                   </div>
                 </div>
