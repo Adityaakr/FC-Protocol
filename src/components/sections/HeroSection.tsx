@@ -123,7 +123,7 @@ export const HeroSection = () => {
                 className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold leading-tight tracking-tight"
               >
                 <span className="bg-gradient-to-r from-primary via-cyan-500 to-primary bg-clip-text text-transparent animate-gradient">
-                  Borrow against the future. Autopilot Money OS 
+                  Borrow against the future. Autopilot Money OS for stablecoins — credit, AI treasury automation, and market-neutral yield.
                 </span>
               </motion.h2>
               
@@ -133,6 +133,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed"
               >
+                FlexCredit turns your income into a single onchain account for balances, payments, and cashflow, plus an income-backed, under-collateralized credit line. On top, an AI-powered treasury allocates idle funds into strategies with progressive protection instead of cliff liquidations.
               </motion.p>
             </div>
 
@@ -207,7 +208,7 @@ export const HeroSection = () => {
             className="relative flex items-center justify-center max-w-full overflow-hidden"
           >
             {/* iPhone 15 Pro Frame - Realistic */}
-            <div className="relative w-full max-w-[360px] sm:w-[320px] mx-auto overflow-hidden">
+            <div className="relative w-[360px] max-w-full mx-auto overflow-hidden">
               {/* Phone Frame/Bezel - More realistic */}
               <div className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 rounded-[3rem] p-[5px] shadow-none ring-1 ring-gray-200">
                 {/* Screen Glass Effect */}
@@ -247,7 +248,7 @@ export const HeroSection = () => {
                   {/* Main Dashboard Container - Glassmorphism Design */}
                   <div
                     className="relative overflow-y-auto [&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar-corner]:bg-transparent"
-                    style={{ height: '600px', maxHeight: '80vh', scrollbarWidth: 'none' as const }}
+                    style={{ height: '600px', scrollbarWidth: 'none' as const }}
                   >
                     {/* Full-bleed Nature Wallpaper Background */}
                     <div className="absolute inset-0">
@@ -437,10 +438,10 @@ export const HeroSection = () => {
               </div>
             </div>
             {/* Bottom shadow base and Floating Dock */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-[90vw] max-w-[360px] h-16 bg-gradient-to-t from-white via-white/80 to-transparent rounded-full blur-lg z-10 pointer-events-none"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-[360px] max-w-full h-16 bg-gradient-to-t from-white via-white/80 to-transparent rounded-full blur-lg z-10 pointer-events-none"></div>
             <div className="absolute left-1/2 -translate-x-1/2 bottom-4 z-30 flex justify-center">
               <FloatingDock
-                desktopClassName="w-[82vw] max-w-[300px] h-14 items-center justify-around bg-white border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-2"
+                desktopClassName="w-[300px] max-w-full h-14 items-center justify-around bg-white border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-2"
                 mobileClassName="translate-y-4"
                 items={dockItems}
               />
