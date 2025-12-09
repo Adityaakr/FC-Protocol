@@ -123,7 +123,7 @@ export const HeroSection = () => {
                 className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold leading-tight tracking-tight"
               >
                 <span className="bg-gradient-to-r from-emerald-500 via-emerald-500 to-lime-500 bg-clip-text text-transparent">
-                  Borrow against the future. Autopilot Money OS for stablecoins — credit, AI treasury automation, and market-neutral yield.
+                  Borrow against the future. Autopilot Money OS for stablecoins credit, AI treasury automation, and market-neutral yield.
                 </span>
               </motion.h2>
               
