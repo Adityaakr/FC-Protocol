@@ -50,30 +50,30 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
       {/* Premium gradient background with mesh */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/[0.02] to-cyan-500/[0.03] -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-emerald-500/[0.02] to-lime-400/[0.03] -z-10" />
       
       {/* Multi-colored dotted pattern */}
       <div className="absolute inset-0 -z-10" style={{
         backgroundImage: `
-          radial-gradient(circle, rgba(59, 130, 246, 0.35) 1.5px, transparent 1.5px),
-          radial-gradient(circle, rgba(6, 182, 212, 0.28) 1.5px, transparent 1.5px),
-          radial-gradient(circle, rgba(139, 92, 246, 0.22) 1.5px, transparent 1.5px)
+          radial-gradient(circle, rgba(34, 197, 94, 0.32) 1.5px, transparent 1.5px),
+          radial-gradient(circle, rgba(132, 204, 22, 0.26) 1.5px, transparent 1.5px),
+          radial-gradient(circle, rgba(74, 222, 128, 0.2) 1.5px, transparent 1.5px)
         `,
         backgroundSize: '40px 40px, 60px 60px, 80px 80px',
         backgroundPosition: '0 0, 20px 20px, 40px 40px'
       }} />
       
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)] -z-10" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(6,182,212,0.06),transparent_50%)] -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)] -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(132,204,22,0.06),transparent_50%)] -z-10" />
       
       {/* Animated gradient blobs */}
-      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/8 rounded-full blur-3xl -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/8 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/8 rounded-full blur-3xl -z-10 animate-pulse" />
+      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-lime-400/8 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }} />
       
       {/* Subtle grid overlay for depth */}
       <div className="absolute inset-0 -z-10 opacity-[0.015]" style={{
-        backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px)`,
+        backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.5) 1px, transparent 1px)`,
         backgroundSize: '100px 100px'
       }} />
 
@@ -93,9 +93,9 @@ export const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="inline-flex"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 via-cyan-500/10 to-primary/10 border border-primary/20 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold bg-gradient-to-r from-primary to-cyan-600 bg-clip-text text-transparent">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-emerald-500/40 backdrop-blur-sm shadow-[0_6px_20px_-12px_rgba(16,94,57,0.45)]">
+                <Sparkles className="w-4 h-4 text-emerald-500" />
+                <span className="text-sm font-semibold text-emerald-600">
                   Next-Gen Banking
                 </span>
               </div>
@@ -112,7 +112,7 @@ export const HeroSection = () => {
                 Banking meets{" "}
                 <span className="relative inline-block">
                   DeFi
-                  <div className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-primary/30 to-cyan-500/30 blur-sm" />
+                  <div className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-emerald-400/08 via-lime-400/08 to-emerald-400/08 blur-[0.5px]" />
                 </span>
               </motion.h1>
               
@@ -122,7 +122,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold leading-tight tracking-tight"
               >
-                <span className="bg-gradient-to-r from-primary via-cyan-500 to-primary bg-clip-text text-transparent animate-gradient">
+                <span className="bg-gradient-to-r from-emerald-500 via-emerald-500 to-lime-500 bg-clip-text text-transparent">
                   Borrow against the future. Autopilot Money OS for stablecoins — credit, AI treasury automation, and market-neutral yield.
                 </span>
               </motion.h2>
@@ -146,14 +146,14 @@ export const HeroSection = () => {
             >
               <Button
                 size="lg"
-                className="group relative bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-600/90 text-white shadow-lg hover:shadow-2xl hover:shadow-primary/25 transition-all duration-300 text-base sm:text-lg h-14 sm:h-16 px-8 sm:px-10 rounded-2xl font-semibold overflow-hidden"
+                className="group relative bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-500/90 hover:to-lime-500/90 text-white shadow-lg hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 text-base sm:text-lg h-14 sm:h-16 px-8 sm:px-10 rounded-2xl font-semibold overflow-hidden"
                 onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
               >
                 <span className="relative z-10 flex items-center">
                   Join Waitlist
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Button>
               <Button
                 size="lg"
@@ -162,7 +162,7 @@ export const HeroSection = () => {
                   const element = document.querySelector('#problem');
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="group border-2 border-border hover:border-primary/50 text-foreground hover:bg-primary/5 text-base sm:text-lg h-14 sm:h-16 px-8 sm:px-10 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg"
+                className="group border-2 border-border hover:border-emerald-500/50 text-foreground hover:bg-emerald-500/5 text-base sm:text-lg h-14 sm:h-16 px-8 sm:px-10 rounded-2xl font-semibold transition-all duration-300 hover:shadow-lg"
               >
                 See the Problem
                 <TrendingUp className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -172,28 +172,28 @@ export const HeroSection = () => {
             {/* Flow indicators - Modern Pills */}
             <div className="flex flex-wrap items-center gap-3 pt-6">
               <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Wallet className="w-4 h-4 text-primary" />
+                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                  <Wallet className="w-4 h-4 text-emerald-600" />
                 </div>
                 <span className="text-sm font-medium text-foreground">Income & Cashflow Backed</span>
               </div>
-              <ArrowRight className="text-primary w-5 h-5" />
+              <ArrowRight className="text-emerald-600 w-5 h-5" />
               <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4 text-primary" />
+                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-emerald-600" />
                 </div>
                 <span className="text-sm font-medium text-foreground">Credit & Strategies</span>
               </div>
                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4 text-primary" />
+                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-emerald-600" />
                 </div>
                 <span className="text-sm font-medium text-foreground">AI earns market-neutral DeFi yield</span>
               </div>
-              <ArrowRight className="text-primary w-5 h-5" />
+              <ArrowRight className="text-emerald-600 w-5 h-5" />
               <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Shield className="w-4 h-4 text-primary" />
+                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                  <Shield className="w-4 h-4 text-emerald-600" />
                 </div>
                 <span className="text-sm font-medium text-foreground">Storm Shield</span>
               </div>
@@ -368,7 +368,7 @@ export const HeroSection = () => {
                                     initial={{ height: 0 }}
                                     animate={{ height: `${height}%` }}
                                     transition={{ duration: 0.3, delay: 0.4 + i * 0.05 }}
-                                    className="flex-1 bg-gradient-to-t from-emerald-400 via-cyan-400 to-sky-400 rounded-t shadow-sm"
+                                    className="flex-1 bg-gradient-to-t from-emerald-500 via-emerald-400 to-lime-300 rounded-t shadow-sm"
                                   ></motion.div>
                                 ))}
                         </div>

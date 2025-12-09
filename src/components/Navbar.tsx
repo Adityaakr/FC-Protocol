@@ -38,14 +38,16 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <img 
               src="/mon.png" 
               alt="Monaris Logo" 
               className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg lg:text-2xl text-foreground">Monaris</span>
+              <span className="font-display font-extrabold text-xl lg:text-2xl bg-gradient-to-r from-emerald-500 via-lime-500 to-emerald-600 bg-clip-text text-transparent drop-shadow-sm">
+                Monaris
+              </span>
             </div>
           </div>
 
@@ -69,7 +71,7 @@ export const Navbar = () => {
             </Button>
             <Button 
               size="sm" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
+              className="bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-500/90 hover:to-lime-500/90 text-white shadow-md"
               onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
             >
               Join Waitlist
@@ -105,7 +107,7 @@ export const Navbar = () => {
               </Button>
               <Button 
                 size="sm" 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="w-full bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-500/90 hover:to-lime-500/90 text-white"
                 onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
               >
                 Join Waitlist

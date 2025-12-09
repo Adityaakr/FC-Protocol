@@ -14,7 +14,7 @@ export const FooterSection = () => {
                 className="w-12 h-12 rounded-xl object-contain"
               />
               <div className="flex flex-col">
-                <span className="font-display font-bold text-xl text-foreground">Monaris</span>
+                <span className="font-display font-bold text-3xl text-foreground">Monaris</span>
               </div>
             </div>
           </div>
