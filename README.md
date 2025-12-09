@@ -1,12 +1,12 @@
-# FlexCredit - FC Protocol
+# Monaris - FC Protocol
 
-**Next-Gen Onchain Banking, Credit & Treasury**
+**Next-Gen Onchain Accounts, Credit & Treasury**
 
-FlexCredit turns your income into an onchain bank account with balances, payments, cashflow, and an income-backed, under-collateralized credit line. On top, it runs an automated treasury that allocates idle funds into strategies with progressive liquidation protection.
+Monaris turns your income into an onchain account with balances, payments, cashflow, and an income-backed, under-collateralized credit line. On top, it runs an automated treasury that allocates idle funds into strategies with progressive liquidation protection.
 
 ## 🌟 Overview
 
-FlexCredit is built on the FC Protocol, providing:
+Monaris is built on the FC Protocol, providing:
 
 - **Onchain Bank Account**: Full-featured banking with balances, payments, and cashflow tracking
 - **Income-Backed Credit**: Under-collateralized credit lines backed by your stablecoin income
@@ -16,9 +16,9 @@ FlexCredit is built on the FC Protocol, providing:
 
 ## 🏗️ Architecture
 
-FlexCredit is built on a three-tier architecture:
+Monaris is built on a three-tier architecture:
 
-### 1. FlexCredit App (User Interface Layer)
+### 1. Monaris App (User Interface Layer)
 - User-facing application for managing accounts, credit, and treasury
 
 ### 2. FC Protocol (Core Layer)
@@ -100,7 +100,7 @@ npm run build
 
 ## 🌐 Links
 
-- **Website**: [FlexCredit.in](https://flexcredit.in)
+- **Website**: [Monaris](https://monaris)
 - **Documentation**: Coming soon
 - **GitHub**: [FC-Protocol](https://github.com/Adityaakr/FC-Protocol)
 - **Twitter**: Coming soon

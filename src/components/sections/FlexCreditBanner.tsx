@@ -16,7 +16,7 @@ export const FlexCreditBanner = () => {
           className="text-center overflow-hidden"
         >
           <h2 className="text-[3.5rem] sm:text-[6rem] md:text-[9rem] lg:text-[12rem] font-serif font-light italic leading-none mb-8 text-black/50 break-words" style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '0.02em' }}>
-            FlexCredit<span className="text-[1.75rem] sm:text-[3rem] md:text-[4.5rem] lg:text-[6rem]">.in</span>
+            Monaris
           </h2>
           
           {/* Footer Links */}
@@ -31,21 +31,19 @@ export const FlexCreditBanner = () => {
               <span className="text-sm font-medium">Docs (Coming Soon)</span>
             </a>
             <a
-              href="https://github.com/FC-Protocol-building-flexcredit"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+              href="#"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-400 transition-colors cursor-not-allowed opacity-60"
               aria-label="GitHub"
+              onClick={(e) => e.preventDefault()}
             >
               <Github className="w-5 h-5" />
               <span className="text-sm font-medium">GitHub</span>
             </a>
             <a
-              href="https://x.com/flexcreditin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+              href="#"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-400 transition-colors cursor-not-allowed opacity-60"
               aria-label="Twitter"
+              onClick={(e) => e.preventDefault()}
             >
               <Twitter className="w-5 h-5" />
               <span className="text-sm font-medium">Twitter</span>
@@ -53,7 +51,7 @@ export const FlexCreditBanner = () => {
           </div>
           
           {/* Copyright */}
-          <p className="text-xs text-gray-600 mt-6">© FlexCredit / FC, 2025.</p>
+          <p className="text-xs text-gray-600 mt-6">© Monaris, 2025.</p>
         </motion.div>
       </div>
     </section>

@@ -127,7 +127,7 @@ export const ProblemSection = () => {
                   
                   <div className="pt-6 mt-8 border-t-2 border-gray-200">
                     <p className="text-black font-bold text-lg leading-relaxed tracking-tight">
-                    FlexCredit fixes this by turning your income into a full financial operating system.
+                    Monaris fixes this by turning your income into a full financial operating system.
                     </p>
                   </div>
                 </div>

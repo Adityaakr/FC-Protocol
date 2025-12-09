@@ -7,7 +7,7 @@ const features = [
     tag: "Stablecoin Treasury",
     title: "Onchain Bank Account",
     description:
-      "Deposit your stablecoins into FlexCredit to get a clean onchain bank experience: balances, history, and programmable routing of your funds.",
+      "Deposit your stablecoins into Monaris to get a clean onchain account experience: balances, history, and programmable routing of your funds.",
   },
   {
     icon: CreditCard,
@@ -28,7 +28,7 @@ const features = [
     tag: "Strategies + Storm Protection",
     title: "Automated Treasury",
     description:
-      "Allocate to vetted strategies and let FlexCredit automatically rebalance, repay, or protect you during market storms.",
+      "Allocate to vetted strategies and let Monaris automatically rebalance, repay, or protect you during market storms.",
   },
 ];
 
@@ -108,7 +108,7 @@ export const ProductSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            FlexCredit: a <span className="text-blue-600">bank account, credit line, AI yield, and treasury brain</span> in one app.
+            Monaris: a <span className="text-blue-600">account, credit line, AI yield, and treasury brain</span> in one app.
           </h2>
         </motion.div>
 

@@ -9,13 +9,12 @@ export const FooterSection = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
-                src="/flex.png" 
-                alt="FlexCredit Logo" 
+                src="mon.png" 
+                alt="Monaris Logo" 
                 className="w-12 h-12 rounded-xl object-contain"
               />
               <div className="flex flex-col">
-                <span className="font-display font-bold text-xl text-foreground">FlexCredit</span>
-                <span className="text-xs text-muted-foreground -mt-1">powered by FC</span>
+                <span className="font-display font-bold text-xl text-foreground">Monaris</span>
               </div>
             </div>
           </div>
@@ -74,7 +73,7 @@ export const FooterSection = () => {
               </a>
             </div>
             <div className="pt-4 space-y-1">
-              <p className="text-xs text-muted-foreground">© FlexCredit / FC, 2025.</p>
+              <p className="text-xs text-muted-foreground">© Monaris, 2025.</p>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ const personas = [
     icon: User,
     title: "Stablecoin freelancers",
     description: "Paid in USDC, but no credit card that understands their income.",
-    benefit: "FlexCredit gives them an onchain account + revolving credit + a safe place to run yield.",
+    benefit: "Monaris gives them an onchain account + revolving credit + a safe place to run yield.",
     features: [
       "Income-based credit lines",
       "Smart debt/credit account management",
@@ -20,7 +20,7 @@ const personas = [
     icon: Users,
     title: "Small onchain teams / DAOs",
     description: "Team treasuries and grants in USDC.",
-    benefit: "Use FlexCredit to manage runway, allocate to low-risk strategies, and protect during market shocks.",
+    benefit: "Use Monaris to manage runway, allocate to low-risk strategies, and protect during market shocks.",
     features: [
       "Multi-sig treasury management",
       "Runway optimization tools",
@@ -34,7 +34,7 @@ const personas = [
     icon: Zap,
     title: "Onchain-native builders & traders",
     description: "Hold USDC but tired of manually moving between protocols.",
-    benefit: "FlexCredit gives them credit + treasury automation + risk layer.",
+    benefit: "Monaris gives them credit + treasury automation + risk layer.",
     features: [
       "Revolving credit lines for trading capital",
       "Automated yield optimization across protocols",

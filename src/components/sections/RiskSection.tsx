@@ -151,7 +151,7 @@ export const RiskSection = () => {
                 Yield without being naked long
               </h3>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">
-                FlexCredit integrates hedged and delta-neutral strategies via FC's strategy adapters — think spot + short,
+                Monaris integrates hedged and delta-neutral strategies via FC's strategy adapters — think spot + short,
                 basis trades, or LP + hedge setups.
               </p>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">

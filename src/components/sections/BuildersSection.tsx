@@ -46,7 +46,7 @@ export const BuildersSection = () => {
             Built for <span className="text-cyan-500">builders</span> too.
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">
-            Developers can build apps on top of FC, not just use FlexCredit.
+            Developers can build apps on top of FC, not just use Monaris.
           </p>
         </motion.div>
 
@@ -111,7 +111,7 @@ export const BuildersSection = () => {
               <div className="text-gray-500">
                 <span className="text-purple-400">import</span>{" "}
                 <span className="text-gray-400">{'{'}</span>{" "}
-                <span className="text-cyan-300">FlexCreditSDK</span>
+                <span className="text-cyan-300">MonarisSDK</span>
                 <span className="text-gray-400">,</span>{" "}
                 <span className="text-cyan-300">CreditAccount</span>
                 <span className="text-gray-400">{'}'}</span>{" "}
@@ -128,7 +128,7 @@ export const BuildersSection = () => {
                   <span className="text-cyan-300">sdk</span>{" "}
                   <span className="text-gray-400">=</span>{" "}
                   <span className="text-purple-400">new</span>{" "}
-                  <span className="text-yellow-300">FlexCreditSDK</span>
+                  <span className="text-yellow-300">MonarisSDK</span>
                   <span className="text-gray-400">(</span>
                   <span className="text-orange-300">provider</span>
                   <span className="text-gray-400">)</span>

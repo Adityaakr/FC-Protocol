@@ -133,7 +133,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed"
               >
-                FlexCredit turns your income into a single onchain account for balances, payments, and cashflow, plus an income-backed, under-collateralized credit line. On top, an AI-powered treasury allocates idle funds into strategies with progressive protection instead of cliff liquidations.
+                Monaris turns your income into a single onchain account for balances, payments, and cashflow, plus an income-backed, under-collateralized credit line. On top, an AI-powered treasury allocates idle funds into strategies with progressive protection instead of cliff liquidations.
               </motion.p>
             </div>
 

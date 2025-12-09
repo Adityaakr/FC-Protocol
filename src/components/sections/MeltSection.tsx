@@ -100,7 +100,7 @@ export const MeltSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            <span className="text-blue-600">FC Protocol</span>: the engine behind FlexCredit.
+            <span className="text-blue-600">FC Protocol</span>: the engine behind Monaris.
           </h2>
         </motion.div>
 
@@ -115,13 +115,13 @@ export const MeltSection = () => {
           >
             <div className="space-y-5">
               <p className="text-lg text-gray-600 font-medium leading-relaxed">
-                FC is the credit, treasury, and risk protocol that powers FlexCredit and future apps.
+                FC is the credit, treasury, and risk protocol that powers Monaris and future apps.
               </p>
               <p className="text-lg text-gray-600 font-medium leading-relaxed">
                 It tracks user cashflow, credit usage, strategy allocations, and risk profile.
               </p>
               <p className="text-lg text-gray-600 font-medium leading-relaxed">
-                It's designed to sit under multiple apps, not just FlexCredit.
+                It's designed to sit under multiple apps, not just Monaris.
               </p>
             </div>
 
@@ -154,10 +154,10 @@ export const MeltSection = () => {
           >
             <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-8 shadow-lg">
               <div className="space-y-6">
-                {/* Top: FlexCredit App */}
+                {/* Top: Monaris App */}
                 <div className="text-center">
                   <div className="inline-block bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl px-6 py-4 shadow-sm">
-                    <div className="font-display font-bold text-lg text-blue-600">FlexCredit App</div>
+                    <div className="font-display font-bold text-lg text-blue-600">Monaris App</div>
                     <div className="text-xs text-gray-600 mt-1 font-medium">User Interface Layer</div>
                   </div>
                 </div>

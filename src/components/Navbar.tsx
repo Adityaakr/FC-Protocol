@@ -40,13 +40,12 @@ export const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img 
-              src="/flex.png" 
-              alt="FlexCredit Logo" 
+              src="/mon.png" 
+              alt="Monaris Logo" 
               className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg lg:text-xl text-foreground">FlexCredit</span>
-              <span className="text-xs text-muted-foreground -mt-1">powered by FC Protocol</span>
+              <span className="font-display font-bold text-lg lg:text-2xl text-foreground">Monaris</span>
             </div>
           </div>
 

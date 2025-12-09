@@ -1,18 +1,18 @@
-# FlexCredit - Complete Project Overview
+# Monaris - Complete Project Overview
 
 ## 🎯 Project Summary
 
-**FlexCredit** is a next-generation onchain banking, credit, and treasury platform built on the **FC Protocol**. It transforms stablecoin income into a complete financial operating system with banking features, income-backed credit lines, and AI-powered automated treasury management.
+**Monaris** is a next-generation onchain account, credit, and treasury platform built on the **FC Protocol**. It transforms stablecoin income into a complete financial operating system with account features, income-backed credit lines, and AI-powered automated treasury management.
 
 ---
 
 ## 📁 Repository Structure
 
 ### Main Application (`/src`)
-The primary FlexCredit marketing website and application interface.
+The primary Monaris marketing website and application interface.
 
 ### FC Subdirectory (`/FC`)
-An alternative version of the FlexCredit website with a different design approach.
+An alternative version of the Monaris website with a different design approach.
 
 ---
 
@@ -20,7 +20,7 @@ An alternative version of the FlexCredit website with a different design approac
 
 ### Three-Tier System
 
-1. **FlexCredit App** (User Interface Layer)
+1. **Monaris App** (User Interface Layer)
    - User-facing application for managing accounts, credit, and treasury
    - Beautiful, modern React-based web interface
 
@@ -63,7 +63,7 @@ An alternative version of the FlexCredit website with a different design approac
   4. No unified view of cash, credit, and strategy risk
   5. Need for AI that earns delta-neutral DeFi yield
 - "The missing layer" card explaining the gap in the market
-- Explains FlexCredit's solution approach
+- Explains Monaris's solution approach
 
 ### 3. **ProductSection** (`/src/components/sections/ProductSection.tsx`)
 - Light blue gradient background with waveform patterns
@@ -256,7 +256,7 @@ npm run preview      # Preview production build
 ## 🔗 External Integrations
 
 - **Typeform**: Waitlist signup (`https://form.typeform.com/to/c6vpCpMA`)
-- **Website**: [FlexCredit.in](https://flexcredit.in)
+- **Website**: [Monaris](https://monaris)
 
 ---
 
@@ -322,7 +322,7 @@ npm run preview      # Preview production build
 
 ## 🎉 Summary
 
-This is a **complete, production-ready marketing website** for FlexCredit, featuring:
+This is a **complete, production-ready marketing website** for Monaris, featuring:
 - ✅ Beautiful, modern UI/UX
 - ✅ Fully responsive design
 - ✅ Smooth animations
@@ -334,5 +334,6 @@ This is a **complete, production-ready marketing website** for FlexCredit, featu
 - ✅ Optimized build configuration
 
 The project demonstrates a professional-grade web application ready for deployment and user acquisition.
+
 
 

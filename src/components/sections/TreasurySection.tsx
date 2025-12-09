@@ -5,12 +5,12 @@ const steps = [
   {
     icon: DollarSign,
     title: "USDC Incomes Come In",
-    description: "Freelancers and teams get paid in stablecoins into their FlexCredit account.",
+    description: "Freelancers and teams get paid in stablecoins into their Monaris account.",
     badge: "+ $1,200 USDC from client",
   },
   {
     icon: TrendingUp,
-    title: "FlexCredit Assigns a Credit Line",
+    title: "Monaris Assigns a Credit Line",
     description: "FC's credit engine assigns a starter limit based on cashflow, behavior, and risk profile.",
     badge: "Credit line: $1,500 | Available: $1,500",
   },
@@ -23,7 +23,7 @@ const steps = [
   {
     icon: BarChart,
     title: "Treasury Engine Rebalances",
-    description: "FlexCredit keeps target ratios between cash, strategies, and buffer; you see one unified view.",
+    description: "Monaris keeps target ratios between cash, strategies, and buffer; you see one unified view.",
     badge: "Cash 50% • Strategies 30% • Buffer 20%",
   },
 ];
@@ -40,7 +40,7 @@ export const TreasurySection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-            How <span className="text-gradient">credit and automated treasury</span> work in FlexCredit.
+            How <span className="text-gradient">credit and automated treasury</span> work in Monaris.
           </h2>
         </motion.div>
 
