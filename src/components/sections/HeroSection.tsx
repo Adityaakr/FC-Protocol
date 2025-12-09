@@ -231,7 +231,7 @@ export const HeroSection = () => {
                           <div className="w-1 h-1.5 bg-slate-700 rounded-sm"></div>
                           <div className="w-1 h-2 bg-slate-700 rounded-sm"></div>
                           <div className="w-1 h-2.5 bg-slate-700 rounded-sm"></div>
-                        </div>
+                  </div>
                         {/* WiFi */}
                         <svg className="w-3.5 h-2.5" viewBox="0 0 20 14" fill="none">
                           <path d="M10 0C6 0 2.5 1.5 0 4L10 14L20 4C17.5 1.5 14 0 10 0Z" fill="#1f2937"/>
@@ -240,10 +240,10 @@ export const HeroSection = () => {
                         <div className="w-5 h-2.5 border border-slate-700 rounded-sm relative">
                           <div className="absolute right-0 top-0.5 w-0.5 h-1.5 bg-slate-700 rounded-r"></div>
                           <div className="w-full h-full bg-slate-700 rounded-sm" style={{ width: '90%' }}></div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
+                </div>
+                </div>
+              </div>
 
                   {/* Main Dashboard Container - Glassmorphism Design */}
                   <div
@@ -307,13 +307,6 @@ export const HeroSection = () => {
                         <div className="text-4xl font-semibold text-slate-900 mb-1.5 tracking-tight">$687,180.00</div>
                         <div className="flex items-center justify-center gap-2">
                           <span className="text-xs text-slate-700 font-medium">687,180.00 USDC</span>
-                          <motion.button
-                            whileHover={{ scale: 1.08 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-2 py-0.5 bg-white border border-slate-200 rounded-full shadow hover:bg-slate-50 transition-all"
-                          >
-                            <span className="text-[9px] font-semibold text-slate-800">USDC</span>
-                          </motion.button>
                     </div>
                   </motion.div>
 
@@ -353,7 +346,7 @@ export const HeroSection = () => {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         whileHover={{ scale: 1.01 }}
                         className="backdrop-blur-xl bg-white/90 rounded-3xl border border-slate-200 shadow-xl p-4 hover:bg-white transition-all"
-                      >
+                  >
                         <div className="text-[10px] font-bold text-slate-800 mb-3 uppercase tracking-widest">Account Snapshot</div>
                         <div className="space-y-3">
                           <div className="flex items-center justify-between py-0.5">
@@ -425,15 +418,15 @@ export const HeroSection = () => {
                                   <div className="text-[11px] font-semibold text-slate-900">{item.label}</div>
                                   <div className="text-[9px] text-slate-500 font-medium">{item.time}</div>
                                 </div>
-                              </div>
+                      </div>
                               <span className="text-xs font-bold text-slate-800">{item.amount}</span>
                             </motion.div>
                           ))}
-                        </div>
+                      </div>
                       </motion.div>
                       </div>
 
-                  </div>
+                    </div>
                 </div>
               </div>
             </div>
@@ -445,7 +438,7 @@ export const HeroSection = () => {
                 mobileClassName="translate-y-4"
                 items={dockItems}
               />
-            </div>
+              </div>
           </motion.div>
         </div>
       </div>

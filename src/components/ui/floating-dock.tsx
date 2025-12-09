@@ -23,7 +23,7 @@ export const FloatingDock = ({
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
+      {/* Mobile dock hidden */}
     </>
   );
 };
