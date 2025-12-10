@@ -151,7 +151,7 @@ export const RiskSection = () => {
                 Yield without being naked long
               </h3>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">
-                Monaris integrates hedged and delta-neutral strategies via FC's strategy adapters — think spot + short,
+                Monaris integrates hedged and delta-neutral strategies via Monaris Protocol's strategy adapters — think spot + short,
                 basis trades, or LP + hedge setups.
               </p>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">
@@ -189,7 +189,7 @@ export const RiskSection = () => {
                 Don't get nuked by liquidations
               </h3>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">
-                Instead of letting you hit a hard liquidation cliff, FC's risk layer tracks health factors and risk
+                Instead of letting you hit a hard liquidation cliff, Monaris Protocol's risk layer tracks health factors and risk
                 metrics.
               </p>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">

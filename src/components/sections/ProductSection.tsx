@@ -14,7 +14,7 @@ const features = [
     tag: "Income-backed, zero extra collateral",
     title: "Credit Line",
     description:
-      "FC's credit engine translates your income and cashflow profile into a revolving credit line — without requiring you to over-collateralize with idle assets.",
+      "Monaris Protocol's credit engine translates your income and cashflow profile into a revolving credit line — without requiring you to over-collateralize with idle assets.",
   },
   {
     icon: TrendingUp,

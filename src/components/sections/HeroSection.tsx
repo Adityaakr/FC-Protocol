@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { ArrowRight, TrendingUp, Shield, Wallet, Sparkles, PieChart, Activity, Send, Receipt, Clock, CheckCircle2, AlertCircle, Settings, Bell, ChevronDown, Play, Pause, Power, ToggleLeft, ToggleRight, QrCode, Home, Building2, Users, Eye, EyeOff, Download, CreditCard, BarChart3, Plus, ArrowDownCircle, ArrowUpCircle } from "lucide-react";
+import { ArrowRight, TrendingUp, Shield, Wallet, Sparkles, PieChart, Activity, Send, Receipt, Clock, CheckCircle2, AlertCircle, Settings, Bell, ChevronDown, Play, Pause, Power, ToggleLeft, ToggleRight, Home, Building2, Users, Eye, EyeOff, Download, CreditCard, BarChart3, Plus, ArrowDownCircle, ArrowUpCircle } from "lucide-react";
 import { IconHome, IconCreditCard, IconChartBar, IconShield, IconActivity } from "@tabler/icons-react";
 import { useState, useEffect } from "react";
 import dashboardHero from "@/assets/dashboard-hero.png";
@@ -214,13 +214,9 @@ export const HeroSection = () => {
                 {/* Screen Glass Effect */}
                 <div className="relative bg-gradient-to-b from-white via-slate-50 to-slate-100 rounded-[2.8rem] overflow-hidden shadow-inner">
                   {/* iPhone Status Bar / Dynamic Island */}
-                  <div className="relative h-12 flex items-center justify-center border-b border-slate-200 bg-white">
+                  <div className="relative h-12 flex items-center justify-center bg-white">
                     {/* Dynamic Island - iPhone 15 Pro */}
-                    <div className="absolute top-2.5 w-[110px] h-5 bg-black rounded-full flex items-center justify-center gap-1.5 px-3.5 shadow-lg">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-sm"></div>
-                      <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 shadow-sm"></div>
-                      <div className="w-1.5 h-1.5 rounded-full bg-red-500 shadow-sm"></div>
-                    </div>
+                    <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-[110px] h-7 bg-black rounded-full shadow-lg z-10"></div>
                     {/* Status Bar Info */}
                     <div className="absolute top-2.5 left-4 right-4 flex items-center justify-between text-slate-700 text-[10px] font-semibold">
                       <div>1:20 PM</div>
@@ -263,37 +259,11 @@ export const HeroSection = () => {
                       }}></div>
                       {/* Additional depth layer */}
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.03),transparent_70%)]"></div>
-                    </div>
+                      </div>
 
                   {/* Bottom gradient fill to avoid blank space */}
                   <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-white/80 to-white pointer-events-none" />
 
-                    {/* Top Header - Glassmorphism */}
-                    <div className="sticky top-0 z-20 px-4 pt-2 pb-2 flex items-center justify-between backdrop-blur-2xl bg-white/92 border-b border-slate-200/70 shadow-sm">
-                      <div className="flex items-center gap-3">
-                        <div className="text-[13px] font-semibold text-slate-900 leading-none">james@fc</div>
-                        <span className="text-[11px] text-slate-300">•</span>
-                        <button className="text-[11px] text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline transition-colors leading-none">
-                          Toggle Balance
-                        </button>
-                      </div>
-                      <div className="flex items-center gap-2.5">
-                        <motion.div 
-                          whileHover={{ scale: 1.08 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="px-3 py-1 bg-emerald-50/95 backdrop-blur-md rounded-full border border-emerald-200 shadow-sm"
-                        >
-                          <span className="text-[10px] font-semibold text-emerald-700 tracking-wide">SAFE</span>
-                        </motion.div>
-                        <motion.button
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="w-8 h-8 rounded-full bg-white/96 backdrop-blur-md flex items-center justify-center border border-slate-200/80 shadow-sm hover:bg-white transition-all"
-                        >
-                          <QrCode className="w-3.5 h-3.5 text-slate-700" />
-                        </motion.button>
-                      </div>
-                    </div>
 
                     {/* Dashboard Content - Glassmorphism */}
                     <div className="relative px-4 pt-7 pb-28 space-y-5">

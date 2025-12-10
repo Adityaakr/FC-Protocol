@@ -40,10 +40,11 @@ export const FlexCreditBanner = () => {
               <span className="text-sm font-medium">GitHub</span>
             </a>
             <a
-              href="#"
-              className="flex items-center gap-2 text-gray-700 hover:text-gray-400 transition-colors cursor-not-allowed opacity-60"
+              href="https://x.com/monaris_fi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-400 transition-colors"
               aria-label="Twitter"
-              onClick={(e) => e.preventDefault()}
             >
               <Twitter className="w-5 h-5" />
               <span className="text-sm font-medium">Twitter</span>

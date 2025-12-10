@@ -100,7 +100,7 @@ export const MeltSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            <span className="text-blue-600">FC Protocol</span>: the engine behind Monaris.
+            <span className="text-blue-600">Monaris Protocol</span>: the engine behind Monaris.
           </h2>
         </motion.div>
 
@@ -115,7 +115,7 @@ export const MeltSection = () => {
           >
             <div className="space-y-5">
               <p className="text-lg text-gray-600 font-medium leading-relaxed">
-                FC is the credit, treasury, and risk protocol that powers Monaris and future apps.
+                Monaris Protocol is the credit, treasury, and risk protocol that powers Monaris and future apps.
               </p>
               <p className="text-lg text-gray-600 font-medium leading-relaxed">
                 It tracks user cashflow, credit usage, strategy allocations, and risk profile.
@@ -167,10 +167,10 @@ export const MeltSection = () => {
                   <div className="w-0.5 h-8 bg-blue-300" />
                 </div>
 
-                {/* Middle: FC Protocol */}
+                {/* Middle: Monaris Protocol */}
                 <div className="bg-gradient-to-br from-gray-50 to-blue-50 border-2 border-gray-300 rounded-2xl p-6 shadow-sm">
                   <div className="text-center mb-4">
-                    <div className="font-display font-bold text-xl text-black">FC Protocol</div>
+                    <div className="font-display font-bold text-xl text-black">Monaris Protocol</div>
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-white rounded-xl p-3 text-center border border-gray-200 shadow-sm">

@@ -11,7 +11,7 @@ const steps = [
   {
     icon: TrendingUp,
     title: "Monaris Assigns a Credit Line",
-    description: "FC's credit engine assigns a starter limit based on cashflow, behavior, and risk profile.",
+    description: "Monaris Protocol's credit engine assigns a starter limit based on cashflow, behavior, and risk profile.",
     badge: "Credit line: $1,500 | Available: $1,500",
   },
   {

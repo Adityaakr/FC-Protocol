@@ -16,7 +16,7 @@ const features = [
   {
     icon: Box,
     title: "Strategy Adapters",
-    description: "Plug your own strategies into FC under strict risk caps.",
+    description: "Plug your own strategies into Monaris Protocol under strict risk caps.",
   },
   {
     icon: Webhook,
@@ -43,10 +43,10 @@ export const BuildersSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            Built for <span className="text-cyan-500">builders</span> too.
+            Built for <span className="text-emerald-600">builders</span> too.
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">
-            Developers can build apps on top of FC, not just use Monaris.
+            Developers can build apps on top of Monaris Protocol, not just use Monaris.
           </p>
         </motion.div>
 
@@ -60,7 +60,7 @@ export const BuildersSection = () => {
             className="space-y-6"
           >
             <p className="text-lg text-gray-600 font-medium leading-relaxed">
-              FC exposes a clean set of contracts and data models for credit, treasury, strategies, and risk. You can build your own wallets, dashboards, or agent frameworks on top of it.
+              Monaris Protocol exposes a clean set of contracts and data models for credit, treasury, strategies, and risk. You can build your own wallets, dashboards, or agent frameworks on top of it.
 
             </p>
 
@@ -72,10 +72,10 @@ export const BuildersSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                  className="bg-gray-50 border border-gray-200 rounded-2xl p-5 hover:border-cyan-300 hover:shadow-md transition-all duration-300"
+                  className="bg-gray-50 border border-gray-200 rounded-2xl p-5 hover:border-emerald-500/40 hover:shadow-md hover:shadow-emerald-500/10 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-50 to-cyan-100 flex items-center justify-center mb-4 shadow-sm">
-                    <feature.icon className="w-6 h-6 text-cyan-600" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center mb-4 shadow-sm group-hover:from-emerald-100 group-hover:to-emerald-200 group-hover:scale-105 transition-all duration-300">
+                    <feature.icon className="w-6 h-6 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
                   </div>
                   <h4 className="font-display font-bold text-black mb-2 tracking-tight">{feature.title}</h4>
                   <p className="text-sm text-gray-600 font-medium leading-relaxed">{feature.description}</p>
@@ -84,7 +84,7 @@ export const BuildersSection = () => {
             </div>
 
             <div className="pt-4">
-              <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary/5">
+              <Button variant="outline" size="lg" className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 hover:border-emerald-700 hover:text-emerald-700 transition-all">
                 View Protocol Docs
               </Button>
             </div>
@@ -104,7 +104,7 @@ export const BuildersSection = () => {
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
-              <span className="text-sm text-gray-400 font-mono">fc-sdk.ts</span>
+              <span className="text-sm text-gray-400 font-mono">monaris-sdk.ts</span>
             </div>
             
             <div className="space-y-3 font-mono text-xs leading-relaxed">
@@ -113,15 +113,17 @@ export const BuildersSection = () => {
                 <span className="text-gray-400">{'{'}</span>{" "}
                 <span className="text-cyan-300">MonarisSDK</span>
                 <span className="text-gray-400">,</span>{" "}
-                <span className="text-cyan-300">CreditAccount</span>
+                <span className="text-cyan-300">zkTLS</span>
+                <span className="text-gray-400">,</span>{" "}
+                <span className="text-cyan-300">StrategyAdapter</span>
                 <span className="text-gray-400">{'}'}</span>{" "}
                 <span className="text-purple-400">from</span>{" "}
-                <span className="text-green-300">'@flexcredit/sdk'</span>
+                <span className="text-green-300">'@monaris/sdk'</span>
               </div>
               
               <div className="pt-2 space-y-2">
                 <div className="text-gray-500">
-                  <span className="text-gray-400">//</span> 1. Initialize SDK & query credit account
+                  <span className="text-gray-400">//</span> 1. Initialize SDK & verify offchain balances
                 </div>
                 <div>
                   <span className="text-purple-400">const</span>{" "}
@@ -133,6 +135,47 @@ export const BuildersSection = () => {
                   <span className="text-orange-300">provider</span>
                   <span className="text-gray-400">)</span>
                 </div>
+                <div className="pt-1">
+                  <span className="text-gray-500">
+                    <span className="text-gray-400">//</span> Verify Coinbase & bank balances via zkTLS
+                  </span>
+                </div>
+                <div>
+                  <span className="text-purple-400">const</span>{" "}
+                  <span className="text-cyan-300">verifiedBalance</span>{" "}
+                  <span className="text-gray-400">=</span>{" "}
+                  <span className="text-purple-400">await</span>{" "}
+                  <span className="text-yellow-300">zkTLS</span>
+                  <span className="text-gray-400">.</span>
+                  <span className="text-green-400">verifyOffchainBalance</span>
+                  <span className="text-gray-400">(</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-gray-400">{'{'}</span>
+                </div>
+                <div className="pl-6">
+                  <span className="text-cyan-300">coinbase</span>
+                  <span className="text-gray-400">:</span>{" "}
+                  <span className="text-green-300">'api_key_xxx'</span>
+                  <span className="text-gray-400">,</span>
+                </div>
+                <div className="pl-6">
+                  <span className="text-cyan-300">bank</span>
+                  <span className="text-gray-400">:</span>{" "}
+                  <span className="text-green-300">'plaid_token_xxx'</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-gray-400">{'}'}</span>
+                </div>
+                <div>
+                  <span className="text-gray-400">)</span>
+                </div>
+              </div>
+              
+              <div className="pt-2 space-y-2">
+                <div className="text-gray-500">
+                  <span className="text-gray-400">//</span> 2. Query credit account with verified income
+                </div>
                 <div>
                   <span className="text-purple-400">const</span>{" "}
                   <span className="text-cyan-300">account</span>{" "}
@@ -143,6 +186,8 @@ export const BuildersSection = () => {
                   <span className="text-green-400">getCreditAccount</span>
                   <span className="text-gray-400">(</span>
                   <span className="text-orange-300">userAddr</span>
+                  <span className="text-gray-400">,</span>{" "}
+                  <span className="text-cyan-300">verifiedBalance</span>
                   <span className="text-gray-400">)</span>
                 </div>
                 <div>
@@ -150,20 +195,20 @@ export const BuildersSection = () => {
                   <span className="text-gray-400">.</span>
                   <span className="text-green-400">log</span>
                   <span className="text-gray-400">(</span>
+                  <span className="text-green-300">`Credit Limit: $</span>
+                  <span className="text-gray-400">${'{'}</span>
                   <span className="text-orange-300">account</span>
                   <span className="text-gray-400">.</span>
                   <span className="text-cyan-300">limit</span>
-                  <span className="text-gray-400">,</span>{" "}
-                  <span className="text-orange-300">account</span>
-                  <span className="text-gray-400">.</span>
-                  <span className="text-cyan-300">available</span>
+                  <span className="text-gray-400">{'}'}</span>
+                  <span className="text-green-300">`</span>
                   <span className="text-gray-400">)</span>
                 </div>
               </div>
               
               <div className="pt-2 space-y-2">
                 <div className="text-gray-500">
-                  <span className="text-gray-400">//</span> 2. Get realized PNL from strategies
+                  <span className="text-gray-400">//</span> 3. Check realized PNL & allocate to strategy
                 </div>
                 <div>
                   <span className="text-purple-400">const</span>{" "}
@@ -174,15 +219,7 @@ export const BuildersSection = () => {
                   <span className="text-gray-400">.</span>
                   <span className="text-green-400">getRealizedPnL</span>
                   <span className="text-gray-400">(</span>
-                </div>
-                <div className="pl-4">
                   <span className="text-orange-300">userAddr</span>
-                  <span className="text-gray-400">,</span>
-                </div>
-                <div className="pl-4">
-                  <span className="text-orange-300">strategyId</span>
-                </div>
-                <div>
                   <span className="text-gray-400">)</span>
                 </div>
                 <div>
@@ -199,62 +236,40 @@ export const BuildersSection = () => {
                   <span className="text-green-300">`</span>
                   <span className="text-gray-400">)</span>
                 </div>
-              </div>
-              
-              <div className="pt-2 space-y-2">
-                <div className="text-gray-500">
-                  <span className="text-gray-400">//</span> 3. Track strategy performance & allocations
+                <div className="pt-1">
+                  <span className="text-gray-500">
+                    <span className="text-gray-400">//</span> Allocate to delta-neutral strategy adapter
+                  </span>
                 </div>
                 <div>
-                  <span className="text-purple-400">const</span>{" "}
-                  <span className="text-cyan-300">strategies</span>{" "}
-                  <span className="text-gray-400">=</span>{" "}
                   <span className="text-purple-400">await</span>{" "}
                   <span className="text-yellow-300">sdk</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-green-400">getUserStrategies</span>
+                  <span className="text-green-400">allocateStrategy</span>
                   <span className="text-gray-400">(</span>
-                  <span className="text-orange-300">userAddr</span>
-                  <span className="text-gray-400">)</span>
-                </div>
-                <div>
-                  <span className="text-orange-300">strategies</span>
-                  <span className="text-gray-400">.</span>
-                  <span className="text-green-400">forEach</span>
-                  <span className="text-gray-400">(</span>
-                  <span className="text-cyan-300">s</span>{" "}
-                  <span className="text-purple-400">=&gt;</span>{" "}
-                  <span className="text-gray-400">{'{'}</span>
                 </div>
                 <div className="pl-4">
-                  <span className="text-yellow-300">console</span>
+                  <span className="text-orange-300">userAddr</span>
+                  <span className="text-gray-400">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-cyan-300">StrategyAdapter</span>
                   <span className="text-gray-400">.</span>
-                  <span className="text-green-400">log</span>
-                  <span className="text-gray-400">(</span>
-                  <span className="text-orange-300">s</span>
-                  <span className="text-gray-400">.</span>
-                  <span className="text-cyan-300">name</span>
-                  <span className="text-gray-400">,</span>{" "}
-                  <span className="text-orange-300">s</span>
-                  <span className="text-gray-400">.</span>
-                  <span className="text-cyan-300">apy</span>
-                  <span className="text-gray-400">,</span>{" "}
-                  <span className="text-orange-300">s</span>
-                  <span className="text-gray-400">.</span>
-                  <span className="text-cyan-300">allocated</span>
-                  <span className="text-gray-400">)</span>
+                  <span className="text-green-400">DELTA_NEUTRAL_VAULT</span>
+                  <span className="text-gray-400">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-cyan-300">amount</span>
+                  <span className="text-gray-400">:</span>{" "}
+                  <span className="text-green-300">10000</span>
                 </div>
                 <div>
-                  <span className="text-gray-400">{'}'})</span>
+                  <span className="text-gray-400">)</span>
                 </div>
               </div>
             </div>
             
-            <div className="mt-6 pt-6 border-t border-gray-700">
-              <p className="text-xs text-gray-400 leading-relaxed">
-                Build credit-enabled apps with portable history, AI strategies, and custom DeFi integrations
-              </p>
-            </div>
+            
           </motion.div>
         </div>
       </div>

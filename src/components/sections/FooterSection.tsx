@@ -54,7 +54,9 @@ export const FooterSection = () => {
             <h4 className="font-display font-semibold text-foreground">Connect</h4>
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://x.com/monaris_fi"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center hover:bg-primary/10 hover:border-primary transition-colors"
               >
                 <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary" />

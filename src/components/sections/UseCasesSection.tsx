@@ -48,7 +48,7 @@ const personas = [
     icon: Bot,
     title: "AI Agents (Agentic Finance)",
     description: "Autonomous agents that need budgets, spending limits, and treasury automation.",
-    benefit: "FC provides programmable credit lines, on-chain allowances, budget constraints, and automated treasury management—all anchored in human-owned credit with full audit trails.",
+    benefit: "Monaris Protocol provides programmable credit lines, on-chain allowances, budget constraints, and automated treasury management—all anchored in human-owned credit with full audit trails.",
     features: [
       "Autonomous transactions",
       "On-chain allowances",
@@ -125,10 +125,36 @@ const institutionalFeatures = [
 export const UseCasesSection = () => {
   return (
     <section id="use-cases" className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Green to yellow gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#7cb342] via-[#c0d725] to-[#e8f442]" />
+      {/* Premium gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 via-lime-300/25 to-emerald-500/15 -z-10" />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+      {/* Multi-colored dotted pattern */}
+      <div className="absolute inset-0 -z-10" style={{
+        backgroundImage: `
+          radial-gradient(circle, rgba(34, 197, 94, 0.25) 1.5px, transparent 1.5px),
+          radial-gradient(circle, rgba(132, 204, 22, 0.2) 1.5px, transparent 1.5px),
+          radial-gradient(circle, rgba(74, 222, 128, 0.15) 1.5px, transparent 1.5px)
+        `,
+        backgroundSize: '40px 40px, 60px 60px, 80px 80px',
+        backgroundPosition: '0 0, 20px 20px, 40px 40px'
+      }} />
+      
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(34,197,94,0.12),transparent_50%)] -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(132,204,22,0.1),transparent_50%)] -z-10" />
+      
+      {/* Animated gradient blobs */}
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-emerald-400/12 rounded-full blur-3xl -z-10 animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-lime-300/12 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1.5s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '0.75s' }} />
+      
+      {/* Subtle grid overlay for depth */}
+      <div className="absolute inset-0 -z-10 opacity-[0.02]" style={{
+        backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.5) 1px, transparent 1px)`,
+        backgroundSize: '100px 100px'
+      }} />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Built for Everyone Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -137,11 +163,11 @@ export const UseCasesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-2 bg-cyan-100 rounded-full mb-4">
-            <span className="text-sm font-bold text-cyan-700 uppercase tracking-wide">USE CASES</span>
+          <div className="inline-block px-4 py-2 bg-emerald-100 rounded-full mb-4">
+            <span className="text-sm font-bold text-emerald-700 uppercase tracking-wide">USE CASES</span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 leading-tight tracking-tight">
-            <span className="text-black">Built for </span><span className="text-cyan-500">Everyone</span>
+            <span className="text-black">Built for </span><span className="text-emerald-600">Everyone</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
             From individual earners, large institutions to AI agents and developers
@@ -158,10 +184,10 @@ export const UseCasesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full bg-white/95 backdrop-blur-sm border border-white/50 rounded-3xl p-8 hover:shadow-xl hover:border-cyan-300 transition-all duration-300">
+              <div className="h-full bg-white/95 backdrop-blur-sm border border-emerald-500/20 rounded-3xl p-8 hover:shadow-2xl hover:border-emerald-500/40 hover:shadow-emerald-500/10 transition-all duration-300">
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-cyan-100 flex items-center justify-center mb-6 group-hover:from-cyan-100 group-hover:to-cyan-200 transition-all duration-300 shadow-sm">
-                  <persona.icon className="w-8 h-8 text-cyan-600" />
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center mb-6 group-hover:from-emerald-100 group-hover:to-emerald-200 transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:scale-105">
+                  <persona.icon className="w-8 h-8 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
                 </div>
 
                 {/* Title */}
@@ -173,17 +199,17 @@ export const UseCasesSection = () => {
                 <p className="text-gray-600 mb-4 font-medium leading-relaxed">{persona.description}</p>
 
                 {/* Benefit */}
-                <div className="bg-cyan-50 border-l-4 border-cyan-500 rounded-r-xl p-4 mb-6">
+                <div className="bg-emerald-50 border-l-4 border-emerald-500 rounded-r-xl p-4 mb-6">
                   <p className="text-sm text-gray-800 font-semibold leading-relaxed">{persona.benefit}</p>
                 </div>
 
                 {/* Features (for AI Agents) */}
                 {persona.features && (
-                  <div className="space-y-2.5">
-                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">Key Features:</p>
+                  <div className="space-y-2.5 pt-4 border-t border-emerald-500/10">
+                    <p className="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-3">Key Features:</p>
                     {persona.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-cyan-600" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
                         <span className="text-sm text-gray-700 font-medium">{feature}</span>
                       </div>
                     ))}
@@ -203,7 +229,7 @@ export const UseCasesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight tracking-tight">
-            <span className="text-black">Enterprise Credit </span><span className="text-cyan-500">Layer</span>
+            <span className="text-black">Enterprise Credit </span><span className="text-emerald-600">Layer</span>
           </h2>
           <p className="text-xl text-black max-w-4xl mx-auto font-medium leading-relaxed">
             Institutional-grade tools for liquidity management, corporate treasury optimization, and programmable credit lines
@@ -220,14 +246,14 @@ export const UseCasesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="h-full bg-white/95 backdrop-blur-sm border border-white/50 rounded-3xl p-8 hover:shadow-xl hover:border-cyan-300 transition-all duration-300">
+              <div className="h-full bg-white/95 backdrop-blur-sm border border-emerald-500/20 rounded-3xl p-8 hover:shadow-2xl hover:border-emerald-500/40 hover:shadow-emerald-500/10 transition-all duration-300">
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-cyan-100 flex items-center justify-center mb-6 group-hover:from-cyan-100 group-hover:to-cyan-200 transition-all duration-300 shadow-sm">
-                  <feature.icon className="w-8 h-8 text-cyan-600" />
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center mb-6 group-hover:from-emerald-100 group-hover:to-emerald-200 transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:scale-105">
+                  <feature.icon className="w-8 h-8 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-display font-bold text-black mb-3 tracking-tight">
+                <h3 className="text-xl font-display font-bold text-black mb-4 tracking-tight">
                   {feature.title}
                 </h3>
 
@@ -235,11 +261,11 @@ export const UseCasesSection = () => {
                 <p className="text-gray-600 mb-6 text-sm leading-relaxed font-medium">{feature.description}</p>
 
                 {/* Key Features */}
-                <div className="space-y-2.5">
-                  <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">Key Features:</p>
+                <div className="space-y-2.5 pt-4 border-t border-emerald-500/10">
+                  <p className="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-3">Key Features:</p>
                   {feature.keyFeatures.map((keyFeature, idx) => (
                     <div key={idx} className="flex items-center gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-600" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
                       <span className="text-sm text-gray-700 font-medium">{keyFeature}</span>
                     </div>
                   ))}
