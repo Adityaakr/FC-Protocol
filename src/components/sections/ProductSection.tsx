@@ -35,8 +35,8 @@ const features = [
 export const ProductSection = () => {
   return (
     <section id="product" className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Light blue gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#d4e9f7] via-[#e0f0f9] to-[#e8f4fb]" />
+      {/* Light blue gradient background (lighter) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#eaf4fb] via-[#f2f8fc] to-[#f7fbff]" />
       
       {/* Sophisticated dotted waveform pattern - center */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-64 opacity-20 pointer-events-none">
@@ -108,7 +108,7 @@ export const ProductSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            Monaris: a <span className="text-blue-600">account, credit line, AI yield, and treasury brain</span> in one app.
+            Monaris: a <span className="text-emerald-600">account, credit line, AI yield, and treasury brain</span> in one app.
           </h2>
         </motion.div>
 
@@ -122,15 +122,15 @@ export const ProductSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="h-full bg-white/95 backdrop-blur-sm border border-white/50 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-200">
+              <div className="h-full bg-white/95 backdrop-blur-sm border border-emerald-500/20 rounded-3xl p-8 hover:shadow-2xl hover:border-emerald-500/40 hover:shadow-emerald-500/10 transition-all duration-300">
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-6 group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-300 shadow-sm">
-                  <feature.icon className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center mb-6 group-hover:from-emerald-100 group-hover:to-emerald-200 group-hover:scale-105 transition-all duration-300 shadow-sm">
+                  <feature.icon className="w-8 h-8 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
                 </div>
 
                 {/* Tag */}
                 <div className="inline-block mb-4">
-                  <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full">
+                  <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200/50">
                     {feature.tag}
                   </span>
                 </div>

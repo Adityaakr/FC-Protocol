@@ -100,7 +100,7 @@ export const MeltSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            <span className="text-blue-600">Monaris Protocol</span>: the engine behind Monaris.
+            <span className="text-emerald-600">Monaris Protocol</span>: the engine behind Monaris.
           </h2>
         </motion.div>
 
@@ -133,10 +133,10 @@ export const MeltSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-5 hover:border-blue-300 hover:shadow-md transition-all duration-300"
+                  className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-5 hover:border-emerald-500/40 hover:shadow-md hover:shadow-emerald-500/10 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-4 shadow-sm">
-                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center mb-4 shadow-sm group-hover:from-emerald-100 group-hover:to-emerald-200 group-hover:scale-105 transition-all duration-300">
+                    <feature.icon className="w-6 h-6 text-emerald-600 group-hover:text-emerald-700 transition-colors" />
                   </div>
                   <h4 className="font-display font-bold text-black mb-2 tracking-tight">{feature.title}</h4>
                   <p className="text-sm text-gray-600 font-medium leading-relaxed">{feature.description}</p>
@@ -156,19 +156,19 @@ export const MeltSection = () => {
               <div className="space-y-6">
                 {/* Top: Monaris App */}
                 <div className="text-center">
-                  <div className="inline-block bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl px-6 py-4 shadow-sm">
-                    <div className="font-display font-bold text-lg text-blue-600">Monaris App</div>
+                  <div className="inline-block bg-gradient-to-br from-emerald-50 to-emerald-100 border-2 border-emerald-200 rounded-2xl px-6 py-4 shadow-sm">
+                    <div className="font-display font-bold text-lg text-emerald-600">Monaris App</div>
                     <div className="text-xs text-gray-600 mt-1 font-medium">User Interface Layer</div>
                   </div>
                 </div>
 
                 {/* Arrow */}
                 <div className="flex justify-center">
-                  <div className="w-0.5 h-8 bg-blue-300" />
+                  <div className="w-0.5 h-8 bg-emerald-400" />
                 </div>
 
                 {/* Middle: Monaris Protocol */}
-                <div className="bg-gradient-to-br from-gray-50 to-blue-50 border-2 border-gray-300 rounded-2xl p-6 shadow-sm">
+                <div className="bg-gradient-to-br from-gray-50 to-emerald-50 border-2 border-gray-300 rounded-2xl p-6 shadow-sm">
                   <div className="text-center mb-4">
                     <div className="font-display font-bold text-xl text-black">Monaris Protocol</div>
                   </div>
@@ -190,7 +190,7 @@ export const MeltSection = () => {
 
                 {/* Arrow */}
                 <div className="flex justify-center">
-                  <div className="w-0.5 h-8 bg-blue-300" />
+                  <div className="w-0.5 h-8 bg-emerald-400" />
                 </div>
 
                 {/* Bottom: External DeFi */}

@@ -128,17 +128,6 @@ export const UseCasesSection = () => {
       {/* Premium gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 via-lime-300/25 to-emerald-500/15 -z-10" />
       
-      {/* Multi-colored dotted pattern */}
-      <div className="absolute inset-0 -z-10" style={{
-        backgroundImage: `
-          radial-gradient(circle, rgba(34, 197, 94, 0.25) 1.5px, transparent 1.5px),
-          radial-gradient(circle, rgba(132, 204, 22, 0.2) 1.5px, transparent 1.5px),
-          radial-gradient(circle, rgba(74, 222, 128, 0.15) 1.5px, transparent 1.5px)
-        `,
-        backgroundSize: '40px 40px, 60px 60px, 80px 80px',
-        backgroundPosition: '0 0, 20px 20px, 40px 40px'
-      }} />
-      
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(34,197,94,0.12),transparent_50%)] -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(132,204,22,0.1),transparent_50%)] -z-10" />
@@ -152,6 +141,37 @@ export const UseCasesSection = () => {
       <div className="absolute inset-0 -z-10 opacity-[0.02]" style={{
         backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.5) 1px, transparent 1px)`,
         backgroundSize: '100px 100px'
+      }} />
+
+      {/* Vertical dotted bands */}
+      <div className="absolute inset-0 -z-10 pointer-events-none" style={{
+        backgroundImage: `
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 8px,
+            rgba(148, 163, 184, 0.35) 8px,
+            rgba(148, 163, 184, 0.35) 10px
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 8px,
+            rgba(148, 163, 184, 0.35) 8px,
+            rgba(148, 163, 184, 0.35) 10px
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 8px,
+            rgba(148, 163, 184, 0.35) 8px,
+            rgba(148, 163, 184, 0.35) 10px
+          )
+        `,
+        backgroundSize: '2px 100%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '50% 0, 32% 0, 68% 0',
+        opacity: 0.35
       }} />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
