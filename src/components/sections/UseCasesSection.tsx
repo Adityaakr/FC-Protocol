@@ -4,57 +4,60 @@ import { User, Users, Zap, Bot, Building2, Briefcase, TrendingUp, Globe, Layers,
 const personas = [
   {
     icon: User,
-    title: "Stablecoin freelancers",
-    description: "Paid in USDC, but no credit card that understands their income.",
-    benefit: "Monaris gives them an onchain account + revolving credit + a safe place to run yield.",
+    title: "Stablecoin earners & freelancers",
+    description: "Paid in USDC, but still juggling wallets, invoices, and no real credit line.",
+    benefit: "Monaris gives them a stablecoin account, revolving credit, and a safe place to earn low-risk yield.",
+    mobileOneLiner: "Turn your USDC income into an account, credit line, and safe yield in one app.",
     features: [
-      "Income-based credit lines",
-      "Smart debt/credit account management",
-      "Subscription + autopay support",
-      "Spending limits and protected balances",
-      "Low-risk yield strategies",
-      "No traditional credit score required"
+      "Income-based credit lines (no heavy over-collateralization)",
+      "Smart debt + repayment management in one place",
+      "Subscriptions, autopay, and scheduled payouts",
+      "Spending limits and protected “don’t touch” balances",
+      "Conservative, market-neutral yield strategies"
     ]
   },
   {
     icon: Users,
-    title: "Small onchain teams / DAOs",
-    description: "Team treasuries and grants in USDC.",
-    benefit: "Use Monaris to manage runway, allocate to low-risk strategies, and protect during market shocks.",
+    title: "Onchain teams, DAOs & treasuries",
+    description: "Hold USDC for runway and grants, but treasury and spending are managed in spreadsheets and chats.",
+    benefit: "Monaris helps teams manage runway, allocate to low-risk strategies, and stay protected when markets move.",
+    mobileOneLiner: "Runway, spend controls, and low-risk yield for USDC treasuries in one place.",
     features: [
-      "Multi-sig treasury management",
-      "Runway optimization tools",
-      "Conservative yield strategies",
-      "Storm Shield downside protection",
-      "Team spending limits",
-      "Grant capital deployment"
+      "Shared onchain account that works with multi-sig wallets",
+      "Runway, cash-burn, and treasury health at a glance",
+      "Policy-based allocations into conservative strategies",
+      "Storm Shield downside protection (progressive derisking)",
+      "Team cards / spending limits, approvals, and budgets",
+      "Grants, payroll, and vendor payouts in stablecoins"
     ]
   },
   {
     icon: Zap,
     title: "Onchain-native builders & traders",
-    description: "Hold USDC but tired of manually moving between protocols.",
-    benefit: "Monaris gives them credit + treasury automation + risk layer.",
+    description: "Keep USDC spread across protocols for credit and yield, with no unified risk or automation.",
+    benefit: "Monaris gives them a credit line, AI-assisted treasury routing, and a built-in risk layer.",
+    mobileOneLiner: "One account for USDC, credit, and AI-routed yield with guardrails.",
     features: [
-      "Revolving credit lines for trading capital",
-      "Automated yield optimization across protocols",
-      "Real-time portfolio rebalancing",
-      "Storm Shield protection during volatility",
-      "Gas-efficient multi-protocol strategies",
-      "One-click strategy deployment"
+      "Revolving credit lines for trading and working capital",
+      "Automated allocation across curated market-neutral strategies",
+      "Real-time rebalancing within policy bands (cash / buffer / strategies)",
+      "Storm Shield protection during volatility and depegs",
+      "One-click strategy deployment from a single account"
     ]
   },
   {
     icon: Bot,
-    title: "AI Agents (Agentic Finance)",
-    description: "Autonomous agents that need budgets, spending limits, and treasury automation.",
-    benefit: "Monaris Protocol provides programmable credit lines, on-chain allowances, budget constraints, and automated treasury management—all anchored in human-owned credit with full audit trails.",
+    title: "AI agents & agentic finance",
+    description: "Agents need budgets, limits, and auditability—not raw keys to a treasury wallet.",
+    benefit: "Monaris Protocol gives agents programmable credit, onchain allowances, and treasury policies—anchored in human-owned credit with full audit trails.",
+    mobileOneLiner: "Give AI agents budgets, limits, and audit trails instead of a raw wallet.",
     features: [
-      "Autonomous transactions",
-      "On-chain allowances",
-      "Budget constraints",
-      "Task-level payments",
-      "Treasury automation"
+      "Agent sub-accounts with per-task budgets and spend limits",
+      "Onchain allowances and time-boxed authorizations",
+      "Strategy and venue whitelists enforced by policy",
+      "Task-level payments, refunds, and reporting",
+      "Complete audit log of every agent action",
+      "Easy integration for agent frameworks and wallets (API / SDK)"
     ]
   },
 ];
@@ -63,63 +66,39 @@ const institutionalFeatures = [
   {
     icon: Briefcase,
     title: "Corporate Treasury Automation",
-    description: "Manage working capital with automated credit lines tied to receivables. Reduce idle cash, optimize payment timing, and maintain liquidity across multiple chains and currencies.",
+    description: "Use Monaris to manage working capital in stablecoins with automated credit lines tied to receivables. Instead of idle balances and manual cash juggling, treasuries get policy-based allocation, Storm Shield protection, and clear runway visibility.",
+    mobileOneLiner: "Automate stablecoin working capital with credit lines and treasury policies.",
     keyFeatures: [
-      "Multi-chain liquidity pools",
-      "Automated rebalancing",
-      "Real-time cash forecasting"
+      "Multi-entity, multi-chain stablecoin treasuries",
+      "Receivables-linked working-capital credit",
+      "Policy rebalancing across cash/buffer/strategies",
+      "Real-time cash/runway dashboards with limits"
     ]
   },
   {
     icon: TrendingUp,
     title: "Institutional Liquidity Provision",
-    description: "Deploy capital into diversified credit pools with transparent risk bands. Earn yield on stablecoins while supporting the on-chain economy with full audit trails and performance analytics.",
+    description: "Deploy capital into diversified, risk-banded credit and yield pools. Monaris routes into curated, market-neutral strategies with strict limits and Storm Shield protection, while giving institutions full transparency on risk, performance, and flows.",
+    mobileOneLiner: "Deploy stablecoin liquidity into risk-banded, market-neutral credit pools.",
     keyFeatures: [
-      "Risk-adjusted returns",
-      "Portfolio diversification",
-      "Real-time reporting dashboards"
+      "Risk-tiered stablecoin credit & yield pools",
+      "Market-neutral, hedged strategies; drawdown/venue caps",
+      "Diversification across venues and strategies",
+      "Real-time performance analytics + audit trails"
     ]
   },
   {
     icon: Building2,
-    title: "B2B Payment Financing",
-    description: "Extend credit to business customers at point-of-sale. Enable larger transactions without upfront capital. Automated underwriting based on verified on-chain payment history.",
+    title: "Embedded B2B Credit & Payment Financing",
+    description: "Embed Monaris credit directly into your payment or marketplace flow. Offer net terms, invoice financing, and higher ticket sizes to your customers, powered by programmable credit limits and underwriting on verified onchain/offchain payment history.",
+    mobileOneLiner: "Embed net terms and invoice financing into your B2B payments with Monaris credit.",
     keyFeatures: [
-      "Invoice financing",
-      "Net terms automation",
-      "Credit scoring APIs"
+      "Embedded invoice/receivables financing at checkout",
+      "Net terms + working capital for merchants/partners",
+      "Programmable limits + risk via API/webhooks",
+      "Credit scoring + decisioning APIs for your products"
     ]
-  },
-  {
-    icon: Globe,
-    title: "Cross-Border Settlement",
-    description: "Facilitate instant cross-border payments with embedded credit lines. Eliminate wire funding requirements and FX risk through programmable treasury management.",
-    keyFeatures: [
-      "T+0 settlement",
-      "Multi-currency support",
-      "Hedging strategies"
-    ]
-  },
-  {
-    icon: Layers,
-    title: "Supply Chain Finance",
-    description: "Unlock working capital for suppliers and distributors. Track goods movement on-chain and release payments automatically. Dynamic credit based on verified shipment data.",
-    keyFeatures: [
-      "Smart contract escrows",
-      "Milestone-based releases",
-      "Vendor onboarding tools"
-    ]
-  },
-  {
-    icon: Database,
-    title: "White-Label Credit Infrastructure",
-    description: "Embed Protean's credit engine into your platform. Offer branded credit products to your users with full control over risk parameters, pricing, and user experience.",
-    keyFeatures: [
-      "API-first architecture",
-      "Custom risk models",
-      "Branded checkout flows"
-    ]
-  },
+  }
 ];
 
 export const UseCasesSection = () => {
@@ -187,10 +166,13 @@ export const UseCasesSection = () => {
             <span className="text-sm font-bold text-emerald-700 uppercase tracking-wide">USE CASES</span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 leading-tight tracking-tight">
-            <span className="text-black">Built for </span><span className="text-emerald-600">Everyone</span>
+            <span className="text-black">Built for the </span><span className="text-emerald-600">Stablecoin Economy</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
-            From individual earners, large institutions to AI agents and developers
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-medium hidden md:block">
+            One Money OS for individuals, teams, power users, and AI agents.
+          </p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto font-medium md:hidden">
+            One Money OS — for people, teams, and agents.
           </p>
         </motion.div>
 
@@ -219,9 +201,15 @@ export const UseCasesSection = () => {
                 <p className="text-gray-600 mb-4 font-medium leading-relaxed">{persona.description}</p>
 
                 {/* Benefit */}
-                <div className="bg-emerald-50 border-l-4 border-emerald-500 rounded-r-xl p-4 mb-6">
+                <div className="bg-emerald-50 border-l-4 border-emerald-500 rounded-r-xl p-4 mb-6 hidden md:block">
                   <p className="text-sm text-gray-800 font-semibold leading-relaxed">{persona.benefit}</p>
                 </div>
+                {/* Mobile one-liner */}
+                {persona.mobileOneLiner && (
+                  <p className="md:hidden text-sm text-emerald-700 font-semibold leading-relaxed mb-6">
+                    “{persona.mobileOneLiner}”
+                  </p>
+                )}
 
                 {/* Features (for AI Agents) */}
                 {persona.features && (
@@ -252,7 +240,7 @@ export const UseCasesSection = () => {
             <span className="text-black">Enterprise Credit </span><span className="text-emerald-600">Layer</span>
           </h2>
           <p className="text-xl text-black max-w-4xl mx-auto font-medium leading-relaxed">
-            Institutional-grade tools for liquidity management, corporate treasury optimization, and programmable credit lines
+            Institutional-grade rails for stablecoin treasuries, liquidity providers, and B2B platforms.
           </p>
         </motion.div>
 
@@ -278,7 +266,13 @@ export const UseCasesSection = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-6 text-sm leading-relaxed font-medium">{feature.description}</p>
+                <p className="text-gray-600 mb-6 text-sm leading-relaxed font-medium hidden md:block">{feature.description}</p>
+                {/* Mobile one-liner */}
+                {feature.mobileOneLiner && (
+                  <p className="md:hidden text-sm text-emerald-700 font-semibold leading-relaxed mb-6">
+                    “{feature.mobileOneLiner}”
+                  </p>
+                )}
 
                 {/* Key Features */}
                 <div className="space-y-2.5 pt-4 border-t border-emerald-500/10">

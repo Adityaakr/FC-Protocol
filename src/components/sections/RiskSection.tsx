@@ -132,7 +132,7 @@ export const RiskSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-4 leading-tight tracking-tight">
-            Delta-neutral strategies and{" "}
+            Market-neutral strategies and{" "}
             <span className="text-cyan-400">'storm shield' protection</span>.
           </h2>
         </motion.div>

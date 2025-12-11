@@ -6,7 +6,6 @@ const navItems = [
   { label: "Product", href: "#product" },
   { label: "Treasury & Credit", href: "#melt" },
   { label: "Risk Layer", href: "#risk" },
-  { label: "For Builders", href: "#builders" },
 ];
 
 export const Navbar = () => {
@@ -45,7 +44,7 @@ export const Navbar = () => {
               className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-display font-extrabold text-xl lg:text-2xl bg-gradient-to-r from-emerald-500 via-lime-500 to-emerald-600 bg-clip-text text-transparent drop-shadow-sm">
+              <span className="font-brand font-semibold text-2xl lg:text-3xl text-emerald-700 drop-shadow-sm">
                 Monaris
               </span>
             </div>

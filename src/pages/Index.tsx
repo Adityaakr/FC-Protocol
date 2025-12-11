@@ -5,7 +5,6 @@ import { ProductSection } from "@/components/sections/ProductSection";
 import { MeltSection } from "@/components/sections/MeltSection";
 import { RiskSection } from "@/components/sections/RiskSection";
 import { UseCasesSection } from "@/components/sections/UseCasesSection";
-import { BuildersSection } from "@/components/sections/BuildersSection";
 import { FlexCreditBanner as MonarisBanner } from "@/components/sections/FlexCreditBanner";
 
 const Index = () => {
@@ -19,7 +18,6 @@ const Index = () => {
         <MeltSection />
         <RiskSection />
         <UseCasesSection />
-        <BuildersSection />
       </main>
       <MonarisBanner />
     </div>

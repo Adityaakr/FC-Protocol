@@ -20,7 +20,7 @@ const problems = [
   },
   {
     icon: Bot,
-    text: "AI that earns market-neutral DeFi yield.",
+    text: "No, AI that earns market-neutral DeFi yield.",
   },
 ];
 
@@ -46,7 +46,7 @@ export const ProblemSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            Today, your stablecoin income has{" "}
+            Today, Stablecoin Income has{" "}
             <span className="relative inline-block text-blue-600">
               no real credit
               <div className="absolute -bottom-1 left-0 right-0 h-1 bg-blue-400/30 rounded-full" />

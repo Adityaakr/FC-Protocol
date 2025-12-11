@@ -5,7 +5,7 @@ const features = [
   {
     icon: Wallet,
     tag: "Stablecoin Treasury",
-    title: "Onchain Bank Account",
+    title: "Onchain Money Account",
     description:
       "Deposit your stablecoins into Monaris to get a clean onchain account experience: balances, history, and programmable routing of your funds.",
   },
@@ -19,7 +19,7 @@ const features = [
   {
     icon: TrendingUp,
     tag: "AI-Powered Yield",
-    title: "Delta-Neutral DeFi Yield",
+    title: "Market-Neutral DeFi Yield",
     description:
       "AI-powered strategies that earn delta-neutral DeFi yield for users across DeFi, optimizing returns while minimizing market exposure risk.",
   },
