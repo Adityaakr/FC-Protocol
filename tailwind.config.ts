@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         display: ['Urbanist', 'system-ui', 'sans-serif'],
         body: ['DM Sans', 'system-ui', 'sans-serif'],
-        brand: ['"Caveat"', 'cursive'],
+        brand: ['"Inter"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

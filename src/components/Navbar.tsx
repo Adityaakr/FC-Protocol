@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoImage from "@/assets/img-fav.png";
 
 const navItems = [
   { label: "Product", href: "#product" },
@@ -37,15 +38,16 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <img 
-              src="/mon.png" 
+              src={logoImage} 
               alt="Monaris Logo" 
               className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-brand font-semibold text-2xl lg:text-3xl text-emerald-700 drop-shadow-sm">
+              <span className="relative inline-block font-brand font-medium text-xl lg:text-2xl text-black tracking-tight">
                 Monaris
+                <span className="pointer-events-none absolute -bottom-1 left-0 right-0 h-1 bg-[linear-gradient(90deg,#6ede3f_0%,#53c72f_60%,#3fa92b_100%)] rounded-full blur-[0.6px] opacity-85" />
               </span>
             </div>
           </div>

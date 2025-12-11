@@ -96,7 +96,7 @@ export const HeroSection = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-emerald-500/40 backdrop-blur-sm shadow-[0_6px_20px_-12px_rgba(16,94,57,0.45)]">
                 <Sparkles className="w-4 h-4 text-emerald-500" />
                 <span className="text-sm font-semibold text-emerald-600">
-                  Next-Gen Banking
+                 MoneyOS
                 </span>
               </div>
             </motion.div>
