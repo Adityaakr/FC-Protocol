@@ -112,7 +112,7 @@ export const HeroSection = () => {
                 Banking meets{" "}
                 <span className="relative inline-block">
                   DeFi
-                  <div className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-emerald-300/40 via-lime-300/50 to-emerald-400/40 blur-md rounded-full" />
+                  <div className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-emerald-400/70 via-emerald-500/60 to-emerald-600/70 blur-sm rounded-full" />
                 </span>
               </motion.h1>
               
