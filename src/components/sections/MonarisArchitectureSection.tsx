@@ -114,7 +114,7 @@ export const MonarisArchitectureSection = () => {
   }, []);
 
   return (
-    <section id="monaris-architecture" className="bg-gradient-to-br from-slate-50 via-cyan-50/30 to-teal-50/40 font-sans overflow-x-hidden">
+    <section id="monaris-architecture" className="bg-gradient-to-br from-slate-50 via-lime-50/30 to-green-50/40 font-sans overflow-x-hidden">
       <div className="w-full max-w-[1800px] mx-auto px-4 py-2 sm:py-3 md:px-8 md:py-4">
         <motion.div 
           className="text-center mb-2 sm:mb-3 md:mb-4 lg:mb-0 lg:hidden"
@@ -248,7 +248,7 @@ function LeftSection() {
     >
       <div className="relative">
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-10">
-          <div className="px-3 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full text-white text-sm md:text-xs font-bold shadow-lg whitespace-nowrap">
+          <div className="px-3 py-1.5 md:px-4 md:py-2 bg-gradient-to-r from-lime-400 to-green-500 rounded-full text-white text-sm md:text-xs font-bold shadow-lg whitespace-nowrap">
             Stablecoin income in
           </div>
         </div>
@@ -257,12 +257,12 @@ function LeftSection() {
           <div className="absolute -left-4 -top-4 w-[calc(100%+32px)] h-[calc(100%+32px)] opacity-10">
             <div className="grid grid-cols-6 gap-1 p-2">
               {[...Array(24)].map((_, i) => (
-                <UserIcon key={i} className="w-2 h-2 md:w-3 md:h-3 text-teal-600" />
+                <UserIcon key={i} className="w-2 h-2 md:w-3 md:h-3 text-lime-600" />
               ))}
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl shadow-teal-500/10 border-2 border-teal-500/50 relative z-10">
+          <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl shadow-lime-500/10 border-2 border-lime-500/50 relative z-10">
             <h3 className="text-sm md:text-xs font-bold text-slate-900 mb-3 md:mb-3 text-center">
               Stablecoin Users & Treasuries
             </h3>
@@ -270,9 +270,9 @@ function LeftSection() {
               {users.map((user, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white rounded-lg p-2 md:p-2 border-2 border-teal-500/30 hover:border-teal-500/50 transition-all"
+                  className="bg-white rounded-lg p-2 md:p-2 border-2 border-lime-500/30 hover:border-lime-500/50 transition-all"
                 >
-                  <user.icon className="w-5 h-5 md:w-5 md:h-5 mx-auto mb-1.5 text-teal-600" />
+                  <user.icon className="w-5 h-5 md:w-5 md:h-5 mx-auto mb-1.5 text-lime-600" />
                   <p className="text-xs md:text-[8px] text-slate-900 font-semibold text-center leading-tight">{user.label}</p>
                 </div>
               ))}
@@ -285,7 +285,7 @@ function LeftSection() {
           {offchainSources.map((source, idx) => (
             <div 
               key={idx}
-              className="bg-white rounded-lg px-3 py-1.5 md:px-3 md:py-1.5 border-2 border-teal-500/30 shadow-sm"
+              className="bg-white rounded-lg px-3 py-1.5 md:px-3 md:py-1.5 border-2 border-lime-500/30 shadow-sm"
             >
               <p className="text-xs md:text-[8px] text-slate-900 font-semibold">{source}</p>
             </div>
@@ -301,31 +301,31 @@ function CenterSection() {
     {
       title: "Onchain Account Layer",
       subtitle: "Unified ledger - Balances - Payments - History",
-      color: "from-cyan-500 to-teal-500",
+      color: "from-lime-400 to-green-500",
       badge: null
     },
     {
       title: "Identity & Policy Engine",
       subtitle: "Humans & AI agents - Roles - Spend policies",
-      color: "from-teal-500 to-emerald-500",
+      color: "from-green-400 to-lime-500",
       badge: null
     },
     {
       title: "Income-Backed Credit Engine",
       subtitle: "Credit limits from stablecoin income + risk bands",
       badge: "Borrow against the future",
-      color: "from-emerald-500 to-teal-500",
+      color: "from-lime-500 to-green-500",
     },
     {
       title: "Treasury Autopilot",
       subtitle: "Cash - Buffer - Strategies - Rebalancing",
-      color: "from-teal-500 to-cyan-500",
+      color: "from-green-400 to-lime-500",
       badge: null
     },
     {
       title: "Storm Shield Risk OS",
       subtitle: "Progressive derisking - No cliff liquidations",
-      color: "from-cyan-500 to-blue-500",
+      color: "from-lime-400 to-green-600",
       badge: null
     },
   ];
@@ -338,14 +338,14 @@ function CenterSection() {
       transition={{ delay: 0.3 }}
     >
       <div className="relative">
-        <div className="bg-gradient-to-br from-slate-800 via-teal-900/40 to-slate-800 rounded-3xl p-5 md:p-6 shadow-2xl shadow-teal-900/30 border-2 border-teal-500/30 min-w-[580px] md:min-w-[800px] lg:min-w-[950px]">
+        <div className="bg-gradient-to-br from-slate-800 via-green-900/40 to-slate-800 rounded-3xl p-5 md:p-6 shadow-2xl shadow-green-900/30 border-2 border-lime-500/30 min-w-[580px] md:min-w-[800px] lg:min-w-[950px]">
           <div className="flex items-center justify-center gap-3 md:gap-3 mb-5 md:mb-6">
-            <div className="w-8 h-8 md:w-8 md:h-8 rounded-lg bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center overflow-hidden">
+            <div className="w-8 h-8 md:w-8 md:h-8 rounded-lg bg-gradient-to-br from-lime-400 to-green-600 flex items-center justify-center overflow-hidden">
               <img src="/mon-s.png" alt="Monaris" className="w-full h-full object-contain" />
             </div>
             <div>
               <h2 className="text-white font-bold text-base md:text-lg">Monaris Core</h2>
-              <p className="text-teal-300 text-xs md:text-xs font-semibold">Autopilot Money OS</p>
+              <p className="text-lime-300 text-xs md:text-xs font-semibold">Autopilot Money OS</p>
             </div>
           </div>
 
@@ -353,13 +353,13 @@ function CenterSection() {
             {modules.map((module, idx) => (
               <div 
                 key={idx}
-                className="relative bg-slate-800/80 rounded-xl p-4 md:p-4.5 border-2 border-teal-500/20 hover:border-teal-500/40 transition-all group overflow-hidden"
+                className="relative bg-slate-800/80 rounded-xl p-4 md:p-4.5 border-2 border-lime-500/20 hover:border-lime-500/40 transition-all group overflow-hidden"
               >
                 <div className={`w-full h-1.5 rounded-full bg-gradient-to-r ${module.color} mb-3 md:mb-3`} />
                 <h4 className="text-white font-bold text-[12px] md:text-[13px] mb-2 md:mb-2.5 leading-tight">{module.title}</h4>
-                <p className="text-teal-200 font-semibold text-[11px] md:text-[12px] leading-tight">{module.subtitle}</p>
+                <p className="text-lime-200 font-semibold text-[11px] md:text-[12px] leading-tight">{module.subtitle}</p>
                 {module.badge && (
-                  <div className="absolute -top-2 -right-2 md:-top-2 md:-right-2 px-2.5 py-1 md:px-2.5 md:py-1 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full shadow-lg z-10">
+                  <div className="absolute -top-2 -right-2 md:-top-2 md:-right-2 px-2.5 py-1 md:px-2.5 md:py-1 bg-gradient-to-r from-lime-500 to-green-600 rounded-full shadow-lg z-10">
                     <span className="text-[10px] md:text-[11px] font-bold text-white whitespace-nowrap">{module.badge}</span>
                   </div>
                 )}
@@ -367,29 +367,29 @@ function CenterSection() {
             ))}
           </div>
 
-          <div className="bg-slate-800/80 rounded-xl p-4 md:p-3 mb-4 md:mb-4 border-2 border-teal-500/30">
-            <div className="flex items-center justify-between gap-1 md:gap-2 text-xs md:text-[9px] text-teal-200">
+          <div className="bg-slate-800/80 rounded-xl p-4 md:p-3 mb-4 md:mb-4 border-2 border-lime-500/30">
+            <div className="flex items-center justify-between gap-1 md:gap-2 text-xs md:text-[9px] text-lime-200">
               <div className="flex items-center gap-1.5 flex-shrink-0">
-                <span className="w-6 h-6 md:w-5 md:h-5 rounded-full bg-teal-500/30 text-teal-300 flex items-center justify-center font-bold text-sm md:text-[10px]">2</span>
+                <span className="w-6 h-6 md:w-5 md:h-5 rounded-full bg-lime-500/30 text-lime-300 flex items-center justify-center font-bold text-sm md:text-[10px]">2</span>
                 <span className="font-bold whitespace-nowrap">Computes credit limit</span>
               </div>
-              <ArrowRightIcon className="w-5 h-5 md:w-4 md:h-4 text-teal-400 flex-shrink-0" />
+              <ArrowRightIcon className="w-5 h-5 md:w-4 md:h-4 text-lime-400 flex-shrink-0" />
               <div className="flex items-center gap-1.5 flex-shrink-0">
-                <span className="w-6 h-6 md:w-5 md:h-5 rounded-full bg-teal-500/30 text-teal-300 flex items-center justify-center font-bold text-sm md:text-[10px]">3</span>
+                <span className="w-6 h-6 md:w-5 md:h-5 rounded-full bg-lime-500/30 text-lime-300 flex items-center justify-center font-bold text-sm md:text-[10px]">3</span>
                 <span className="font-bold whitespace-nowrap">Allocates by policy</span>
               </div>
-              <ArrowRightIcon className="w-5 h-5 md:w-4 md:h-4 text-teal-400 flex-shrink-0" />
+              <ArrowRightIcon className="w-5 h-5 md:w-4 md:h-4 text-lime-400 flex-shrink-0" />
               <div className="flex items-center gap-1.5 flex-shrink-0">
-                <span className="w-6 h-6 md:w-5 md:h-5 rounded-full bg-teal-500/30 text-teal-300 flex items-center justify-center font-bold text-sm md:text-[10px]">4</span>
+                <span className="w-6 h-6 md:w-5 md:h-5 rounded-full bg-lime-500/30 text-lime-300 flex items-center justify-center font-bold text-sm md:text-[10px]">4</span>
                 <span className="font-bold whitespace-nowrap">Risk monitoring</span>
-                <ShieldIcon className="w-4 h-4 md:w-3 md:h-3 text-teal-400 flex-shrink-0" />
+                <ShieldIcon className="w-4 h-4 md:w-3 md:h-3 text-lime-400 flex-shrink-0" />
               </div>
             </div>
           </div>
 
           <div className="flex justify-center">
-            <div className="px-4 py-2 md:px-4 md:py-2 bg-gradient-to-r from-teal-500/30 to-cyan-500/30 rounded-full border-2 border-teal-400/50">
-              <span className="text-teal-200 text-sm md:text-[11px] font-bold">Autopilot treasury: Cash - Buffer - Strategies</span>
+            <div className="px-4 py-2 md:px-4 md:py-2 bg-gradient-to-r from-lime-500/30 to-green-500/30 rounded-full border-2 border-lime-400/50">
+              <span className="text-lime-200 text-sm md:text-[11px] font-bold">Autopilot treasury: Cash - Buffer - Strategies</span>
             </div>
           </div>
         </div>
@@ -422,7 +422,7 @@ function RightSection() {
       transition={{ delay: 0.5 }}
     >
       <div className="space-y-3 md:space-y-4">
-        <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl shadow-teal-500/10 border-2 border-teal-500/50">
+        <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl shadow-lime-500/10 border-2 border-lime-500/50">
           <h3 className="text-sm md:text-xs font-bold text-slate-900 mb-3 md:mb-3 text-center">
             Strategy Venues (on-chain)
           </h3>
@@ -430,7 +430,7 @@ function RightSection() {
             {strategies.map((strategy, idx) => (
               <div 
                 key={idx}
-                className="bg-white rounded-lg px-3 py-2 md:px-3 md:py-2 border-2 border-teal-500/30"
+                className="bg-white rounded-lg px-3 py-2 md:px-3 md:py-2 border-2 border-lime-500/30"
               >
                 <p className="text-xs md:text-[8px] text-slate-900 font-semibold text-center">{strategy}</p>
               </div>
@@ -442,7 +442,7 @@ function RightSection() {
             {chains.map((chain, idx) => (
               <div 
                 key={idx}
-                className="w-6 h-6 md:w-6 md:h-6 rounded-full bg-white border-2 border-teal-500/50 flex items-center justify-center"
+                className="w-6 h-6 md:w-6 md:h-6 rounded-full bg-white border-2 border-lime-500/50 flex items-center justify-center"
               >
                 <span className="text-xs md:text-[7px] font-bold text-slate-900">{chain}</span>
               </div>
@@ -450,7 +450,7 @@ function RightSection() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl shadow-teal-500/10 border-2 border-teal-500/50">
+        <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl shadow-lime-500/10 border-2 border-lime-500/50">
           <h3 className="text-sm md:text-xs font-bold text-slate-900 mb-3 md:mb-3 text-center">
             Payments & Uses
           </h3>
@@ -458,9 +458,9 @@ function RightSection() {
             {payments.map((payment, idx) => (
               <div 
                 key={idx}
-                className="flex items-center gap-2 md:gap-2 bg-white rounded-lg px-3 py-2 md:px-3 md:py-2 border-2 border-teal-500/30"
+                className="flex items-center gap-2 md:gap-2 bg-white rounded-lg px-3 py-2 md:px-3 md:py-2 border-2 border-lime-500/30"
               >
-                <payment.icon className="w-5 h-5 md:w-4 md:h-4 text-teal-600" />
+                <payment.icon className="w-5 h-5 md:w-4 md:h-4 text-lime-600" />
                 <p className="text-xs md:text-[8px] text-slate-900 font-semibold">{payment.label}</p>
               </div>
             ))}
@@ -468,7 +468,7 @@ function RightSection() {
         </div>
 
         <div className="flex justify-center">
-          <div className="px-4 py-2 md:px-4 md:py-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full shadow-lg">
+          <div className="px-4 py-2 md:px-4 md:py-2 bg-gradient-to-r from-lime-500 to-green-500 rounded-full shadow-lg">
             <span className="text-white text-sm md:text-[9px] font-semibold">Humans & AI agents act within policies</span>
           </div>
         </div>
@@ -493,22 +493,22 @@ function BottomSection() {
       {...fadeInUp}
       transition={{ delay: 0.7 }}
     >
-      <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl border-2 border-teal-500/50">
+      <div className="bg-white rounded-2xl p-4 md:p-4 shadow-xl border-2 border-lime-500/50">
         <div className="flex items-center justify-between mb-3 md:mb-3">
           <h3 className="text-sm md:text-xs font-bold text-slate-900">Data, AI & Integrations</h3>
-          <div className="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-3 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-full border-2 border-teal-500/50">
-            <span className="w-5 h-5 md:w-5 md:h-5 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white flex items-center justify-center font-bold text-xs md:text-[10px]">6</span>
-            <span className="text-xs md:text-[8px] text-teal-900 font-semibold">Continuous data feedback for credit, risk & automation</span>
+          <div className="flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-3 bg-gradient-to-r from-lime-50 to-green-50 rounded-full border-2 border-lime-500/50">
+            <span className="w-5 h-5 md:w-5 md:h-5 rounded-full bg-gradient-to-r from-lime-500 to-green-500 text-white flex items-center justify-center font-bold text-xs md:text-[10px]">6</span>
+            <span className="text-xs md:text-[8px] text-green-900 font-semibold">Continuous data feedback for credit, risk & automation</span>
           </div>
         </div>
         <div className="grid grid-cols-5 gap-2 md:gap-3">
           {services.map((service, idx) => (
             <div 
               key={idx}
-              className="relative bg-white rounded-xl p-2.5 md:p-3 border-2 border-teal-500/30 shadow-sm hover:shadow-md transition-all"
+              className="relative bg-white rounded-xl p-2.5 md:p-3 border-2 border-lime-500/30 shadow-sm hover:shadow-md transition-all"
             >
-              <div className="absolute -top-1 md:-top-2 left-1/2 -translate-x-1/2 w-0.5 h-8 md:h-10 bg-gradient-to-t from-teal-400/50 to-transparent" />
-              <service.icon className="w-5 h-5 md:w-5 md:h-5 mx-auto mb-1.5 md:mb-2 text-teal-600" />
+              <div className="absolute -top-1 md:-top-2 left-1/2 -translate-x-1/2 w-0.5 h-8 md:h-10 bg-gradient-to-t from-lime-400/50 to-transparent" />
+              <service.icon className="w-5 h-5 md:w-5 md:h-5 mx-auto mb-1.5 md:mb-2 text-lime-600" />
               <p className="text-[10px] md:text-[7px] text-slate-900 font-semibold text-center leading-tight">{service.label}</p>
             </div>
           ))}
@@ -529,10 +529,10 @@ function FlowArrows() {
         transition={{ delay: 0.8, duration: 0.5 }}
       >
         <div className="flex items-center gap-1 md:gap-2">
-          <div className="w-12 md:w-20 lg:w-28 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full relative">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] md:border-l-[8px] border-l-cyan-500 border-y-[3px] md:border-y-[4px] border-y-transparent" />
+          <div className="w-12 md:w-20 lg:w-28 h-1 bg-gradient-to-r from-lime-400 to-green-500 rounded-full relative">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] md:border-l-[8px] border-l-green-500 border-y-[3px] md:border-y-[4px] border-y-transparent" />
           </div>
-          <div className="flex items-center gap-1.5 px-3 py-1.5 md:px-2 md:py-1 bg-teal-500 rounded-full">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 md:px-2 md:py-1 bg-lime-500 rounded-full">
             <span className="text-white font-bold text-sm md:text-[10px]">1</span>
             <span className="text-white text-xs md:text-[8px] whitespace-nowrap font-semibold">Income & deposits</span>
           </div>
@@ -547,12 +547,12 @@ function FlowArrows() {
         transition={{ delay: 1, duration: 0.5 }}
       >
         <div className="flex items-center gap-1 md:gap-2">
-          <div className="flex items-center gap-1.5 px-3 py-1.5 md:px-2 md:py-1 bg-cyan-500 rounded-full">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 md:px-2 md:py-1 bg-lime-500 rounded-full">
             <span className="text-white font-bold text-sm md:text-[10px]">5</span>
             <span className="text-white text-xs md:text-[8px] whitespace-nowrap font-semibold">Capital to strategies & use</span>
           </div>
-          <div className="w-10 md:w-16 lg:w-24 h-1 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-full relative">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] md:border-l-[8px] border-l-emerald-500 border-y-[3px] md:border-y-[4px] border-y-transparent" />
+          <div className="w-10 md:w-16 lg:w-24 h-1 bg-gradient-to-r from-lime-500 to-green-500 rounded-full relative">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] md:border-l-[8px] border-l-green-500 border-y-[3px] md:border-y-[4px] border-y-transparent" />
           </div>
         </div>
       </motion.div>
@@ -569,10 +569,10 @@ function ScaleBadge() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1.2, duration: 0.5 }}
     >
-      <div className="flex items-center gap-2 md:gap-3 px-4 py-2 md:px-4 md:py-2 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 backdrop-blur-xl rounded-full shadow-xl border-2 border-teal-500/50">
+      <div className="flex items-center gap-2 md:gap-3 px-4 py-2 md:px-4 md:py-2 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 backdrop-blur-xl rounded-full shadow-xl border-2 border-lime-500/50">
         <div className="flex -space-x-1">
           {[...Array(4)].map((_, i) => (
-            <div key={i} className="w-4 h-4 md:w-4 md:h-4 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 border-2 border-teal-500" />
+            <div key={i} className="w-4 h-4 md:w-4 md:h-4 rounded-full bg-gradient-to-br from-lime-400 to-green-500 border-2 border-lime-500" />
           ))}
         </div>
         <span className="text-white text-sm md:text-[10px] font-semibold">5.3T+ Unsecured Credit Offchain, Money Market</span>
@@ -605,7 +605,7 @@ function DesktopLeftSection() {
     >
       <div className="relative">
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-10">
-          <div className="px-4 py-2 lg:px-5 lg:py-2.5 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full text-white text-sm lg:text-base font-semibold shadow-lg whitespace-nowrap">
+          <div className="px-4 py-2 lg:px-5 lg:py-2.5 bg-gradient-to-r from-lime-500 to-green-600 rounded-full text-white text-sm lg:text-base font-semibold shadow-lg whitespace-nowrap">
             Stablecoin income in
           </div>
         </div>
@@ -614,12 +614,12 @@ function DesktopLeftSection() {
           <div className="absolute -left-4 -top-4 w-[calc(100%+32px)] h-[calc(100%+32px)] opacity-10">
             <div className="grid grid-cols-6 gap-1 p-2">
               {[...Array(24)].map((_, i) => (
-                <UserIcon key={i} className="w-4 h-4 lg:w-5 lg:h-5 text-teal-600" />
+                <UserIcon key={i} className="w-4 h-4 lg:w-5 lg:h-5 text-lime-600" />
               ))}
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-teal-400 relative z-10">
+          <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-lime-400 relative z-10">
             <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-3 lg:mb-4 text-center" style={{ fontWeight: 800 }}>
               Stablecoin Users & Treasuries
             </h3>
@@ -627,9 +627,9 @@ function DesktopLeftSection() {
               {users.map((user, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white rounded-lg lg:rounded-xl p-3 lg:p-4 border-2 border-teal-400 hover:border-teal-500 transition-all"
+                  className="bg-white rounded-lg lg:rounded-xl p-3 lg:p-4 border-2 border-lime-400 hover:border-lime-500 transition-all"
                 >
-                  <user.icon className="w-6 h-6 lg:w-8 lg:h-8 mx-auto mb-2 text-teal-600" />
+                  <user.icon className="w-6 h-6 lg:w-8 lg:h-8 mx-auto mb-2 text-lime-600" />
                   <p className="text-base lg:text-lg text-slate-900 text-center leading-snug font-bold">{user.label}</p>
                 </div>
               ))}
@@ -642,7 +642,7 @@ function DesktopLeftSection() {
           {offchainSources.map((source, idx) => (
             <div 
               key={idx}
-              className="bg-white rounded-lg lg:rounded-xl px-3 py-2 lg:px-4 lg:py-2.5 border-2 border-slate-300 shadow-sm"
+              className="bg-white rounded-lg lg:rounded-xl px-3 py-2 lg:px-4 lg:py-2.5 border-2 border-lime-300 shadow-sm"
             >
               <p className="text-base lg:text-lg text-slate-900 font-bold">{source}</p>
             </div>
@@ -677,7 +677,7 @@ function DesktopRightSection() {
       transition={{ delay: 0.5 }}
     >
       <div className="space-y-4 lg:space-y-5">
-        <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-teal-300">
+        <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-lime-300">
           <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-3 lg:mb-4 text-center" style={{ fontWeight: 800 }}>
             Strategy Venues (on-chain)
           </h3>
@@ -685,7 +685,7 @@ function DesktopRightSection() {
             {strategies.map((strategy, idx) => (
               <div 
                 key={idx}
-                className="bg-white rounded-lg lg:rounded-xl px-3 py-2 lg:px-4 lg:py-3 border-2 border-teal-400"
+                className="bg-white rounded-lg lg:rounded-xl px-3 py-2 lg:px-4 lg:py-3 border-2 border-lime-400"
               >
                 <p className="text-base lg:text-lg text-slate-900 text-center font-bold">{strategy}</p>
               </div>
@@ -705,7 +705,7 @@ function DesktopRightSection() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-teal-200">
+        <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-lime-200">
           <h3 className="text-lg lg:text-xl font-bold text-slate-900 mb-3 lg:mb-4 text-center" style={{ fontWeight: 800 }}>
             Payments & Uses
           </h3>
@@ -713,9 +713,9 @@ function DesktopRightSection() {
             {payments.map((payment, idx) => (
               <div 
                 key={idx}
-                className="flex items-center gap-2 lg:gap-3 bg-white rounded-lg lg:rounded-xl px-3 py-2 lg:px-4 lg:py-3 border-2 border-teal-300"
+                className="flex items-center gap-2 lg:gap-3 bg-white rounded-lg lg:rounded-xl px-3 py-2 lg:px-4 lg:py-3 border-2 border-lime-300"
               >
-                <payment.icon className="w-5 h-5 lg:w-6 lg:h-6 text-teal-600" />
+                <payment.icon className="w-5 h-5 lg:w-6 lg:h-6 text-lime-600" />
                 <p className="text-base lg:text-lg text-slate-900 font-bold">{payment.label}</p>
               </div>
             ))}
@@ -723,7 +723,7 @@ function DesktopRightSection() {
         </div>
 
         <div className="flex justify-center">
-          <div className="px-4 py-2 lg:px-5 lg:py-3 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full shadow-lg">
+          <div className="px-4 py-2 lg:px-5 lg:py-3 bg-gradient-to-r from-lime-500 to-green-600 rounded-full shadow-lg">
             <span className="text-white text-sm lg:text-base font-semibold">Humans & AI agents act within policies</span>
           </div>
         </div>
@@ -738,31 +738,31 @@ function DesktopCenterSection() {
     {
       title: "Onchain Account Layer",
       subtitle: "Unified ledger - Balances - Payments - History",
-      color: "from-cyan-500 to-teal-500",
+      color: "from-lime-400 to-green-500",
       badge: null
     },
     {
       title: "Identity & Policy Engine",
       subtitle: "Humans & AI agents - Roles - Spend policies",
-      color: "from-cyan-500 to-teal-500",
+      color: "from-lime-400 to-green-500",
       badge: null
     },
     {
       title: "Income-Backed Credit Engine",
       subtitle: "Credit limits from stablecoin income + risk bands",
       badge: "Borrow against the future",
-      color: "from-cyan-500 to-teal-500",
+      color: "from-lime-400 to-green-500",
     },
     {
       title: "Treasury Autopilot",
       subtitle: "Cash - Buffer - Strategies - Rebalancing",
-      color: "from-cyan-500 to-teal-500",
+      color: "from-lime-400 to-green-500",
       badge: null
     },
     {
       title: "Storm Shield Risk OS",
       subtitle: "Progressive derisking - No cliff liquidations",
-      color: "from-cyan-500 to-teal-500",
+      color: "from-lime-400 to-green-500",
       badge: null
     },
   ];
@@ -775,14 +775,14 @@ function DesktopCenterSection() {
       transition={{ delay: 0.3 }}
     >
       <div className="relative">
-        <div className="bg-gradient-to-br from-slate-800 via-teal-900/20 to-slate-800 rounded-3xl lg:rounded-4xl p-6 lg:p-8 shadow-2xl border-2 border-teal-500/30 min-w-[520px] lg:min-w-[680px]">
+        <div className="bg-gradient-to-br from-slate-800 via-green-900/20 to-slate-800 rounded-3xl lg:rounded-4xl p-6 lg:p-8 shadow-2xl border-2 border-lime-500/30 min-w-[520px] lg:min-w-[680px]">
           <div className="flex items-center justify-center gap-3 lg:gap-4 mb-6 lg:mb-8">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-gradient-to-br from-lime-400 to-green-600 flex items-center justify-center overflow-hidden">
               <img src="/mon-s.png" alt="Monaris" className="w-full h-full object-contain" />
             </div>
             <div>
               <h2 className="text-white font-bold text-2xl lg:text-3xl" style={{ fontWeight: 900 }}>Monaris Core</h2>
-              <p className="text-teal-300 text-base lg:text-lg font-bold">Autopilot Money OS</p>
+              <p className="text-lime-300 text-base lg:text-lg font-bold">Autopilot Money OS</p>
             </div>
           </div>
 
@@ -790,13 +790,13 @@ function DesktopCenterSection() {
             {modules.map((module, idx) => (
               <div 
                 key={idx}
-                className="relative bg-slate-800/80 rounded-xl lg:rounded-2xl p-3 lg:p-4 border-2 border-teal-500/20 hover:border-teal-500/40 transition-all group"
+                className="relative bg-slate-800/80 rounded-xl lg:rounded-2xl p-3 lg:p-4 border-2 border-lime-500/20 hover:border-lime-500/40 transition-all group"
               >
                 <div className={`w-full h-1.5 lg:h-2 rounded-full bg-gradient-to-r ${module.color} mb-2 lg:mb-3`} />
                 <h4 className="text-white font-bold text-sm lg:text-base mb-1 leading-snug" style={{ fontWeight: 700 }}>{module.title}</h4>
                 <p className="text-slate-200 text-sm lg:text-base leading-snug font-bold">{module.subtitle}</p>
                 {module.badge && (
-                  <div className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 px-2 py-1 lg:px-2.5 lg:py-1.5 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full">
+                  <div className="absolute -top-2 -right-2 lg:-top-3 lg:-right-3 px-2 py-1 lg:px-2.5 lg:py-1.5 bg-gradient-to-r from-lime-500 to-green-600 rounded-full">
                     <span className="text-[10px] lg:text-xs font-bold text-white whitespace-nowrap">{module.badge}</span>
                   </div>
                 )}
@@ -804,29 +804,29 @@ function DesktopCenterSection() {
             ))}
           </div>
 
-          <div className="bg-slate-800/80 rounded-xl lg:rounded-2xl p-3 lg:p-4 mb-4 lg:mb-5 border-2 border-teal-500/30">
+          <div className="bg-slate-800/80 rounded-xl lg:rounded-2xl p-3 lg:p-4 mb-4 lg:mb-5 border-2 border-lime-500/30">
             <div className="flex items-center justify-between text-base lg:text-lg text-white font-bold">
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-teal-500/30 text-teal-300 flex items-center justify-center font-bold text-xs lg:text-sm">2</span>
+                <span className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-lime-500/30 text-lime-300 flex items-center justify-center font-bold text-xs lg:text-sm">2</span>
                 <span>Computes credit limit</span>
               </div>
-              <ArrowRightIcon className="w-5 h-5 lg:w-6 lg:h-6 text-teal-400" />
+              <ArrowRightIcon className="w-5 h-5 lg:w-6 lg:h-6 text-lime-400" />
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-teal-500/30 text-teal-300 flex items-center justify-center font-bold text-xs lg:text-sm">3</span>
+                <span className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-lime-500/30 text-lime-300 flex items-center justify-center font-bold text-xs lg:text-sm">3</span>
                 <span>Allocates by policy</span>
               </div>
-              <ArrowRightIcon className="w-5 h-5 lg:w-6 lg:h-6 text-teal-400" />
+              <ArrowRightIcon className="w-5 h-5 lg:w-6 lg:h-6 text-lime-400" />
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-teal-500/30 text-teal-300 flex items-center justify-center font-bold text-xs lg:text-sm">4</span>
+                <span className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-lime-500/30 text-lime-300 flex items-center justify-center font-bold text-xs lg:text-sm">4</span>
                 <span>Risk monitoring</span>
-                <ShieldIcon className="w-4 h-4 lg:w-5 lg:h-5 text-teal-400" />
+                <ShieldIcon className="w-4 h-4 lg:w-5 lg:h-5 text-lime-400" />
               </div>
             </div>
           </div>
 
           <div className="flex justify-center">
-            <div className="px-4 py-2 lg:px-5 lg:py-3 bg-gradient-to-r from-teal-500/30 to-teal-600/30 rounded-full border-2 border-teal-400/50">
-              <span className="text-teal-200 text-sm lg:text-base font-semibold">Autopilot treasury: Cash - Buffer - Strategies</span>
+            <div className="px-4 py-2 lg:px-5 lg:py-3 bg-gradient-to-r from-lime-500/30 to-green-600/30 rounded-full border-2 border-lime-400/50">
+              <span className="text-lime-200 text-sm lg:text-base font-semibold">Autopilot treasury: Cash - Buffer - Strategies</span>
             </div>
           </div>
         </div>
@@ -846,10 +846,10 @@ function DesktopFlowArrows() {
         transition={{ delay: 0.8, duration: 0.5 }}
       >
         <div className="flex items-center gap-2 lg:gap-3">
-          <div className="w-20 lg:w-32 h-1.5 lg:h-2 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full relative">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[8px] lg:border-l-[10px] border-l-teal-600 border-y-[4px] lg:border-y-[5px] border-y-transparent" />
+          <div className="w-20 lg:w-32 h-1.5 lg:h-2 bg-gradient-to-r from-lime-400 to-green-600 rounded-full relative">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[8px] lg:border-l-[10px] border-l-green-600 border-y-[4px] lg:border-y-[5px] border-y-transparent" />
           </div>
-          <div className="flex items-center gap-1.5 px-3 py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r from-lime-500 to-green-600 rounded-full">
             <span className="text-white font-bold text-sm lg:text-base">1</span>
             <span className="text-white text-xs lg:text-sm whitespace-nowrap">Income & deposits</span>
           </div>
@@ -864,12 +864,12 @@ function DesktopFlowArrows() {
         transition={{ delay: 1, duration: 0.5 }}
       >
         <div className="flex items-center gap-2 lg:gap-3">
-          <div className="flex items-center gap-1.5 px-3 py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r from-lime-500 to-green-500 rounded-full">
             <span className="text-white font-bold text-sm lg:text-base">5</span>
             <span className="text-white text-xs lg:text-sm whitespace-nowrap">Capital to strategies & use</span>
           </div>
-          <div className="w-16 lg:w-28 h-1.5 lg:h-2 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full relative">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[8px] lg:border-l-[10px] border-l-teal-600 border-y-[4px] lg:border-y-[5px] border-y-transparent" />
+          <div className="w-16 lg:w-28 h-1.5 lg:h-2 bg-gradient-to-r from-lime-400 to-green-600 rounded-full relative">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[8px] lg:border-l-[10px] border-l-green-600 border-y-[4px] lg:border-y-[5px] border-y-transparent" />
           </div>
         </div>
       </motion.div>
@@ -886,10 +886,10 @@ function DesktopScaleBadge() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1.2, duration: 0.5 }}
     >
-      <div className="flex items-center gap-3 lg:gap-4 px-5 py-2.5 lg:px-6 lg:py-3 bg-gradient-to-r from-slate-800 via-teal-900/40 to-slate-800 rounded-full shadow-xl border-2 border-teal-500/50">
+      <div className="flex items-center gap-3 lg:gap-4 px-5 py-2.5 lg:px-6 lg:py-3 bg-gradient-to-r from-slate-800 via-green-900/40 to-slate-800 rounded-full shadow-xl border-2 border-lime-500/50">
         <div className="flex -space-x-1">
           {[...Array(4)].map((_, i) => (
-            <div key={i} className="w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 border-2 border-teal-500 shadow-lg" />
+            <div key={i} className="w-5 h-5 lg:w-6 lg:h-6 rounded-full bg-gradient-to-br from-lime-400 to-green-600 border-2 border-lime-500 shadow-lg" />
           ))}
         </div>
         <span className="text-white text-sm lg:text-base font-semibold">5.3 Trillion Unsecured Credit Offchain, Money Market</span>
@@ -915,22 +915,22 @@ function DesktopBottomSection() {
       {...fadeInUp}
       transition={{ delay: 0.7 }}
     >
-      <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-teal-200">
+      <div className="bg-white rounded-2xl lg:rounded-3xl p-4 lg:p-6 shadow-xl border-2 border-lime-200">
         <div className="flex items-center justify-between mb-3 lg:mb-4">
           <h3 className="text-lg lg:text-xl font-bold text-slate-900" style={{ fontWeight: 800 }}>Data, AI & Integrations</h3>
-          <div className="flex items-center gap-2 lg:gap-3 px-3 py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r from-teal-50 to-teal-100 rounded-full border-2 border-teal-400">
-            <span className="w-6 h-6 lg:w-7 lg:h-7 rounded-full bg-gradient-to-r from-teal-500 to-teal-600 text-white flex items-center justify-center font-bold text-xs lg:text-sm">6</span>
-            <span className="text-base lg:text-lg text-teal-900 font-bold">Continuous data feedback for credit, risk & automation</span>
+          <div className="flex items-center gap-2 lg:gap-3 px-3 py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r from-lime-50 to-green-100 rounded-full border-2 border-lime-400">
+            <span className="w-6 h-6 lg:w-7 lg:h-7 rounded-full bg-gradient-to-r from-lime-500 to-green-600 text-white flex items-center justify-center font-bold text-xs lg:text-sm">6</span>
+            <span className="text-base lg:text-lg text-green-900 font-bold">Continuous data feedback for credit, risk & automation</span>
           </div>
         </div>
         <div className="grid grid-cols-5 gap-2 lg:gap-4">
           {services.map((service, idx) => (
             <div 
               key={idx}
-              className="relative bg-white rounded-xl lg:rounded-2xl p-3 lg:p-4 border-2 border-teal-300 shadow-sm hover:shadow-lg transition-all hover:scale-105"
+              className="relative bg-white rounded-xl lg:rounded-2xl p-3 lg:p-4 border-2 border-lime-300 shadow-sm hover:shadow-lg transition-all hover:scale-105"
             >
-              <div className="absolute -top-2 lg:-top-3 left-1/2 -translate-x-1/2 w-0.5 h-8 lg:h-12 bg-gradient-to-t from-teal-400/50 to-transparent" />
-              <service.icon className="w-6 h-6 lg:w-8 lg:h-8 mx-auto mb-2 lg:mb-3 text-teal-600" />
+              <div className="absolute -top-2 lg:-top-3 left-1/2 -translate-x-1/2 w-0.5 h-8 lg:h-12 bg-gradient-to-t from-lime-400/50 to-transparent" />
+              <service.icon className="w-6 h-6 lg:w-8 lg:h-8 mx-auto mb-2 lg:mb-3 text-lime-600" />
               <p className="text-base lg:text-lg text-slate-900 text-center leading-snug font-bold">{service.label}</p>
             </div>
           ))}
