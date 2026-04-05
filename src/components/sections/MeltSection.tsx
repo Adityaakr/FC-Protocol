@@ -4,23 +4,23 @@ import { Database, TrendingUp, Shield, Boxes } from "lucide-react";
 const engineFeatures = [
   {
     icon: Database,
-    title: "Credit Engine",
-    description: "Computes credit limits from income buckets, behavior, and exposure.",
+    title: "Programmable Settlement Router",
+    description: "Route payments, receivables, and repayment flows through a built-in settlement layer designed for programmable finance, better coordination, and capital efficiency.",
   },
   {
     icon: TrendingUp,
-    title: "Treasury Engine",
-    description: "Decides how much stays as cash, how much goes into strategies, how much is reserved as buffer.",
-  },
-  {
-    icon: Shield,
-    title: "Risk & Storm Shield",
-    description: "Monitors positions, triggers progressive protection before liquidation cliffs.",
+    title: "Monaris Credit Engine",
+    description: "Compute credit access from cashflow, settlement behavior, receivables quality, and account activity, powering BNPL, invoice financing, and settlement-aware lending.",
   },
   {
     icon: Boxes,
-    title: "Strategy Adapters",
-    description: "Plug in delta-neutral & hedged strategies, with strict caps and risk bands.",
+    title: "Treasury Engine",
+    description: "Allocate capital across reserve buckets, treasury strategies, repayments, and working capital logic with transparent rules and configurable limits.",
+  },
+  {
+    icon: Shield,
+    title: "Risk + Protection Layer",
+    description: "Monitor account health, credit exposure, and treasury posture in real time, with protective actions designed to reduce risk before cliff events.",
   },
 ];
 
@@ -115,13 +115,7 @@ export const MeltSection = () => {
           >
             <div className="space-y-5">
               <p className="text-lg text-gray-600 font-medium leading-relaxed">
-                Monaris Protocol is the credit, treasury, and risk protocol that powers Monaris and future apps.
-              </p>
-              <p className="text-lg text-gray-600 font-medium leading-relaxed">
-                It tracks user cashflow, credit usage, strategy allocations, and risk profile.
-              </p>
-              <p className="text-lg text-gray-600 font-medium leading-relaxed">
-                It's designed to sit under multiple apps, not just Monaris.
+                Monaris Protocol coordinates payments, settlement, credit, treasury, and risk beneath the user experience, turning stablecoin cashflow into programmable financial infrastructure for users and businesses.
               </p>
             </div>
 
@@ -174,16 +168,16 @@ export const MeltSection = () => {
                   </div>
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-white rounded-xl p-3 text-center border border-gray-200 shadow-sm">
+                      <div className="text-xs font-bold text-black">Settlement Router</div>
+                    </div>
+                    <div className="bg-white rounded-xl p-3 text-center border border-gray-200 shadow-sm">
                       <div className="text-xs font-bold text-black">Credit Engine</div>
                     </div>
                     <div className="bg-white rounded-xl p-3 text-center border border-gray-200 shadow-sm">
                       <div className="text-xs font-bold text-black">Treasury Engine</div>
                     </div>
                     <div className="bg-white rounded-xl p-3 text-center border border-gray-200 shadow-sm">
-                      <div className="text-xs font-bold text-black">Risk Layer</div>
-                    </div>
-                    <div className="bg-white rounded-xl p-3 text-center border border-gray-200 shadow-sm">
-                      <div className="text-xs font-bold text-black">Strategy Adapters</div>
+                      <div className="text-xs font-bold text-black">Risk + Protection</div>
                     </div>
                   </div>
                 </div>
