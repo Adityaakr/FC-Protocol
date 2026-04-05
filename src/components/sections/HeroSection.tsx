@@ -107,12 +107,15 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold text-foreground leading-[1.05] tracking-tight"
+                className="text-3xl sm:text-4xl lg:text-[2.8rem] xl:text-[3.75rem] font-display font-bold text-foreground leading-none tracking-tight"
               >
-                Banking meets{" "}
-                <span className="relative inline-block">
-                  DeFi
-                  <div className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-emerald-400/70 via-emerald-500/60 to-emerald-600/70 blur-sm rounded-full" />
+                <span className="block whitespace-nowrap">Turn stablecoin cashflow</span>
+                <span className="block whitespace-nowrap mt-3 lg:mt-4">
+                  into a{" "}
+                  <span className="relative inline-block">
+                    real financial account
+                    <span className="pointer-events-none absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-emerald-300/60 via-emerald-500/45 to-lime-400/60 blur-sm rounded-full" />
+                  </span>
                 </span>
               </motion.h1>
               
@@ -123,7 +126,7 @@ export const HeroSection = () => {
                 className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold leading-tight tracking-tight"
               >
                 <span className="bg-gradient-to-r from-emerald-500 via-emerald-500 to-lime-500 bg-clip-text text-transparent">
-                  Borrow against the future. Autopilot Money OS for stablecoins credit, AI treasury automation, and market-neutral yield.
+                  Private payments, cashflow-backed credit, and automated treasury for the next era of finance.
                 </span>
               </motion.h2>
               
@@ -133,7 +136,8 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed"
               >
-                Monaris turns your income into a single onchain account for balances, payments, and cashflow, plus an income-backed, under-collateralized credit line. On top, an AI-powered treasury allocates idle funds into strategies with progressive protection instead of cliff liquidations.
+                Monaris brings balances, payments, receivables, and cashflow into one account layer. From there, users and businesses can access PayFi-powered credit, including BNPL, invoice financing, embedded finance, programmable repayments, and built-in protection from a single system.
+
               </motion.p>
             </div>
 
@@ -147,7 +151,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 className="group relative bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-500/90 hover:to-lime-500/90 text-white shadow-lg hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 text-base sm:text-lg h-14 sm:h-16 px-8 sm:px-10 rounded-2xl font-semibold overflow-hidden"
-                onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
+                onClick={() => window.open('https://waitlist.monaris.co/', '_blank')}
               >
                 <span className="relative z-10 flex items-center">
                   Join Waitlist
@@ -170,32 +174,36 @@ export const HeroSection = () => {
             </motion.div>
 
             {/* Flow indicators - Modern Pills */}
-            <div className="flex flex-wrap items-center gap-3 pt-6">
-              <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                  <Wallet className="w-4 h-4 text-emerald-600" />
+            <div className="flex flex-col items-start gap-3 pt-6">
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                    <Wallet className="w-4 h-4 text-emerald-600" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Private payments</span>
                 </div>
-                <span className="text-sm font-medium text-foreground">Income & Cashflow Backed</span>
+                <ArrowRight className="text-emerald-600 w-5 h-5" />
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-emerald-600" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">PayFi Rails</span>
+                </div>
               </div>
-              <ArrowRight className="text-emerald-600 w-5 h-5" />
-              <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4 text-emerald-600" />
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-emerald-600" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Credit & Strategies</span>
                 </div>
-                <span className="text-sm font-medium text-foreground">Credit & Strategies</span>
-              </div>
-               <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4 text-emerald-600" />
+                <ArrowRight className="text-emerald-600 w-5 h-5" />
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
+                    <Shield className="w-4 h-4 text-emerald-600" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Storm Shield protection</span>
                 </div>
-                <span className="text-sm font-medium text-foreground">AI earns market-neutral DeFi yield</span>
-              </div>
-              <ArrowRight className="text-emerald-600 w-5 h-5" />
-              <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                  <Shield className="w-4 h-4 text-emerald-600" />
-                </div>
-                <span className="text-sm font-medium text-foreground">Storm Shield</span>
               </div>
             </div>
           </motion.div>
