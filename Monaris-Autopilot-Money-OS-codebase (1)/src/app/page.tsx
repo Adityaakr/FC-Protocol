@@ -159,7 +159,7 @@ export default function Home() {
           transition={{ delay: 1, duration: 0.5 }}
         >
           <p className="text-[10px] sm:text-xs md:text-sm text-slate-500 px-4">
-            Enterprise-grade infrastructure powering the future of autonomous finance
+            Enterprise-grade infrastructure powering the future of autonomous neo-finance
           </p>
         </motion.div>
       </div>
