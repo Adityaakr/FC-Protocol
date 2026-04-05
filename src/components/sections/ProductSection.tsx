@@ -4,31 +4,31 @@ import { Wallet, CreditCard, Brain, TrendingUp } from "lucide-react";
 const features = [
   {
     icon: Wallet,
-    tag: "Stablecoin Treasury",
-    title: "Onchain Money Account",
+    tag: "Private account layer",
+    title: "Private Money Account",
     description:
-      "Deposit your stablecoins into Monaris to get a clean onchain account experience: balances, history, and programmable routing of your funds.",
+      "Bring balances, payments, receivables, and cashflow into one account layer built for stablecoin-native finance.",
   },
   {
     icon: CreditCard,
-    tag: "Income-backed, zero extra collateral",
-    title: "Credit Line",
+    tag: "PayFi-powered credit",
+    title: "Monaris Credit",
     description:
-      "Monaris Protocol's credit engine translates your income and cashflow profile into a revolving credit line — without requiring you to over-collateralize with idle assets.",
+      "Access PayFi-powered credit shaped by cashflow, settlement behavior, and account activity, including BNPL, invoice financing, and programmable repayments.",
   },
   {
     icon: TrendingUp,
-    tag: "AI-Powered Yield",
-    title: "Market-Neutral DeFi Yield",
+    tag: "Intelligent allocation",
+    title: "AI-Assisted Treasury",
     description:
-      "AI-powered strategies that earn delta-neutral DeFi yield for users across DeFi, optimizing returns while minimizing market exposure risk.",
+      "Route idle capital through intelligent treasury logic with transparent allocation rules, reserve buckets, and configurable risk limits.",
   },
   {
     icon: Brain,
-    tag: "Strategies + Storm Protection",
-    title: "Automated Treasury",
+    tag: "Built-in guardrails",
+    title: "Storm Shield",
     description:
-      "Allocate to vetted strategies and let Monaris automatically rebalance, repay, or protect you during market storms.",
+      "Monitor exposure across credit and treasury activity, with built-in guardrails designed to reduce risk before liquidation cliffs.",
   },
 ];
 
@@ -108,8 +108,11 @@ export const ProductSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            Monaris: a <span className="text-emerald-600">account, credit line, AI yield, and treasury brain</span> in one app.
+            One system for <span className="text-emerald-600">private payments, credit, treasury, and protection</span>
           </h2>
+          <p className="text-lg text-gray-700 max-w-4xl mx-auto font-medium leading-relaxed">
+            Monaris combines private payments, cashflow visibility, PayFi-powered credit, AI-assisted treasury, and built-in protection into one financial operating system for stablecoin cashflow.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
