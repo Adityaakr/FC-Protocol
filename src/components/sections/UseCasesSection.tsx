@@ -48,8 +48,8 @@ const personas = [
   {
     icon: Bot,
     title: "AI agents & agentic finance",
-    description: "Agents need budgets, limits, and auditability—not raw keys to a treasury wallet.",
-    benefit: "Monaris Protocol gives agents programmable credit, onchain allowances, and treasury policies—anchored in human-owned credit with full audit trails.",
+    description: "Agents need budgets, limits, and auditability, not raw keys to a treasury wallet.",
+    benefit: "Monaris Protocol gives agents programmable credit, onchain allowances, and treasury policies, anchored in human-owned credit with full audit trails.",
     mobileOneLiner: "Give AI agents budgets, limits, and audit trails instead of a raw wallet.",
     features: [
       "Agent sub-accounts with per-task budgets and spend limits",
@@ -172,7 +172,7 @@ export const UseCasesSection = () => {
             One Money OS for individuals, teams, power users, and AI agents.
           </p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-medium md:hidden">
-            One Money OS — for people, teams, and agents.
+            One Money OS for people, teams, and agents.
           </p>
         </motion.div>
 
