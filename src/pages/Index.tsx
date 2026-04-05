@@ -5,6 +5,7 @@ import { ProductSection } from "@/components/sections/ProductSection";
 import { MeltSection } from "@/components/sections/MeltSection";
 import { MonarisArchitectureSection } from "@/components/sections/MonarisArchitectureSection";
 import { RiskSection } from "@/components/sections/RiskSection";
+import { RoadmapSection } from "@/components/sections/RoadmapSection";
 // import { UseCasesSection } from "@/components/sections/UseCasesSection";
 // import { BuildersSection } from "@/components/sections/BuildersSection";
 import { FlexCreditBanner as MonarisBanner } from "@/components/sections/FlexCreditBanner";
@@ -20,6 +21,7 @@ const Index = () => {
         <MeltSection />
         <MonarisArchitectureSection />
         <RiskSection />
+        <RoadmapSection />
         {/* <UseCasesSection />
         <BuildersSection /> */} 
 
