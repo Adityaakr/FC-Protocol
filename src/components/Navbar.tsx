@@ -73,7 +73,7 @@ export const Navbar = () => {
             <Button 
               size="sm" 
               className="bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-500/90 hover:to-lime-500/90 text-white shadow-md"
-              onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
+              onClick={() => window.open('https://waitlist.monaris.co/', '_blank')}
             >
               Join Waitlist
             </Button>
@@ -109,7 +109,7 @@ export const Navbar = () => {
               <Button 
                 size="sm" 
                 className="w-full bg-gradient-to-r from-emerald-500 to-lime-500 hover:from-emerald-500/90 hover:to-lime-500/90 text-white"
-                onClick={() => window.open('https://form.typeform.com/to/c6vpCpMA', '_blank')}
+                onClick={() => window.open('https://waitlist.monaris.co/', '_blank')}
               >
                 Join Waitlist
               </Button>
