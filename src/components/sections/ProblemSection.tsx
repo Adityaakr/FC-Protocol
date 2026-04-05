@@ -4,23 +4,23 @@ import { AlertCircle, FileX, Zap, BarChart3, Bot } from "lucide-react";
 const problems = [
   {
     icon: AlertCircle,
-    text: "You get paid in stablecoins, but you don't get a fair credit line.",
+    text: "You can get paid in stablecoins and still have no usable credit profile.",
   },
   {
     icon: FileX,
-    text: "Treasury is manual: moving funds between wallets, chains, and protocols.",
+    text: "Working capital stays trapped in invoices, receivables, and delayed settlements.",
   },
   {
     icon: Zap,
-    text: "DeFi liquidations are brutal: instant nukes, no soft landing.",
+    text: "Treasury is still manual across wallets, chains, and protocols.",
   },
   {
     icon: BarChart3,
-    text: "No unified view of cash, credit, and strategy risk in one place.",
+    text: "Most crypto credit is collateral-first, not cashflow-aware.",
   },
   {
     icon: Bot,
-    text: "No, AI that earns market-neutral DeFi yield.",
+    text: "There is still no private operating layer for stablecoin-native PayFi.",
   },
 ];
 
@@ -46,12 +46,11 @@ export const ProblemSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
-            Today, Stablecoin Income has{" "}
+            Stablecoin cashflow still lacks a{" "}
             <span className="relative inline-block text-blue-600">
-              no real credit
+              real financial layer
               <div className="absolute -bottom-1 left-0 right-0 h-1 bg-blue-400/30 rounded-full" />
             </span>
-            {" "}for Humans & AI Agents.
           </h2>
         </motion.div>
 
@@ -101,33 +100,38 @@ export const ProblemSection = () => {
                 
                 <div className="space-y-6 text-gray-800">
                   <p className="text-lg leading-relaxed font-medium text-gray-700">
-                    People already earn, save, and spend in stablecoins. Freelancers, onchain teams, and
-                    crypto-native users handle thousands sometimes millions in stablecoins monthly.
+                    People already earn, save, and move serious value in stablecoins. Freelancers, global teams, merchants, and crypto-native businesses already manage meaningful cashflow onchain every month.
                   </p>
                   
                   <p className="text-lg leading-relaxed text-gray-800">
-                    But there is <strong className="text-black font-bold bg-yellow-100/50 px-1 rounded">No bank-like experience, no fair credit, no automated treasury, no risk OS, and no standard layer for agentic finance</strong>{" "}
-                    on top of payments.
+                    But that activity still behaves like disconnected wallets, not a real financial system.{" "}
+                    <span className="font-bold text-emerald-700 bg-emerald-100/70 px-1.5 py-0.5 rounded">
+                      There is no standard layer for private payments, no PayFi infrastructure for BNPL, invoice financing, or settlement-aware credit, and no unified treasury and protection system across the account.
+                    </span>
                   </p>
                   
                   <ul className="space-y-4 text-gray-900 pt-2">
                     <li className="flex items-start gap-4 group">
                       <span className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mt-2 flex-shrink-0 shadow-sm" />
-                      <span className="font-semibold text-base leading-relaxed">No under-collateralized credit.</span>
+                      <span className="font-semibold text-base leading-relaxed">No private neo-payments.</span>
                     </li>
                     <li className="flex items-start gap-4 group">
                       <span className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mt-2 flex-shrink-0 shadow-sm" />
-                      <span className="font-semibold text-base leading-relaxed">No automated treasury management.</span>
+                      <span className="font-semibold text-base leading-relaxed">No PayFi-powered credit.</span>
                     </li>
                     <li className="flex items-start gap-4 group">
                       <span className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mt-2 flex-shrink-0 shadow-sm" />
-                      <span className="font-semibold text-base leading-relaxed">No storm protection layer.</span>
+                      <span className="font-semibold text-base leading-relaxed">No financing tied to settlement behavior.</span>
+                    </li>
+                    <li className="flex items-start gap-4 group">
+                      <span className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mt-2 flex-shrink-0 shadow-sm" />
+                      <span className="font-semibold text-base leading-relaxed">No unified treasury and risk layer.</span>
                     </li>
                   </ul>
                   
                   <div className="pt-6 mt-8 border-t-2 border-gray-200">
                     <p className="text-black font-bold text-lg leading-relaxed tracking-tight">
-                    Monaris fixes this by turning your income into a full financial operating system.
+                      Monaris changes that by turning stablecoin cashflow into private neo-finance infrastructure.
                     </p>
                   </div>
                 </div>
