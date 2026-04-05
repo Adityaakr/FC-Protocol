@@ -3,16 +3,16 @@ import { TrendingDown, Shield, AlertTriangle } from "lucide-react";
 
 const strategies = [
   {
-    title: "Delta-neutral vaults",
-    description: "Spot + short positions maintaining zero net directional exposure",
+    title: "Reserve Buckets",
+    description: "Keep capital liquid and available for payments, repayments, payroll, or operations.",
   },
   {
-    title: "Market-neutral basis plays",
-    description: "Basis trading capturing funding rate spreads without price risk",
+    title: "Treasury Strategies",
+    description: "Route idle balances through controlled treasury logic with visible rules, allocation limits, and capital safeguards.",
   },
   {
-    title: "LP + hedge strategies",
-    description: "Liquidity provision with delta-hedged protection layers",
+    title: "Programmable Repayments",
+    description: "Automatically use cashflow and settlements to repay credit or reduce exposure over time.",
   },
 ];
 
@@ -21,7 +21,7 @@ const riskSteps = [
     icon: Shield,
     status: "Normal",
     label: "All good",
-    description: "Portfolio healthy, all metrics in safe zones",
+    description: "Capital healthy and operating within safe ranges.",
     color: "text-green-500",
     bgColor: "bg-green-500/10",
   },
@@ -29,15 +29,15 @@ const riskSteps = [
     icon: AlertTriangle,
     status: "Watch",
     label: "Storm watch: reducing risk",
-    description: "Risk metrics elevated, beginning protective measures",
+    description: "Risk rising. Protective adjustments begin.",
     color: "text-yellow-500",
     bgColor: "bg-yellow-500/10",
   },
   {
     icon: TrendingDown,
-    status: "Storm Shield",
+    status: "Storm Shield Active",
     label: "Auto-protection engaged",
-    description: "Partial repayment / de-risking in progress",
+    description: "Automated de-risking, reserve routing, or repayment in progress.",
     color: "text-orange-500",
     bgColor: "bg-orange-500/10",
   },
@@ -132,9 +132,12 @@ export const RiskSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-4 leading-tight tracking-tight">
-            Market-neutral strategies and{" "}
-            <span className="text-cyan-400">'storm shield' protection</span>.
+            Automated treasury with{" "}
+            <span className="text-cyan-400">built-in protection</span>
           </h2>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto font-medium leading-relaxed">
+            Monaris helps users and businesses manage idle capital more intelligently, with AI-assisted treasury logic, reserve management, programmable repayments, and protection designed to reduce risk before things break.
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -148,14 +151,10 @@ export const RiskSection = () => {
           >
             <div>
               <h3 className="text-2xl font-display font-bold text-white mb-3 tracking-tight">
-                Yield without being naked long
+                Put idle capital to work with controlled exposure
               </h3>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">
-                Monaris integrates hedged and delta-neutral strategies via Monaris Protocol's strategy adapters — think spot + short,
-                basis trades, or LP + hedge setups.
-              </p>
-              <p className="text-gray-300 mb-6 font-medium leading-relaxed">
-                You see expected returns, risk tiers, and capital caps per strategy.
+                Capital inside Monaris can be allocated across reserve buckets, treasury strategies, working capital, and repayment flows through transparent rules and configurable limits. The goal is not blind yield chasing, it is disciplined capital efficiency.
               </p>
             </div>
 
@@ -186,15 +185,10 @@ export const RiskSection = () => {
           >
             <div>
               <h3 className="text-2xl font-display font-bold text-white mb-3 tracking-tight">
-                Don't get nuked by liquidations
+                Protection before liquidation cliffs
               </h3>
               <p className="text-gray-300 mb-6 font-medium leading-relaxed">
-                Instead of letting you hit a hard liquidation cliff, Monaris Protocol's risk layer tracks health factors and risk
-                metrics.
-              </p>
-              <p className="text-gray-300 mb-6 font-medium leading-relaxed">
-                When things get spicy, the storm shield can auto-deallocate from strategies, auto-repay part of your
-                credit, or move assets into safer buckets.
+                Monaris continuously tracks treasury posture, account health and credit exposure. When risk rises, Storm Shield can automatically reduce allocations, route funds into safer buckets, or trigger repayment logic before positions become fragile.
               </p>
             </div>
 
