@@ -5,6 +5,7 @@ import logoImage from "@/assets/img-fav.png";
 
 const navItems = [
   { label: "Product", href: "#product" },
+  { label: "Traction", href: "#traction" },
   { label: "Treasury & Credit", href: "#melt" },
   { label: "Risk Layer", href: "#risk" },
 ];

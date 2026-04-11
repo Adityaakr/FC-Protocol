@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ProductSection } from "@/components/sections/ProductSection";
+import { MonarisTractionSection } from "@/components/sections/MonarisTractionSection";
 import { MeltSection } from "@/components/sections/MeltSection";
 import { MonarisArchitectureSection } from "@/components/sections/MonarisArchitectureSection";
 import { RiskSection } from "@/components/sections/RiskSection";
@@ -18,6 +19,7 @@ const Index = () => {
         <HeroSection />
         <ProblemSection />
         <ProductSection />
+        <MonarisTractionSection />
         <MeltSection />
         <MonarisArchitectureSection />
         <RiskSection />
