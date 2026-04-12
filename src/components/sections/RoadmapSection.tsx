@@ -248,13 +248,40 @@ const flywheelSteps = [
   "Network economy",
 ];
 
-const statusStyles: Record<RoadmapStatus, string> = {
-  Live: "bg-emerald-100 text-emerald-700 border-emerald-200",
-  Expanding: "bg-lime-100 text-lime-700 border-lime-200",
-  "In Build": "bg-cyan-100 text-cyan-700 border-cyan-200",
-  Next: "bg-amber-100 text-amber-700 border-amber-200",
-  Designed: "bg-slate-100 text-slate-700 border-slate-200",
-  "Phased Rollout": "bg-emerald-50 text-emerald-800 border-emerald-200",
+const statusConfig: Record<
+  RoadmapStatus,
+  { bg: string; text: string; dot: string }
+> = {
+  Live: {
+    bg: "bg-emerald-500/10",
+    text: "text-emerald-600",
+    dot: "bg-emerald-500",
+  },
+  Expanding: {
+    bg: "bg-lime-500/10",
+    text: "text-lime-600",
+    dot: "bg-lime-500",
+  },
+  "In Build": {
+    bg: "bg-sky-500/10",
+    text: "text-sky-600",
+    dot: "bg-sky-500",
+  },
+  Next: {
+    bg: "bg-amber-500/10",
+    text: "text-amber-600",
+    dot: "bg-amber-500",
+  },
+  Designed: {
+    bg: "bg-slate-500/8",
+    text: "text-slate-500",
+    dot: "bg-slate-400",
+  },
+  "Phased Rollout": {
+    bg: "bg-violet-500/10",
+    text: "text-violet-600",
+    dot: "bg-violet-500",
+  },
 };
 
 function matchesFilter(status: RoadmapStatus, filter: FilterKey) {
