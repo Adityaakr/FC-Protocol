@@ -212,18 +212,15 @@ const roadmapPhases: Phase[] = [
     detailBlocks: [
       {
         title: "USDM+",
-        body:
-          "The yield-bearing cash layer. 1:1 redeemable against stablecoins. The default settlement asset inside Monaris, used for invoicing, BNPL settlement, treasury balances, advance pool accounting, and programmable repayments. Idle USDM+ earns yield from productive protocol activity, making it the money users actually touch every day.",
+        body: "The yield-bearing cash layer. 1:1 redeemable against stablecoins. The default settlement asset inside Monaris, used for invoicing, BNPL settlement, treasury balances, advance pool accounting, and programmable repayments. Idle USDM+ earns yield from productive protocol activity, making it the money users actually touch every day.",
       },
       {
         title: "MNAR",
-        body:
-          "The governance and coordination token. MNAR holders vote on risk parameters, fee structures, credit model updates, treasury policy, and chain expansion priorities. MNAR also provides fee discounts on Monaris Credit, Score API access, and premium treasury features. Builder incentives, partner coordination, and ecosystem rewards flow through MNAR, tied to real usage, not emissions.",
+        body: "The governance and coordination token. MNAR holders vote on risk parameters, fee structures, credit model updates, treasury policy, and chain expansion priorities. MNAR also provides fee discounts on Monaris Credit, Score API access, and premium treasury features. Builder incentives, partner coordination, and ecosystem rewards flow through MNAR, tied to real usage, not emissions.",
       },
       {
         title: "sMNAR",
-        body:
-          "Staked MNAR. The security and alignment layer. sMNAR holders receive a share of protocol revenue, boosted governance weight, and serve as the first-loss backstop for the advance pool. If defaults exceed risk reserves, staked MNAR can be slashed, aligning stakers' incentives with sound underwriting. sMNAR also bonds settlement-router operators, data attestation providers, and future credit-risk delegates.",
+        body: "Staked MNAR. The security and alignment layer. sMNAR holders receive a share of protocol revenue, boosted governance weight, and serve as the first-loss backstop for the advance pool. If defaults exceed risk reserves, staked MNAR can be slashed, aligning stakers' incentives with sound underwriting. sMNAR also bonds settlement-router operators, data attestation providers, and future credit-risk delegates.",
       },
     ],
     detailFooter:
@@ -288,7 +285,9 @@ function matchesFilter(status: RoadmapStatus, filter: FilterKey) {
   if (filter === "all") return true;
   if (filter === "live") return status === "Live";
   if (filter === "build") return status === "In Build";
-  return status === "Next" || status === "Designed" || status === "Phased Rollout";
+  return (
+    status === "Next" || status === "Designed" || status === "Phased Rollout"
+  );
 }
 
 export const RoadmapSection = () => {
@@ -300,11 +299,13 @@ export const RoadmapSection = () => {
 
   return (
     <section id="roadmap" className="relative py-24 lg:py-32 overflow-hidden">
+      {/* Subtle background — consistent with rest of the site */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/40 to-white" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(16,185,129,0.06),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_100%,rgba(132,204,22,0.04),transparent_60%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
         <div className="max-w-4xl mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -329,6 +330,7 @@ export const RoadmapSection = () => {
             </p>
           </motion.div>
 
+          {/* Filter pills */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -354,6 +356,7 @@ export const RoadmapSection = () => {
           </motion.div>
         </div>
 
+        {/* Phase cards grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeFilter}
@@ -377,6 +380,7 @@ export const RoadmapSection = () => {
                   className="group relative"
                 >
                   <div className="h-full rounded-2xl border border-slate-200/80 bg-white p-6 transition-all duration-300 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-0.5">
+                    {/* Top row: phase number + status */}
                     <div className="flex items-center justify-between mb-5">
                       <div className="flex items-center gap-3">
                         <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/80 border border-emerald-200/50">
@@ -406,14 +410,17 @@ export const RoadmapSection = () => {
                       </span>
                     </div>
 
+                    {/* Title */}
                     <h3 className="font-display font-bold text-slate-900 text-xl leading-tight mb-3 tracking-tight">
                       {phase.title}
                     </h3>
 
+                    {/* Summary */}
                     <p className="text-sm text-slate-500 leading-relaxed mb-5">
                       {phase.summary}
                     </p>
 
+                    {/* Includes list */}
                     <div className="space-y-2.5">
                       {phase.includes.map((item) => (
                         <div key={item} className="flex items-start gap-2.5">
@@ -431,6 +438,7 @@ export const RoadmapSection = () => {
           </motion.div>
         </AnimatePresence>
 
+        {/* Flywheel */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
