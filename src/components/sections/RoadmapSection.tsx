@@ -432,27 +432,25 @@ export const RoadmapSection = () => {
         </AnimatePresence>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-14"
+          className="mt-20"
         >
-          <div className="rounded-[2rem] border border-emerald-500/20 bg-white/90 backdrop-blur-sm p-6 shadow-xl shadow-emerald-500/10">
-            <p className="text-xs font-bold text-emerald-700 uppercase tracking-[0.2em] mb-5 text-center">
+          <div className="relative rounded-2xl border border-slate-200/80 bg-white p-8 sm:p-10">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 text-center">
               Monaris Flywheel
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-3">
               {flywheelSteps.map((step, index) => (
-                <div key={step} className="flex items-center gap-3">
-                  <div className="rounded-full border border-emerald-200 bg-gradient-to-r from-emerald-50 to-lime-50 px-4 py-2.5">
-                    <span className="text-sm font-semibold text-gray-800">{step}</span>
-                  </div>
-                  {index < flywheelSteps.length - 1 ? (
-                    <span className="text-emerald-600 text-lg font-bold" aria-hidden="true">
-                      →
-                    </span>
-                  ) : null}
+                <div key={step} className="flex items-center gap-2">
+                  <span className="inline-flex items-center rounded-full bg-slate-50 border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 whitespace-nowrap">
+                    {step}
+                  </span>
+                  {index < flywheelSteps.length - 1 && (
+                    <ArrowRight className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                  )}
                 </div>
               ))}
             </div>
