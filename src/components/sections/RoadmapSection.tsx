@@ -354,73 +354,71 @@ export const RoadmapSection = () => {
           </motion.div>
         </div>
 
-        <div className="relative">
-          <div className="hidden xl:block absolute left-0 right-0 top-[6.8rem] h-0.5 bg-gradient-to-r from-transparent via-lime-400/60 to-transparent" />
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeFilter}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.3 }}
+            className="grid gap-4 md:grid-cols-2 xl:grid-cols-3"
+          >
             {visiblePhases.map((phase, index) => {
               const Icon = phase.icon;
+              const status = statusConfig[phase.status];
 
               return (
                 <motion.div
                   key={phase.id}
-                  initial={{ opacity: 0, y: 24 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.06 }}
-                  className="relative"
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="group relative"
                 >
-                  <div className="hidden xl:block absolute left-1/2 -top-6 h-6 w-0.5 -translate-x-1/2 bg-gradient-to-b from-lime-400/0 to-lime-400/70" />
-                  <div className="h-full bg-white/95 backdrop-blur-sm border border-emerald-500/20 rounded-3xl p-5 shadow-sm hover:shadow-2xl hover:border-emerald-500/40 hover:shadow-emerald-500/10 transition-all duration-300">
-                    <div className="flex items-start justify-between gap-4 mb-4">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center shadow-sm">
-                          <Icon className="w-6 h-6 text-emerald-600" />
+                  <div className="h-full rounded-2xl border border-slate-200/80 bg-white p-6 transition-all duration-300 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-0.5">
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="flex items-center gap-3">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100/80 border border-emerald-200/50">
+                          <Icon className="w-5 h-5 text-emerald-600" />
                         </div>
-                        <div>
-                          <p className="text-xs font-bold text-emerald-600 uppercase tracking-[0.18em] mb-1">
-                            {phase.phase}
-                          </p>
-                          <h3
-                            className={cn(
-                              "font-display font-bold text-black tracking-tight",
-                              phase.id === "phase-2"
-                                ? "text-base sm:text-lg leading-tight"
-                                : "text-xl sm:text-2xl",
-                            )}
-                          >
-                            {phase.id === "phase-2" ? (
-                              <>
-                                Cashflow,
-                                <br />
-                                <span className="whitespace-nowrap">
-                                  Receivables & Proof
-                                </span>
-                              </>
-                            ) : (
-                              phase.title
-                            )}
-                          </h3>
-                        </div>
+                        <span className="text-xs font-bold text-slate-400 uppercase tracking-[0.15em]">
+                          {phase.phase}
+                        </span>
                       </div>
                       <span
                         className={cn(
-                          "inline-flex shrink-0 rounded-full border px-3 py-1 text-xs font-bold",
-                          statusStyles[phase.status],
+                          "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide",
+                          status.bg,
+                          status.text,
                         )}
                       >
-                        {phase.status === "Live" ? "Live (Closed Beta)" : phase.status}
+                        <span
+                          className={cn(
+                            "w-1.5 h-1.5 rounded-full",
+                            status.dot,
+                            phase.status === "Live" && "animate-pulse",
+                          )}
+                        />
+                        {phase.status === "Live"
+                          ? "Live (Closed Beta)"
+                          : phase.status}
                       </span>
                     </div>
 
-                    <p className="text-sm sm:text-base text-gray-700 font-medium leading-relaxed mb-4">
+                    <h3 className="font-display font-bold text-slate-900 text-xl leading-tight mb-3 tracking-tight">
+                      {phase.title}
+                    </h3>
+
+                    <p className="text-sm text-slate-500 leading-relaxed mb-5">
                       {phase.summary}
                     </p>
 
-                    <div className="space-y-2">
+                    <div className="space-y-2.5">
                       {phase.includes.map((item) => (
-                        <div key={item} className="flex items-center gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
-                          <span className="text-sm text-gray-700 font-medium">
+                        <div key={item} className="flex items-start gap-2.5">
+                          <div className="w-1 h-1 rounded-full bg-emerald-400 mt-[7px] flex-shrink-0" />
+                          <span className="text-[13px] text-slate-600 leading-snug">
                             {item}
                           </span>
                         </div>
@@ -430,8 +428,8 @@ export const RoadmapSection = () => {
                 </motion.div>
               );
             })}
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
