@@ -299,18 +299,10 @@ export const RoadmapSection = () => {
   );
 
   return (
-    <section id="roadmap" className="relative py-18 lg:py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 via-lime-300/25 to-emerald-500/15" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(34,197,94,0.12),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(132,204,22,0.10),transparent_50%)]" />
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(34,197,94,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(34,197,94,0.45) 1px, transparent 1px)",
-          backgroundSize: "100px 100px",
-        }}
-      />
+    <section id="roadmap" className="relative py-24 lg:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/40 to-white" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(16,185,129,0.06),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_100%,rgba(132,204,22,0.04),transparent_60%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between mb-14">
