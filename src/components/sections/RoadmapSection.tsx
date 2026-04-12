@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
+  ArrowRight,
   ArrowRightLeft,
   Bot,
   CreditCard,
@@ -30,6 +31,7 @@ type DetailBlock = {
 type Phase = {
   id: string;
   phase: string;
+  phaseNumber: string;
   title: string;
   status: RoadmapStatus;
   summary: string;
@@ -46,6 +48,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-1",
     phase: "Phase 1",
+    phaseNumber: "01",
     title: "Private Money Movement",
     status: "Live",
     summary:
@@ -66,6 +69,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-2",
     phase: "Phase 2",
+    phaseNumber: "02",
     title: "Cashflow, Receivables & Proof",
     status: "Live",
     summary:
@@ -85,6 +89,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-3",
     phase: "Phase 3",
+    phaseNumber: "03",
     title: "Monaris Score",
     status: "In Build",
     summary:
@@ -104,6 +109,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-3-5-pay",
     phase: "Phase 3.5",
+    phaseNumber: "03.5",
     title: "Monaris Pay",
     status: "In Build",
     summary:
@@ -125,6 +131,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-3-5-earn",
     phase: "Phase 3.5",
+    phaseNumber: "03.5",
     title: "Monaris Earn",
     status: "In Build",
     summary:
@@ -146,6 +153,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-4",
     phase: "Phase 4",
+    phaseNumber: "04",
     title: "Monaris Credit",
     status: "Next",
     summary:
@@ -164,6 +172,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-5",
     phase: "Phase 5",
+    phaseNumber: "05",
     title: "Monaris Business + Mona AI",
     status: "Designed",
     summary:
@@ -183,6 +192,7 @@ const roadmapPhases: Phase[] = [
   {
     id: "phase-6",
     phase: "Phase 6",
+    phaseNumber: "06",
     title: "Monaris Economy",
     status: "Phased Rollout",
     summary:
