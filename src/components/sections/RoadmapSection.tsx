@@ -305,39 +305,36 @@ export const RoadmapSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_100%,rgba(132,204,22,0.04),transparent_60%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between mb-14">
+        <div className="max-w-4xl mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl"
           >
-            <div className="inline-block px-4 py-2 bg-emerald-100 rounded-full mb-4">
-              <span className="text-sm font-bold text-emerald-700 uppercase tracking-wide">
-                ROADMAP
-              </span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-5xl font-display font-bold text-black mb-4 leading-tight tracking-tight">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-emerald-600 mb-4">
+              Roadmap
+            </span>
+            <h2 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-display font-bold text-slate-900 leading-[1.1] tracking-tight mb-5">
               Building the{" "}
-              <span className="text-emerald-600">
+              <span className="bg-gradient-to-r from-emerald-500 to-lime-500 bg-clip-text text-transparent">
                 private cashflow operating system
               </span>{" "}
               for the stablecoin economy
             </h2>
-            <p className="text-base sm:text-lg text-gray-700 max-w-4xl font-medium leading-relaxed">
-              We&apos;re rolling it out in layers: first money movement, then proof,
-              then credit, then full money automation, and finally the network economy
-              that powers it all.
+            <p className="text-lg text-slate-500 max-w-3xl leading-relaxed">
+              We&apos;re rolling it out in layers: first money movement, then
+              proof, then credit, then full money automation, and finally the
+              network economy that powers it all.
             </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex flex-wrap gap-2 lg:justify-end"
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="flex flex-wrap gap-2 mt-8"
           >
             {filters.map((filter) => (
               <button
@@ -345,10 +342,10 @@ export const RoadmapSection = () => {
                 type="button"
                 onClick={() => setActiveFilter(filter.key)}
                 className={cn(
-                  "rounded-full border px-4 py-2 text-sm font-semibold transition-all",
+                  "rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200",
                   activeFilter === filter.key
-                    ? "border-emerald-500 bg-gradient-to-r from-emerald-500 to-lime-500 text-white shadow-md"
-                    : "border-emerald-200 bg-white/80 text-emerald-700 hover:border-emerald-400 hover:bg-emerald-50",
+                    ? "bg-slate-900 text-white shadow-lg shadow-slate-900/20"
+                    : "bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:text-slate-900",
                 )}
               >
                 {filter.label}
