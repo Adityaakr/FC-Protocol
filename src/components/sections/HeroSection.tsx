@@ -109,11 +109,11 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-3xl sm:text-4xl lg:text-[2.8rem] xl:text-[3.75rem] font-display font-bold text-foreground leading-none tracking-tight"
               >
-                <span className="block whitespace-nowrap">Turn stablecoin cashflow</span>
+                <span className="block whitespace-nowrap">Your stablecoin income deserves</span>
                 <span className="block whitespace-nowrap mt-3 lg:mt-4">
                   into a{" "}
                   <span className="relative inline-block">
-                    real financial account
+                    real financial access
                     <span className="pointer-events-none absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-emerald-300/60 via-emerald-500/45 to-lime-400/60 blur-sm rounded-full" />
                   </span>
                 </span>
@@ -126,7 +126,7 @@ export const HeroSection = () => {
                 className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold leading-tight tracking-tight"
               >
                 <span className="bg-gradient-to-r from-emerald-500 via-emerald-500 to-lime-500 bg-clip-text text-transparent">
-                  Private payments, cashflow-backed credit, and automated treasury for the next era of finance.
+                   Private payments, cashflow-backed credit, and automated treasury — powered by PayFi rails.
                 </span>
               </motion.h2>
               
