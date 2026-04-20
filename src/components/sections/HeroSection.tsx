@@ -9,7 +9,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 export const HeroSection = () => {
   const [isHovered, setIsHovered] = useState(false);
   const progress = useMotionValue(251.2);
-  const smoothProgress = useSpring(progress, { 
+  const smoothProgress = useSpring(progress, {
     stiffness: 50,
     damping: 30,
     mass: 1
@@ -51,7 +51,7 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
       {/* Premium gradient background with mesh */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-emerald-500/[0.02] to-lime-400/[0.03] -z-10" />
-      
+
       {/* Multi-colored dotted pattern */}
       <div className="absolute inset-0 -z-10" style={{
         backgroundImage: `
@@ -62,15 +62,15 @@ export const HeroSection = () => {
         backgroundSize: '40px 40px, 60px 60px, 80px 80px',
         backgroundPosition: '0 0, 20px 20px, 40px 40px'
       }} />
-      
+
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)] -z-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(132,204,22,0.06),transparent_50%)] -z-10" />
-      
+
       {/* Animated gradient blobs */}
       <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-emerald-500/8 rounded-full blur-3xl -z-10 animate-pulse" />
       <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-lime-400/8 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }} />
-      
+
       {/* Subtle grid overlay for depth */}
       <div className="absolute inset-0 -z-10 opacity-[0.015]" style={{
         backgroundImage: `linear-gradient(rgba(34, 197, 94, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.5) 1px, transparent 1px)`,
@@ -96,41 +96,41 @@ export const HeroSection = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-emerald-500/40 backdrop-blur-sm shadow-[0_6px_20px_-12px_rgba(16,94,57,0.45)]">
                 <Sparkles className="w-4 h-4 text-emerald-500" />
                 <span className="text-sm font-semibold text-emerald-600">
-                 MoneyOS
+                  MoneyOS
                 </span>
               </div>
             </motion.div>
 
             {/* Headline */}
             <div className="space-y-6">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[3rem] font-display font-bold text-foreground leading-none tracking-tight"
               >
-                <span className="block whitespace-nowrap">Your stablecoin income deserves</span>
+                <span className="block whitespace-nowrap">Your stablecoin income</span>
                 <span className="block whitespace-nowrap mt-3 lg:mt-4">
-                  into a{" "}
+                  deserves{" "}
                   <span className="relative inline-block">
                     real financial access
                     <span className="pointer-events-none absolute -bottom-3 left-0 right-0 h-3 bg-gradient-to-r from-emerald-300/60 via-emerald-500/45 to-lime-400/60 blur-sm rounded-full" />
                   </span>
                 </span>
               </motion.h1>
-              
-              <motion.h2 
+
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-display font-semibold leading-tight tracking-tight"
               >
                 <span className="bg-gradient-to-r from-emerald-500 via-emerald-500 to-lime-500 bg-clip-text text-transparent">
-                   Private payments, cashflow-backed credit, and automated treasury — powered by PayFi rails.
+                  Private payments, cashflow-backed credit, and automated treasury — powered by PayFi rails.
                 </span>
               </motion.h2>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -142,7 +142,7 @@ export const HeroSection = () => {
             </div>
 
             {/* Premium CTAs */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -235,19 +235,19 @@ export const HeroSection = () => {
                           <div className="w-1 h-1.5 bg-slate-700 rounded-sm"></div>
                           <div className="w-1 h-2 bg-slate-700 rounded-sm"></div>
                           <div className="w-1 h-2.5 bg-slate-700 rounded-sm"></div>
-                  </div>
+                        </div>
                         {/* WiFi */}
                         <svg className="w-3.5 h-2.5" viewBox="0 0 20 14" fill="none">
-                          <path d="M10 0C6 0 2.5 1.5 0 4L10 14L20 4C17.5 1.5 14 0 10 0Z" fill="#1f2937"/>
+                          <path d="M10 0C6 0 2.5 1.5 0 4L10 14L20 4C17.5 1.5 14 0 10 0Z" fill="#1f2937" />
                         </svg>
                         {/* Battery */}
                         <div className="w-5 h-2.5 border border-slate-700 rounded-sm relative">
                           <div className="absolute right-0 top-0.5 w-0.5 h-1.5 bg-slate-700 rounded-r"></div>
                           <div className="w-full h-full bg-slate-700 rounded-sm" style={{ width: '90%' }}></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                </div>
-              </div>
 
                   {/* Main Dashboard Container - Glassmorphism Design */}
                   <div
@@ -267,16 +267,16 @@ export const HeroSection = () => {
                       }}></div>
                       {/* Additional depth layer */}
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.03),transparent_70%)]"></div>
-                      </div>
+                    </div>
 
-                  {/* Bottom gradient fill to avoid blank space */}
-                  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-white/80 to-white pointer-events-none" />
+                    {/* Bottom gradient fill to avoid blank space */}
+                    <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-white/80 to-white pointer-events-none" />
 
 
                     {/* Dashboard Content - Glassmorphism */}
                     <div className="relative px-4 pt-7 pb-24 space-y-5">
                       {/* Hero Center - Large Balance */}
-                      <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -285,13 +285,13 @@ export const HeroSection = () => {
                         <div className="text-4xl font-semibold text-slate-900 mb-1.5 tracking-tight">$687,180.00</div>
                         <div className="flex items-center justify-center gap-2">
                           <span className="text-xs text-slate-700 font-medium">687,180.00 USDC</span>
-                    </div>
-                  </motion.div>
+                        </div>
+                      </motion.div>
 
                       {/* Quick Actions Row - 3 Circular Buttons */}
-                  <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="flex items-center justify-center gap-7"
                       >
@@ -311,26 +311,26 @@ export const HeroSection = () => {
                           >
                             <div className="w-14 h-14 rounded-full bg-white border border-slate-200 shadow-md flex items-center justify-center hover:bg-slate-50 transition">
                               <action.icon className="w-6 h-6 text-slate-700" strokeWidth={2.4} />
-                      </div>
+                            </div>
                             <span className="text-[10px] font-semibold text-slate-800">{action.label}</span>
                           </motion.button>
                         ))}
-                  </motion.div>
+                      </motion.div>
 
                       {/* Account Snapshot - Glass Card */}
-                  <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         whileHover={{ scale: 1.01 }}
                         className="backdrop-blur-xl bg-white/90 rounded-3xl border border-slate-200 shadow-xl p-4 hover:bg-white transition-all"
-                  >
+                      >
                         <div className="text-[10px] font-bold text-slate-800 mb-3 uppercase tracking-widest">Account Snapshot</div>
                         <div className="space-y-3">
                           <div className="flex items-center justify-between py-0.5">
                             <span className="text-[10px] text-slate-500 uppercase tracking-wide font-medium">Available to Borrow</span>
                             <span className="text-sm font-bold text-slate-900">$17,000</span>
-                      </div>
+                          </div>
                           <div className="flex items-center justify-between py-0.5">
                             <span className="text-[10px] text-slate-500 uppercase tracking-wide font-medium">Treasury Deployed</span>
                             <span className="text-sm font-bold text-slate-900">32%</span>
@@ -349,16 +349,16 @@ export const HeroSection = () => {
                                     className="flex-1 bg-gradient-to-t from-emerald-500 via-emerald-400 to-lime-300 rounded-t shadow-sm"
                                   ></motion.div>
                                 ))}
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                      </motion.div>
 
                       {/* Recent Activity - Glass Card */}
-                  <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
                         whileHover={{ scale: 1.01 }}
                         className="backdrop-blur-xl bg-white rounded-3xl border border-slate-200 shadow-lg p-4 hover:bg-slate-50 transition-all"
@@ -396,24 +396,24 @@ export const HeroSection = () => {
                                   <div className="text-[11px] font-semibold text-slate-900">{item.label}</div>
                                   <div className="text-[9px] text-slate-500 font-medium">{item.time}</div>
                                 </div>
-                      </div>
+                              </div>
                               <span className="text-xs font-bold text-slate-800">{item.amount}</span>
                             </motion.div>
                           ))}
-                      </div>
+                        </div>
                       </motion.div>
-                      </div>
-
                     </div>
 
-                    {/* Floating Dock - inside screen glass */}
-                    <div className="absolute left-1/2 bottom-3 z-30 -translate-x-1/2">
-                      <FloatingDock
-                        desktopClassName="h-12 items-center justify-around bg-white/95 border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-1.5 gap-1"
-                        mobileClassName="translate-y-4"
-                        items={dockItems}
-                      />
-                    </div>
+                  </div>
+
+                  {/* Floating Dock - inside screen glass */}
+                  <div className="absolute left-1/2 bottom-3 z-30 -translate-x-1/2">
+                    <FloatingDock
+                      desktopClassName="h-12 items-center justify-around bg-white/95 border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-1.5 gap-1"
+                      mobileClassName="translate-y-4"
+                      items={dockItems}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
