@@ -78,7 +78,7 @@ export const HeroSection = () => {
       }} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-8 lg:gap-10 xl:gap-12 items-center">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -107,7 +107,7 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-3xl sm:text-4xl lg:text-[2.8rem] xl:text-[3.75rem] font-display font-bold text-foreground leading-none tracking-tight"
+                className="text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[3rem] font-display font-bold text-foreground leading-none tracking-tight"
               >
                 <span className="block whitespace-nowrap">Your stablecoin income deserves</span>
                 <span className="block whitespace-nowrap mt-3 lg:mt-4">
@@ -123,7 +123,7 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-xl sm:text-xl lg:text-2xl xl:text-3xl font-display font-semibold leading-tight tracking-tight"
+                className="text-base sm:text-lg lg:text-xl xl:text-2xl font-display font-semibold leading-tight tracking-tight"
               >
                 <span className="bg-gradient-to-r from-emerald-500 via-emerald-500 to-lime-500 bg-clip-text text-transparent">
                    Private payments, cashflow-backed credit, and automated treasury — powered by PayFi rails.
@@ -213,10 +213,10 @@ export const HeroSection = () => {
             initial={{ opacity: 0, x: 30, rotateY: -5 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative flex items-center justify-center max-w-full overflow-hidden"
+            className="relative flex items-center justify-center lg:justify-end max-w-full overflow-visible"
           >
             {/* iPhone 15 Pro Frame - Realistic */}
-            <div className="relative w-[320px] max-w-full mx-auto overflow-hidden">
+            <div className="relative w-[260px] sm:w-[290px] xl:w-[320px] max-w-full mx-auto lg:mx-0 lg:-translate-x-10 overflow-visible">
               {/* Phone Frame/Bezel - More realistic */}
               <div className="relative bg-gradient-to-b from-gray-900 via-black to-gray-900 rounded-[3rem] p-[5px] shadow-none ring-1 ring-gray-200">
                 {/* Screen Glass Effect */}
@@ -274,7 +274,7 @@ export const HeroSection = () => {
 
 
                     {/* Dashboard Content - Glassmorphism */}
-                    <div className="relative px-4 pt-7 pb-28 space-y-5">
+                    <div className="relative px-4 pt-7 pb-24 space-y-5">
                       {/* Hero Center - Large Balance */}
                       <motion.div 
                         initial={{ opacity: 0, y: 20 }}
@@ -405,18 +405,19 @@ export const HeroSection = () => {
                       </div>
 
                     </div>
+
+                    {/* Floating Dock - inside screen glass */}
+                    <div className="absolute left-1/2 bottom-3 z-30 -translate-x-1/2">
+                      <FloatingDock
+                        desktopClassName="h-12 items-center justify-around bg-white/95 border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-1.5 gap-1"
+                        mobileClassName="translate-y-4"
+                        items={dockItems}
+                      />
+                    </div>
                 </div>
               </div>
             </div>
-            {/* Bottom shadow base and Floating Dock */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-[320px] max-w-full h-16 bg-gradient-to-t from-white via-white/80 to-transparent rounded-full blur-lg z-10 pointer-events-none"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-4 z-30 flex justify-center">
-              <FloatingDock
-                desktopClassName="w-[260px] max-w-full h-14 items-center justify-around bg-white border border-slate-200 rounded-full shadow-xl backdrop-blur px-3 py-2"
-                mobileClassName="translate-y-4"
-                items={dockItems}
-              />
-              </div>
+
           </motion.div>
         </div>
       </div>
