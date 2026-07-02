@@ -59,8 +59,8 @@ const Testimonials = () => (
       </div>
 
       <div className="relative overflow-hidden rounded-3xl bg-paper bg-grad">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-paper to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-paper to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-8 sm:w-40 bg-gradient-to-r from-paper to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-8 sm:w-40 bg-gradient-to-l from-paper to-transparent z-10" />
         <div className="py-6 sm:py-7">
           <MarqueeRow items={ROW_1} />
         </div>

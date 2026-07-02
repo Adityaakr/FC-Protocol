@@ -83,7 +83,7 @@ const Footer = () => (
       </div>
 
       {/* giant wordmark, cropped at bottom */}
-      <div className="mt-12 overflow-hidden select-none" style={{ fontSize: "clamp(88px,16.5vw,236px)", height: ".66em" }} aria-hidden="true">
+      <div className="mt-12 overflow-hidden select-none" style={{ fontSize: "clamp(52px,16.5vw,236px)", height: ".66em" }} aria-hidden="true">
         <div className="disp font-bold text-ink text-center whitespace-nowrap" style={{ lineHeight: 1, letterSpacing: "-.02em" }}>Monaris</div>
       </div>
 
