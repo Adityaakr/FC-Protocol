@@ -270,7 +270,7 @@ const CalculatorSection = () => {
             </div>
           </div>
           <p className="mt-4 text-[11px] leading-relaxed text-neutral-400 text-center">
-            <span className="text-volt-text">*</span> This is just for demo purposes, real calculations may vary.
+            <span className="text-volt-text">*</span> Illustrative demo. Real advances are underwritten against your verified cashflow and Monaris Score, and may differ. Not an offer of credit.
           </p>
         </div>
       </div>
