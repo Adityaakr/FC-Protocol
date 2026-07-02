@@ -270,7 +270,7 @@ const CalculatorSection = () => {
             </div>
           </div>
           <p className="mt-4 text-[11px] leading-relaxed text-neutral-400 text-center">
-            <span className="text-volt-text">*</span> Advance = eligible receivable x advance rate x term and verification factors, minus a 15% locked reserve. Eligible receivable is capped by your verified monthly volume. Estimates are illustrative and depend on your Monaris Score, pool liquidity, and invoice verification. Not an offer of credit.
+            <span className="text-volt-text">*</span> This is just for demo purposes, real calculations may vary.
           </p>
         </div>
       </div>
