@@ -57,8 +57,8 @@ const Hero = () => (
           <br />
           <span className="text-[#0d0d0d]/45">for the stablecoin economy.</span>
         </h1>
-        <p className="rise mx-auto mt-6 max-w-xl text-base sm:text-lg text-[#0d0d0d]/70 font-medium" style={{ animationDelay: ".1s" }}>
-          A turnkey way to turn receivables into instant liquidity, designed with financial-grade privacy and capital standards.
+        <p className="rise mx-auto mt-6 max-w-2xl text-base sm:text-lg text-[#0d0d0d]/70 font-medium" style={{ animationDelay: ".1s" }}>
+          Monaris turns receivables and recurring cashflow into instant liquidity, backed by private, verifiable credit. One layer for working capital, BNPL-style financing, automated repayments, treasury, and one-click private payments.
         </p>
         <div className="rise flex flex-col sm:flex-row gap-3 mt-8 items-center justify-center" style={{ animationDelay: ".18s" }}>
           <a href="#cta" className="inline-flex items-center gap-2.5 rounded-full bg-[#0d0d0d] text-white px-6 py-3 text-sm font-semibold hover:-translate-y-0.5 transition-all">
