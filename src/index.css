@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-hosted Satoshi (display face). Weights 600/800 are intentionally absent —
+/* Self-hosted Satoshi (display face). Weights 600/800 are intentionally absent:
    the woff2 set ships 300/400/500/700/900 only; body copy is Inter. */
 @font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Light.woff2') format('woff2'); font-weight: 300; font-display: swap; }
 @font-face { font-family: 'Satoshi'; src: url('/fonts/Satoshi-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }

@@ -22,7 +22,7 @@ export const TESTIMONIALS: Testimonial[] = [
     n: "Early-stage founder",
     r: "Business with recurring volume",
     img: founderRecurring,
-    q: "I don’t want competitors or customers seeing how much revenue my business is generating, but I still need credit backed by that cashflow. Monaris solves both — private one-click payments today, and cashflow-backed credit on top.",
+    q: "I don’t want competitors or customers seeing how much revenue my business is generating, but I still need credit backed by that cashflow. Monaris solves both: private one-click payments today, and cashflow-backed credit on top.",
   },
   {
     n: "Founder",

@@ -1,6 +1,6 @@
 import { Check, Clock, RefreshCw, Shield, TrendingDown } from "lucide-react";
 
-/* Static "Healthy" state — the prototype's interactive state machine was dead code
+/* Static "Healthy" state: the prototype's interactive state machine was dead code
    (it bound to markup that doesn't exist), so the visible static card is the spec. */
 const StormShield = () => (
   <div
