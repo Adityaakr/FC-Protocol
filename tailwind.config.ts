@@ -14,11 +14,22 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Satoshi', 'system-ui', 'sans-serif'],
-        body: ['Satoshi', 'system-ui', 'sans-serif'],
-        brand: ['Satoshi', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Satoshi', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SF Mono', 'Menlo', 'monospace'],
       },
       colors: {
+        volt: {
+          DEFAULT: "#C8FF00",
+          bright: "#DDFC01",
+          sky: "#DBF227",
+          dark: "#7CB518",
+          text: "#67790A",
+        },
+        ink: "#131720",
+        paper: "#F7F8F2",
+        dark: "#0B0D07",
+        "lime-soft": "#E9F7B4",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -53,17 +64,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-      },
-      boxShadow: {
-        'glow': 'var(--glow-primary)',
-        'sm': 'var(--shadow-sm)',
-        'md': 'var(--shadow-md)',
-        'lg': 'var(--shadow-lg)',
-      },
-      backgroundImage: {
-        'gradient-hero': 'var(--gradient-hero)',
-        'gradient-subtle': 'var(--gradient-subtle)',
-        'gradient-card': 'var(--gradient-card)',
       },
       borderRadius: {
         lg: "var(--radius)",
