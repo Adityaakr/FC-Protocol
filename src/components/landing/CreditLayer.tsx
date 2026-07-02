@@ -44,7 +44,7 @@ const CreditLayer = () => {
     <section ref={sectionRef} id="credit" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4 pb-24">
       <div className="text-center">
         <SectionBadge icon={Layers}>How the credit layer works</SectionBadge>
-        <h2 className="disp mx-auto mt-5 max-w-3xl text-3xl sm:text-5xl font-bold leading-[1.08] text-ink">
+        <h2 className="disp mx-auto mt-5 max-w-3xl text-3xl sm:text-5xl font-bold leading-[1.22] text-ink">
           The best treasuries have been <span className="marker">seeking private credit</span> for decades.
         </h2>
       </div>
