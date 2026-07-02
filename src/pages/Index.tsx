@@ -1,36 +1,27 @@
-import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { ProductSection } from "@/components/sections/ProductSection";
-import { MonarisTractionSection } from "@/components/sections/MonarisTractionSection";
-import { MeltSection } from "@/components/sections/MeltSection";
-import { MonarisArchitectureSection } from "@/components/sections/MonarisArchitectureSection";
-import { RiskSection } from "@/components/sections/RiskSection";
-import { RoadmapSection } from "@/components/sections/RoadmapSection";
-// import { UseCasesSection } from "@/components/sections/UseCasesSection";
-// import { BuildersSection } from "@/components/sections/BuildersSection";
-import { FlexCreditBanner as MonarisBanner } from "@/components/sections/FlexCreditBanner";
+import Hero from "@/components/landing/Hero";
+import Statement from "@/components/landing/Statement";
+import CalculatorSection from "@/components/landing/CalculatorSection";
+import CreditLayer from "@/components/landing/CreditLayer";
+import Testimonials from "@/components/landing/Testimonials";
+import Treasury from "@/components/landing/Treasury";
+import Advantage from "@/components/landing/Advantage";
+import Finale from "@/components/landing/Finale";
+import Footer from "@/components/landing/Footer";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <ProblemSection />
-        <ProductSection />
-        <MonarisTractionSection />
-        <MeltSection />
-        <MonarisArchitectureSection />
-        <RiskSection />
-        <RoadmapSection />
-        {/* <UseCasesSection />
-        <BuildersSection /> */} 
-
-      </main>
-      <MonarisBanner />
-    </div>
-  );
-};
+const Index = () => (
+  <div className="min-h-screen overflow-x-hidden">
+    <Hero />
+    <main>
+      <Statement />
+      <CalculatorSection />
+      <CreditLayer />
+      <Testimonials />
+      <Treasury />
+      <Advantage />
+      <Finale />
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Index;
