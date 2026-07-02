@@ -13,14 +13,14 @@ export interface Testimonial {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    n: "Gesim",
-    r: "CEO",
+    n: "Charchit",
+    r: "CEO @GeSim",
     img: gesim,
     q: "Would love to use Monaris for automated treasury and one-click private payments. It feels like the missing financial layer for stablecoin businesses.",
   },
   {
-    n: "Early-stage founder",
-    r: "Business with recurring volume",
+    n: "Bridge",
+    r: "Founder @ShoonyaStore",
     img: founderRecurring,
     q: "I don’t want competitors or customers seeing how much revenue my business is generating, but I still need credit backed by that cashflow. Monaris solves both: private one-click payments today, and cashflow-backed credit on top.",
   },
