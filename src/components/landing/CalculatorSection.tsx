@@ -6,6 +6,26 @@ import { TERMS } from "./data";
 const num = (v: string) => parseFloat(v.replace(/[^0-9.]/g, "")) || 0;
 const money = (n: number) => Math.round(n).toLocaleString("en-US");
 
+/* ---- Monaris credit formula ----
+   Advance Today = Eligible Receivable x Advance Rate x Term Factor x Verification Factor - Required Lock
+   Eligible Receivable = min(invoice, monthly volume x coverage multiple)
+   Required Lock = Eligible Receivable x 15% reserve */
+
+const LOCK_RATE = 0.15;
+
+type VerificationLevel = "basic" | "verified" | "audited";
+
+const getAdvanceRate = (score: number) =>
+  score >= 90 ? 0.9 : score >= 80 ? 0.85 : score >= 70 ? 0.75 : score >= 60 ? 0.65 : 0.5;
+
+const getVolumeCoverageMultiple = (score: number) =>
+  score >= 90 ? 3.0 : score >= 80 ? 2.5 : score >= 70 ? 2.0 : 1.5;
+
+const getTermFactor = (days: number) => (days <= 30 ? 1.0 : days <= 45 ? 0.97 : days <= 60 ? 0.94 : 0.88);
+
+const getVerificationFactor = (level: VerificationLevel) =>
+  level === "audited" ? 1.0 : level === "verified" ? 0.97 : 0.9;
+
 /* greys the last 3 characters of the grouped amount, exactly like the prototype */
 const SplitMoney = ({ value }: { value: number }) => {
   const s = money(value);
@@ -28,16 +48,27 @@ const MONTHS = [
   { m: "May", inv: 92, adv: 82 },
 ];
 
+const VERIFICATION_LEVELS: { key: VerificationLevel; label: string }[] = [
+  { key: "basic", label: "Basic" },
+  { key: "verified", label: "Verified" },
+  { key: "audited", label: "Audited" },
+];
+
 const CalculatorSection = () => {
   const [amt, setAmt] = useState("20,000");
   const [vol, setVol] = useState("10,000");
-  const [rate, setRate] = useState(85);
+  const [score, setScore] = useState(85);
   const [termIdx, setTermIdx] = useState(1);
+  const [verification, setVerification] = useState<VerificationLevel>("verified");
   const outRef = useRef<HTMLParagraphElement>(null);
 
   const term = TERMS[termIdx];
-  const advance = (num(amt) * rate) / 100;
-  const monthly = (num(vol) * rate) / 100;
+  const advanceRate = getAdvanceRate(score);
+  const eligibleReceivable = Math.min(num(amt), num(vol) * getVolumeCoverageMultiple(score));
+  const grossAdvance = eligibleReceivable * advanceRate * getTermFactor(term) * getVerificationFactor(verification);
+  const requiredLock = eligibleReceivable * LOCK_RATE;
+  const advanceToday = Math.max(grossAdvance - requiredLock, 0);
+  const monthlyUnlocked = advanceToday * (30 / term);
 
   const pop = () => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -50,8 +81,9 @@ const CalculatorSection = () => {
   const reset = () => {
     setAmt("20,000");
     setVol("10,000");
-    setRate(85);
+    setScore(85);
     setTermIdx(1);
+    setVerification("verified");
   };
 
   const blurFormat = (setter: (v: string) => void) => (e: React.FocusEvent<HTMLInputElement>) => {
@@ -132,14 +164,14 @@ const CalculatorSection = () => {
               </span>
             </label>
             <label className="block">
-              <span className="text-sm font-medium text-neutral-600">Monthly volume (USDC)</span>
+              <span className="text-sm font-medium text-neutral-600">Monthly stablecoin volume (USDC)</span>
               <span className="mt-2 flex items-center rounded-xl border border-[#E5E7EB] bg-white px-4 h-12 focus-within:border-volt-dark transition-colors">
                 <input
                   value={vol}
                   onChange={(e) => setVol(e.target.value)}
                   onBlur={blurFormat(setVol)}
                   inputMode="numeric"
-                  aria-label="Monthly volume in USDC"
+                  aria-label="Monthly stablecoin volume in USDC"
                   className="w-full bg-transparent text-[15px] font-semibold text-ink tnum outline-none"
                 />
                 <Info className="w-4 h-4 text-neutral-300" />
@@ -173,37 +205,60 @@ const CalculatorSection = () => {
 
           <div className="mt-6">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-neutral-600">Advance rate · Monaris Score</span>
-              <span className="whitespace-nowrap rounded-full bg-volt px-3 py-1 text-xs font-semibold text-ink">{rate}%</span>
+              <span className="text-sm font-medium text-neutral-600">Monaris Score</span>
+              <span className="whitespace-nowrap rounded-full bg-volt px-3 py-1 text-xs font-semibold text-ink">
+                {score} · {Math.round(advanceRate * 100)}% rate
+              </span>
             </div>
             <input
               type="range"
               min={50}
-              max={90}
+              max={95}
               step={5}
-              value={rate}
-              onChange={(e) => setRate(+e.target.value)}
-              aria-label="Advance rate from Monaris Score"
-              aria-valuetext={`${rate}%`}
+              value={score}
+              onChange={(e) => setScore(+e.target.value)}
+              aria-label="Monaris Score"
+              aria-valuetext={`Score ${score}, ${Math.round(advanceRate * 100)} percent advance rate`}
               className="mt-3"
-              style={sliderFill(((rate - 50) / 40) * 100)}
+              style={sliderFill(((score - 50) / 45) * 100)}
             />
             <div className="mt-2 flex justify-between text-[11px] text-neutral-400">
-              <span>50%</span>
-              <span>60%</span>
-              <span>70%</span>
-              <span>80%</span>
-              <span>90%</span>
+              <span>50</span>
+              <span>60</span>
+              <span>70</span>
+              <span>80</span>
+              <span>90+</span>
+            </div>
+          </div>
+
+          <div className="mt-6 flex items-center justify-between gap-3 flex-wrap">
+            <span className="text-sm font-medium text-neutral-600">Verification level</span>
+            <div className="flex gap-1.5" role="group" aria-label="Verification level">
+              {VERIFICATION_LEVELS.map(({ key, label }) => (
+                <button
+                  key={key}
+                  onClick={() => setVerification(key)}
+                  aria-pressed={verification === key}
+                  className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+                    verification === key ? "bg-volt text-ink" : "bg-paper text-neutral-500 hover:text-ink"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
             </div>
           </div>
 
           <div className="mt-7 rounded-2xl bg-paper bg-grad p-6 text-center">
             <p className="text-sm text-neutral-500">Advance today:</p>
             <p ref={outRef} className="mt-1 text-4xl sm:text-5xl font-bold text-ink tnum" aria-live="polite">
-              <SplitMoney value={advance} />
+              <SplitMoney value={advanceToday} />
             </p>
             <p className="mt-2 text-xs text-neutral-500" aria-live="polite">
-              ≈ ${money(monthly)} unlocked monthly · instead of waiting Net {term}
+              ≈ ${money(monthlyUnlocked)} unlocked monthly · instead of waiting Net {term}
+            </p>
+            <p className="mt-1.5 text-xs text-neutral-500">
+              Eligible receivable ${money(eligibleReceivable)} · Required lock ${money(requiredLock)} (15% reserve)
             </p>
             <div className="mt-5 flex items-center justify-center gap-3">
               <button onClick={pop} className="inline-flex items-center gap-2 rounded-full bg-[#0d0d0d] text-white px-6 py-2.5 text-sm font-semibold hover:-translate-y-0.5 transition-all">
@@ -215,7 +270,7 @@ const CalculatorSection = () => {
             </div>
           </div>
           <p className="mt-4 text-[11px] leading-relaxed text-neutral-400 text-center">
-            <span className="text-volt-text">*</span> Estimates are illustrative and depend on your Monaris Score, pool liquidity, and invoice verification. Not an offer of credit.
+            <span className="text-volt-text">*</span> Advance = eligible receivable x advance rate x term and verification factors, minus a 15% locked reserve. Eligible receivable is capped by your verified monthly volume. Estimates are illustrative and depend on your Monaris Score, pool liquidity, and invoice verification. Not an offer of credit.
           </p>
         </div>
       </div>
