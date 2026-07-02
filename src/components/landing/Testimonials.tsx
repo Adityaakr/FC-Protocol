@@ -11,9 +11,7 @@ const VerifiedBadge = () => (
 const TestimonialCard = ({ t }: { t: Testimonial }) => (
   <article className="shrink-0 w-[280px] sm:w-[360px] md:w-[400px] mr-4 sm:mr-5 rounded-2xl bg-white bg-grad card-soft p-5">
     <div className="flex items-center gap-3">
-      <span className="h-9 w-9 rounded-full flex items-center justify-center font-display font-bold text-[13px] text-ink" style={{ background: t.av }}>
-        {t.n[0]}
-      </span>
+      <img src={t.img} alt={t.n} className="h-9 w-9 rounded-full object-cover" loading="lazy" />
       <div>
         <div className="flex items-center gap-1">
           <span className="text-sm font-semibold text-ink">{t.n}</span>
@@ -39,8 +37,8 @@ const MarqueeRow = ({ items, reverse }: { items: Testimonial[]; reverse?: boolea
   </div>
 );
 
-const ROW_1 = TESTIMONIALS.slice(0, 4);
-const ROW_2 = [...TESTIMONIALS.slice(3, 6), ...TESTIMONIALS.slice(0, 1)];
+const ROW_1 = TESTIMONIALS.slice(0, 3);
+const ROW_2 = [...TESTIMONIALS.slice(3, 5), ...TESTIMONIALS.slice(0, 1)];
 
 const Testimonials = () => (
   <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24">

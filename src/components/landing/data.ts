@@ -1,17 +1,47 @@
+import gesim from "@/assets/monaris/testimonials/gesim.png";
+import founderRecurring from "@/assets/monaris/testimonials/founder-recurring.png";
+import founderStablecoin from "@/assets/monaris/testimonials/founder-stablecoin.png";
+import financeLead from "@/assets/monaris/testimonials/finance-lead.png";
+import operator from "@/assets/monaris/testimonials/operator.png";
+
 export interface Testimonial {
   n: string;
   r: string;
-  av: string;
+  img: string;
   q: string;
 }
 
 export const TESTIMONIALS: Testimonial[] = [
-  { n: "Michael Chen", r: "CEO, Northwind", av: "#C8FF00", q: "Monaris let us finance a six-figure invoice without leaking a single number onchain. Game-changer for treasury." },
-  { n: "Emily Rodriguez", r: "Finance lead, Atlas Freight", av: "#bdb2ff", q: "Selective disclosure finally makes onchain invoicing usable. Our financier saw exactly what they needed." },
-  { n: "David Kim", r: "Ops, Cobalt", av: "#7Fb5ff", q: "Advances hit our wallet in seconds and auto-repaid from the settlement waterfall. Zero reconciliation." },
-  { n: "Sarah Nguyen", r: "CFO, Vela Logistics", av: "#9EE06A", q: "We settled $214K privately on Payy in under two seconds. This is what PayFi should feel like." },
-  { n: "Dmitri Vasquez", r: "LP, Meridian Capital", av: "#F59E0B", q: "Real receivables, privacy-safe risk views, 8% yield. The first onchain credit I would actually underwrite." },
-  { n: "Aria Donnelly", r: "Risk, Orenda", av: "#C8FF00", q: "The Monaris Score is verifiable without exposing the borrower. That is the unlock for private credit." },
+  {
+    n: "Gesim",
+    r: "CEO",
+    img: gesim,
+    q: "Would love to use Monaris for automated treasury and one-click private payments. It feels like the missing financial layer for stablecoin businesses.",
+  },
+  {
+    n: "Early-stage founder",
+    r: "Business with recurring volume",
+    img: founderRecurring,
+    q: "I don’t want competitors or customers seeing how much revenue my business is generating, but I still need credit backed by that cashflow. Monaris solves both — private one-click payments today, and cashflow-backed credit on top.",
+  },
+  {
+    n: "Founder",
+    r: "Stablecoin-native business",
+    img: founderStablecoin,
+    q: "Stablecoin payments are fast, but they don’t automatically help us access credit. Monaris changes that by turning our recurring cashflow into a private credit signal we can actually use.",
+  },
+  {
+    n: "Finance lead",
+    r: "Digital services company",
+    img: financeLead,
+    q: "Our biggest concern is exposing revenue, customers, and payment activity on public rails. Monaris gives us the privacy we need while still making our cashflow useful for underwriting.",
+  },
+  {
+    n: "Operator",
+    r: "Early-stage recurring revenue business",
+    img: operator,
+    q: "Monaris feels like the missing layer between payments and credit. We can receive money, keep activity private, and use our business cashflow to unlock working capital when needed.",
+  },
 ];
 
 export const TERMS = [30, 60, 90];
