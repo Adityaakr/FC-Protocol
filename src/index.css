@@ -154,6 +154,20 @@ All colors MUST be HSL.
 @keyframes floaty { 0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); } 50% { transform: translateY(-8px) rotate(var(--rot, 0deg)); } }
 .floaty { animation: floaty 6s ease-in-out infinite; }
 
+/* scroll-into-view reveal: blurred + lifted, settles sharp (classes applied via JS only,
+   so content stays visible without JS and under prefers-reduced-motion) */
+.rvb {
+  opacity: 0;
+  transform: translateY(26px);
+  filter: blur(14px);
+}
+.rvb.rv-in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  transition: opacity .9s var(--ease), transform .9s var(--ease), filter .9s var(--ease);
+}
+
 /* testimonial marquee */
 @keyframes mqx { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @keyframes mqx2 { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
