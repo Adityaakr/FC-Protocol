@@ -88,9 +88,8 @@ const Footer = () => (
       </div>
 
       {/* bottom bar */}
-      <div className="relative border-t border-[#131720]/15 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <div className="relative border-t border-[#131720]/15 py-5 flex justify-center items-center">
         <p className="text-[12.5px] text-ink/60">© 2026 Monaris, all rights reserved.</p>
-        <p className="text-[11.5px] text-ink/50 font-mono tracking-wide">Built by Monaris · powered by Payy</p>
       </div>
     </div>
   </footer>
