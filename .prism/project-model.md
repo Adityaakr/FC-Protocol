@@ -33,7 +33,7 @@ Extracted at `/private/tmp/claude-501/-Users-adityakrx-FC-Protocol/fe4e1c80-166d
 - Fonts: Satoshi local woff2 (weights 300/400/500/700/900 only — no 600/800) + Inter (sans) + JetBrains Mono via Google Fonts.
 - 9 sections: hero (V-clip, chartreuse gradient), statement (parallax coins), interactive calculator, credit layer (coin bounce), testimonial marquee, treasury bento (Storm Shield), advantage 3-cards, dark finale, chartreuse footer.
 - Assets to ship (~7 MB): hero-visual-finance.png (1.8 MB), chip-mountains.png (1 MB), credit-card-visual.png (1.8 MB), coins-3d.png (1.5 MB), monaris-m-black.png, 5 Satoshi woff2. Crypto coin SVGs come from spothq CDN (not bundled; have onerror fallbacks).
-- Brand voice (brand-kit/blurb.txt): "Private cashflow infrastructure for the stablecoin era." Confident, compressed, sentence case, headlines end with a period; "selective disclosure", never "anonymous". "Built by Monaris · powered by Payy".
+- Brand voice (brand-kit/blurb.txt): "Private cashflow infrastructure for the stablecoin era." Confident, compressed, sentence case, headlines end with a period; "selective disclosure", never "anonymous". The brand kit's "Built by Monaris · powered by Payy" tagline was shipped then removed (2026-07-03, user request): no Payy mention anywhere on the site — do not reintroduce.
 
 ## Danger zones
 - Replacing `src/index.css` token values without keeping the semantic-token names breaks all shadcn UI + NotFound.
