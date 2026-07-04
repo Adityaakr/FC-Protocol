@@ -173,8 +173,49 @@ All colors MUST be HSL.
 @keyframes mqx2 { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
 .mq-l { animation: mqx 48s linear infinite; }
 .mq-r { animation: mqx2 48s linear infinite; }
+
+/* liquid glass (cinematic footer): near-transparent luminosity fill, 4px backdrop
+   blur, and a 1.4px top/bottom-lit gradient ring drawn with the same mask-composite
+   trick as .bg-grad */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+    rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+    rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* cinematic footer entrances */
+@keyframes fade-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-rise { animation: fade-rise 0.8s ease-out both; }
+.animate-fade-rise-delay { animation: fade-rise 0.8s ease-out 0.2s both; }
+.animate-fade-rise-delay-2 { animation: fade-rise 0.8s ease-out 0.4s both; }
+
 @media (prefers-reduced-motion: reduce) {
-  .mq-l, .mq-r, .rise, .floaty { animation: none; }
+  .mq-l, .mq-r, .rise, .floaty,
+  .animate-fade-rise, .animate-fade-rise-delay, .animate-fade-rise-delay-2 { animation: none; }
 }
 
 /* calculator sliders */
