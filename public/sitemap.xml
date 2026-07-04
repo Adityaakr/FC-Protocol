@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hand-maintained: add one <url> per blog post (see docs/03-blog-section-plan.md). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.monaris.co/</loc>
+  </url>
+  <url>
+    <loc>https://www.monaris.co/blog</loc>
+  </url>
+  <url>
+    <loc>https://www.monaris.co/blog/monaris-x-payy</loc>
+    <lastmod>2026-07-04</lastmod>
+  </url>
+</urlset>

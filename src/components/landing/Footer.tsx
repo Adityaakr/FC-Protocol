@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, FileText, Globe, Twitter, Zap } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Globe, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { DOCS_URL, SITE_URL, X_URL } from "./data";
 
@@ -33,9 +33,10 @@ const Footer = () => (
       <div className="relative z-10 px-6 sm:px-12 pt-20 sm:pt-24">
       {/* statement */}
       <div className="flex flex-col items-center text-center">
-        <div className="liquid-glass animate-fade-rise inline-flex items-center gap-2 rounded-full px-5 py-2 text-[11px] font-semibold uppercase tracking-[.18em]">
-          <Zap className="w-3.5 h-3.5" />
+        <div className="animate-fade-rise flex items-center gap-5 text-[11px] font-medium uppercase tracking-[.28em] text-white/60">
+          <span aria-hidden="true" className="h-px w-12 bg-gradient-to-r from-transparent to-white/35" />
           Private. Programmable. Instant.
+          <span aria-hidden="true" className="h-px w-12 bg-gradient-to-l from-transparent to-white/35" />
         </div>
         <h2
           className="animate-fade-rise mt-8 max-w-5xl text-5xl sm:text-7xl font-normal leading-[0.95] tracking-[-2.46px]"
@@ -120,7 +121,7 @@ const Footer = () => (
 
       {/* giant wordmark, cropped at bottom */}
       <div className="mt-14 overflow-hidden select-none" style={{ fontSize: "clamp(52px,16.5vw,236px)", height: ".66em" }} aria-hidden="true">
-        <div className="disp font-bold text-white text-center whitespace-nowrap" style={{ lineHeight: 1, letterSpacing: "-.02em" }}>Monaris</div>
+        <div className="disp font-bold text-volt text-center whitespace-nowrap" style={{ lineHeight: 1, letterSpacing: "-.02em" }}>Monaris</div>
       </div>
 
       {/* bottom bar */}

@@ -1,4 +1,5 @@
 import { ArrowRight, Globe, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 import logoMark from "@/assets/monaris/monaris-m-black.png";
 import heroVisual from "@/assets/monaris/hero-visual-finance.png";
 import { DOCS_URL } from "./data";
@@ -37,6 +38,7 @@ const Hero = () => (
           </a>
           <a href="#calculator" className="px-4 py-1.5 rounded-full hover:text-[#0d0d0d] transition-colors">Calculator</a>
           <a href="#credit" className="px-4 py-1.5 rounded-full hover:text-[#0d0d0d] transition-colors">Credit layer</a>
+          <Link to="/blog" className="px-4 py-1.5 rounded-full hover:text-[#0d0d0d] transition-colors">Blog</Link>
           <a href={DOCS_URL} className="px-4 py-1.5 rounded-full hover:text-[#0d0d0d] transition-colors">Docs</a>
         </div>
         <div className="flex items-center gap-3">
