@@ -21,7 +21,7 @@ const BlogIndex = () => {
             <span className="text-[13px] sm:text-sm font-medium text-ink/40">({String(posts.length).padStart(2, "0")})</span>
           </div>
           <h1 className="mt-6 max-w-3xl font-sans text-4xl font-bold tracking-[-.025em] leading-[1.05] text-ink sm:text-6xl">
-            Notes on private credit <span className="text-volt-text">and the stablecoin economy.</span>
+            Notes on private credit <span className="text-volt-text">and</span> <span className="bg-[#C8FF00] px-2 py-0.5 box-decoration-clone">the stablecoin economy.</span>
           </h1>
         </header>
 
