@@ -1,5 +1,6 @@
-import { ArrowRight, BookOpen, FileText, Globe, Twitter, Zap } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Globe, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoMark from "@/assets/monaris/monaris-m-black.png";
 import { DOCS_URL, SITE_URL, X_URL } from "./data";
 
 /* Internal anchors are written as "/#x" (not "#x") so the footer also works from
@@ -34,7 +35,7 @@ const Footer = () => (
       {/* statement */}
       <div className="flex flex-col items-center text-center">
         <div className="liquid-glass animate-fade-rise inline-flex items-center gap-2 rounded-full px-5 py-2 text-[11px] font-semibold uppercase tracking-[.18em]">
-          <Zap className="w-3.5 h-3.5" />
+          <img src={logoMark} alt="" aria-hidden="true" className="h-3.5 w-3.5 invert" />
           Private. Programmable. Instant.
         </div>
         <h2
