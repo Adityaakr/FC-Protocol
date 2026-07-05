@@ -23,7 +23,7 @@ const MetaRow = ({ post }: { post: PostMeta }) => (
 export const BlogCard = ({ post }: { post: PostMeta }) => (
   <Link
     to={`/blog/${post.slug}`}
-    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white transition-all hover:border-ink/20 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-volt-dark"
+    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-gradient-to-b from-paper to-lime-soft/45 transition-all hover:border-ink/20 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-volt-dark"
   >
     <div className="aspect-[16/10] w-full overflow-hidden border-b border-ink/10 bg-ink/5">
       {post.cover ? (

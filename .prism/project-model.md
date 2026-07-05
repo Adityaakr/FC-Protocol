@@ -41,7 +41,17 @@ Extracted at `/private/tmp/claude-501/-Users-adityakrx-FC-Protocol/fe4e1c80-166d
 - Prototype OG/meta is absent — must carry over/rewrite meta in index.html or SEO regresses.
 - Storm Shield state-machine JS in the prototype references `.ss-chip`/`#ss-footnote` elements that don't exist in its markup (inert dead code) — decide to add chips or ship static Healthy state.
 
+## Blog editorial conventions (2026-07-06, user-mandated — every new post follows this)
+- Canonical guide: docs/03-blog-writing-style-guide.md. Reference implementation: src/content/blog/posts/monaris-private-credit-layer.tsx. NEVER invent a new style per post.
+- Structure: hook intro (two-sided gap) → numbered sections → closing tagline + CTA row (Read the docs + Launch app buttons).
+- Headings: `<h2><span className="tnum text-volt-text">01</span> - Sentence case heading</h2>` — dash after the number, NEVER a period; sentence case.
+- Key lines: 3–5 volt `.marker` highlights per post, ~one per section, as the skimmable spine.
+- Prose: real 2–4 sentence paragraphs (one-liners only as deliberate beats); bold-lead list items; NO em-dashes anywhere; Satoshi bold = 700 (no 600/800).
+- Blog visual shell: Aztec-journal editorial (dark `.blog-hero-band` heros, cropped volt wordmark, ink-bar highlighted featured titles, `.blog-bg` gradient — no pure white in blog surfaces). Nav is dark ink glass; page wrappers use overflow-x-clip (overflow-x-hidden kills position:sticky).
+- Registration: POST_META stays serializable; lazy() bodies at module scope only; docs/04 reserved for the share-card build script.
+
 ## Decision log
+- 2026-07-06 — Blog redesigned to Aztec-journal editorial style + writing convention codified (docs/03-blog-writing-style-guide.md); pure white removed from all blog surfaces per user directive.
 - 2026-07-03 — Repo cleanup executed: 5-tier evidence-backed deletion (root cruft → assets → dead ui → deps), gates green, render probe clean. Plan: docs/02-repo-cleanup-plan.md. Deferred: App.tsx provider slimming (react-query/Toasters — would free 6 more deps but touches live wiring).
 - 2026-07-03 — Landing redesign: in-place rewrite with additive volt/ink/paper tokens, self-hosted Satoshi + Inter body, static Storm Shield, marquee seam fix. Plan: docs/01-monaris-landing-redesign-plan.md (telemetry inside). Branch `monaris-landing-redesign`.
 

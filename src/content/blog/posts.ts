@@ -8,10 +8,15 @@ export interface PostMeta {
   category: string; // "Announcement" | "Product" | "Engineering" | "Vision"
   date: string; // ISO, e.g. "2026-07-05"
   cover?: string; // public path e.g. "/blog-covers/<slug>.jpg"; omit for the volt fallback card
+  readMinutes?: number; // shown as "N min read"; ~200 words/min, defaults to 4
+  topRead?: boolean; // pins the post into the dark "Top reads" strip (max 4 shown)
 }
 
+// New posts MUST follow docs/03-blog-writing-style-guide.md (numbered "01 - " dash
+// headings, .marker highlights, closing CTA row; monaris-private-credit-layer.tsx
+// is the reference implementation).
 // KEEP THIS ARRAY SERIALIZABLE: no JSX, no asset imports. The per-post share-card
-// build script (docs/03, fast-follow) imports it in Node.
+// build script (docs/04, fast-follow) imports it in Node.
 export const POST_META: PostMeta[] = [
   {
     slug: "monaris-private-credit-layer-stablecoin-economy",
@@ -21,6 +26,8 @@ export const POST_META: PostMeta[] = [
     category: "Vision",
     date: "2026-07-05",
     cover: "/blog-covers/monaris-private-credit-layer.jpg",
+    readMinutes: 4,
+    topRead: true,
   },
 ];
 

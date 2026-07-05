@@ -358,6 +358,23 @@ input[type="range"]:focus-visible {
   vertical-align: top;
 }
 
+/* ============ Blog editorial surfaces (Aztec-journal style, Monaris palette) ============ */
+
+/* page background: no flat white — paper drifting into lime with soft volt glows */
+.blog-bg {
+  background:
+    radial-gradient(1100px 480px at 88% 40px, rgba(200, 255, 0, .14), transparent 62%),
+    radial-gradient(900px 560px at -8% 560px, rgba(233, 247, 180, .55), transparent 60%),
+    linear-gradient(180deg, #F7F8F2 0%, #F3F6E8 52%, #EDF2DC 100%);
+}
+
+/* dark ink band for blog heros */
+.blog-hero-band {
+  background:
+    radial-gradient(900px 420px at 82% -10%, rgba(200, 255, 0, .13), transparent 60%),
+    linear-gradient(180deg, #171C28 0%, #131720 48%, #0B0D07 100%);
+}
+
 /* star field for the dark finale */
 .stars {
   background-image: radial-gradient(rgba(255,255,255,.55) 1px, transparent 1.4px), radial-gradient(rgba(255,255,255,.25) 1px, transparent 1.4px);
