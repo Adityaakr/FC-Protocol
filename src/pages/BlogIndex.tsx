@@ -1,5 +1,5 @@
 import BlogNav from "@/components/blog/BlogNav";
-import { BlogCard, FeaturedBlogCard } from "@/components/blog/BlogCard";
+import { BlogCard } from "@/components/blog/BlogCard";
 import Finale from "@/components/landing/Finale";
 import Footer from "@/components/landing/Footer";
 import { posts } from "@/content/blog/posts";
@@ -10,10 +10,6 @@ const BlogIndex = () => {
     "Blog · Monaris",
     "Notes on private credit, stablecoin cashflow, and what we are building at Monaris.",
   );
-
-  // Under 3 posts the grid looks sparse; lead with a wide featured card instead.
-  const featured = posts.length < 3 ? posts[0] : null;
-  const gridPosts = featured ? posts.slice(1) : posts;
 
   return (
     <div className="min-h-screen overflow-x-hidden">
@@ -29,15 +25,12 @@ const BlogIndex = () => {
           </h1>
         </header>
 
-        <section className="mt-10 pb-20 sm:mt-12">
-          {featured && <FeaturedBlogCard post={featured} />}
-          {gridPosts.length > 0 && (
-            <div className={`grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 ${featured ? "mt-5" : ""}`}>
-              {gridPosts.map((post) => (
-                <BlogCard key={post.slug} post={post} />
-              ))}
-            </div>
-          )}
+        <section className="mt-12 pb-20 sm:mt-16">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {posts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
         </section>
       </main>
       <Finale />
