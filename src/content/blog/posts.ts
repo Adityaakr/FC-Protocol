@@ -17,7 +17,7 @@ export const POST_META: PostMeta[] = [
     slug: "monaris-private-credit-layer-stablecoin-economy",
     title: "Monaris: The Private Credit Layer for the Stablecoin Economy.",
     description:
-      "How Monaris turns receivables and recurring cashflow into instant liquidity — backed by private, verifiable credit. One layer for payments, working capital, and treasury.",
+      "How Monaris turns receivables and recurring cashflow into instant liquidity - backed by private, verifiable credit. One layer for payments, working capital, and treasury.",
     category: "Vision",
     date: "2026-07-05",
     cover: "/blog-covers/monaris-private-credit-layer.jpg",

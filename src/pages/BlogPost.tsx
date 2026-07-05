@@ -33,7 +33,7 @@ const BlogPost = () => {
             <span className="h-1 w-1 rounded-full bg-ink/20" />
             <time dateTime={post.date} className="text-ink/50">{formatPostDate(post.date)}</time>
           </div>
-          <h1 className="mt-4 font-sans text-4xl font-bold tracking-[-.025em] leading-[1.05] text-ink sm:text-5xl">{post.title}</h1>
+          <h1 className="mt-4 font-sans text-4xl font-bold tracking-[-.025em] leading-[1.05] text-ink sm:text-[40px] text-balance">{post.title}</h1>
           <p className="mt-4 font-display text-lg leading-relaxed text-ink/65">{post.description}</p>
 
           {post.cover && (
