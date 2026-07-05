@@ -7,7 +7,7 @@ import { DOCS_URL } from "@/components/landing/data";
 // editorial hero band instead of cutting a light strip above it. The landing
 // nav lives inside Hero and is welded to the gradient hero visuals.
 const BlogNav = () => (
-  <nav className="sticky top-0 z-40 border-b border-paper/10 bg-ink/85 backdrop-blur-xl">
+  <nav className="sticky top-0 z-40 bg-ink">
     <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
       <Link to="/" className="flex items-center gap-2.5">
         {/* the mark ships black-on-transparent; invert renders it paper-white */}

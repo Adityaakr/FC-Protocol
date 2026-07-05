@@ -368,11 +368,12 @@ input[type="range"]:focus-visible {
     linear-gradient(180deg, #F7F8F2 0%, #F3F6E8 52%, #EDF2DC 100%);
 }
 
-/* dark ink band for blog heros */
+/* dark ink band for blog heros; starts at flat ink so the solid-ink BlogNav
+   welds into it with no visible seam */
 .blog-hero-band {
   background:
     radial-gradient(900px 420px at 82% -10%, rgba(200, 255, 0, .13), transparent 60%),
-    linear-gradient(180deg, #171C28 0%, #131720 48%, #0B0D07 100%);
+    linear-gradient(180deg, #131720 0%, #131720 40%, #0B0D07 100%);
 }
 
 /* star field for the dark finale */
