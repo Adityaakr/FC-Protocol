@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowRight, Gauge, Layers } from "lucide-react";
 import SectionBadge from "./SectionBadge";
-import coins3d from "@/assets/monaris/coins-3d.png";
+import coinsStrip from "@/assets/monaris/coins-strip.png";
 import creditCardVisual from "@/assets/monaris/credit-card-visual.png";
 
 const COIN_BASE = 0;
@@ -72,9 +72,9 @@ const CreditLayer = () => {
               ref={coinRef}
               className="absolute -inset-x-2 -top-3 -bottom-3"
               style={{
-                backgroundImage: `url(${coins3d})`,
-                backgroundSize: "104% auto",
-                backgroundPosition: "center 88.5%",
+                backgroundImage: `url(${coinsStrip})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center bottom",
                 backgroundRepeat: "no-repeat",
               }}
             />
