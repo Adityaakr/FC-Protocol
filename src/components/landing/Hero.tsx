@@ -1,7 +1,7 @@
-import { ArrowRight, Globe, BookOpen } from "lucide-react";
+import { ArrowRight, Globe } from "lucide-react";
 import logoMark from "@/assets/monaris/monaris-m-black.png";
 import heroVisual from "@/assets/monaris/hero-visual-finance.png";
-import { DOCS_URL } from "./data";
+import { WAITLIST_URL } from "./data";
 
 const Hero = () => (
   <section id="top" className="px-3 sm:px-5 pt-3 sm:pt-4">
@@ -37,11 +37,10 @@ const Hero = () => (
           </a>
           <a href="#calculator" className="px-4 py-1.5 rounded-full hover:text-[#0d0d0d] transition-colors">Calculator</a>
           <a href="#credit" className="px-4 py-1.5 rounded-full hover:text-[#0d0d0d] transition-colors">Credit layer</a>
-          <a href={DOCS_URL} className="px-4 py-1.5 rounded-full hover:text-[#0d0d0d] transition-colors">Docs</a>
         </div>
         <div className="flex items-center gap-3">
           <a href="#cta" className="hidden sm:block text-sm font-medium text-[#0d0d0d]/80 hover:text-[#0d0d0d] transition-colors">Log in</a>
-          <a href="#cta" className="inline-flex items-center gap-2 rounded-full bg-[#0d0d0d] text-white pl-4 pr-1.5 py-1.5 text-sm font-semibold hover:-translate-y-0.5 transition-all">
+          <a href={WAITLIST_URL} className="inline-flex items-center gap-2 rounded-full bg-[#0d0d0d] text-white pl-4 pr-1.5 py-1.5 text-sm font-semibold hover:-translate-y-0.5 transition-all">
             Launch app{" "}
             <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-volt text-[#0d0d0d]">
               <ArrowRight className="w-3.5 h-3.5" />
@@ -52,20 +51,18 @@ const Hero = () => (
 
       {/* headline */}
       <div className="relative z-10 text-center px-4 mt-12 md:mt-16">
-        <h1 className="rise disp mx-auto max-w-4xl text-[42px] sm:text-6xl md:text-7xl font-bold leading-[1.02] text-[#0d0d0d]">
+        <h1 className="rise disp mx-auto max-w-4xl text-[clamp(20px,6.5vw,30px)] sm:text-6xl md:text-7xl font-bold leading-[1.06] sm:leading-[1.02] text-[#0d0d0d]">
           Private Credit Layer
           <br />
           <span className="text-[#0d0d0d]/45">for the stablecoin economy.</span>
         </h1>
-        <p className="rise mx-auto mt-6 max-w-2xl text-base sm:text-lg text-[#0d0d0d]/70 font-medium" style={{ animationDelay: ".1s" }}>
-          Monaris turns receivables and recurring cashflow into instant liquidity, backed by private, verifiable credit. One layer for working capital, BNPL-style financing, automated repayments, treasury, and one-click private payments.
+        <p className="rise mx-auto mt-6 max-w-2xl text-sm sm:text-lg text-[#0d0d0d]/70 font-medium" style={{ animationDelay: ".1s" }}>
+          <span className="block text-[#0d0d0d]">Capital against what you&rsquo;re owed.</span>
+          Monaris turns stablecoin cashflow into capital: financing against receivables and revenue, automated repayments, treasury, and private payments in one layer. Settled privately, so your business runs and borrows without exposing its finances to the world.
         </p>
         <div className="rise flex flex-col sm:flex-row gap-3 mt-8 items-center justify-center" style={{ animationDelay: ".18s" }}>
-          <a href="#cta" className="inline-flex items-center gap-2.5 rounded-full bg-[#0d0d0d] text-white px-6 py-3 text-sm font-semibold hover:-translate-y-0.5 transition-all">
+          <a href={WAITLIST_URL} className="inline-flex items-center gap-2.5 rounded-full bg-[#0d0d0d] text-white px-6 py-3 text-sm font-semibold hover:-translate-y-0.5 transition-all">
             <Globe className="w-4 h-4 text-volt" /> Launch the app
-          </a>
-          <a href={DOCS_URL} className="inline-flex items-center gap-2.5 rounded-full bg-white/85 backdrop-blur text-[#0d0d0d] px-6 py-3 text-sm font-semibold hover:-translate-y-0.5 transition-all card-float">
-            <BookOpen className="w-4 h-4 text-volt-dark" /> Read the docs
           </a>
         </div>
       </div>
