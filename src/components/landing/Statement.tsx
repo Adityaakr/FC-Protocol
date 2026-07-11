@@ -166,7 +166,8 @@ const Statement = () => {
         world of <span className="text-ink/45">onchain credit</span>
       </h2>
       <p data-reveal className="mx-auto mt-8 max-w-xl text-base sm:text-lg text-neutral-500">
-        Monaris needs no crypto expertise. Issue an invoice, choose what to disclose, and get liquidity, private by default, compliant by design.
+        <span className="block text-ink">Choose what you disclose. Get funded.</span>
+        Monaris makes stablecoin credit as simple as getting paid. Private by default, compliant by design.
       </p>
       <div data-reveal className="mt-8">
         <a href="#calculator" className="inline-flex items-center gap-2.5 rounded-full bg-[#0d0d0d] text-white pl-5 pr-1.5 py-1.5 text-sm font-semibold hover:-translate-y-0.5 transition-all">

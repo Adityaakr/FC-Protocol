@@ -1,5 +1,6 @@
 import Hero from "@/components/landing/Hero";
 import Statement from "@/components/landing/Statement";
+import Audiences from "@/components/landing/Audiences";
 import CalculatorSection from "@/components/landing/CalculatorSection";
 import CreditLayer from "@/components/landing/CreditLayer";
 import Testimonials from "@/components/landing/Testimonials";
@@ -13,6 +14,7 @@ const Index = () => (
     <Hero />
     <main>
       <Statement />
+      <Audiences />
       <CalculatorSection />
       <CreditLayer />
       <Testimonials />
