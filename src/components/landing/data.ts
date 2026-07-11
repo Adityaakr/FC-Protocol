@@ -46,6 +46,6 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const TERMS = [30, 60, 90];
 
-export const DOCS_URL = "https://docs.monaris.co";
+export const WAITLIST_URL = "https://waitlist.monaris.co";
 export const SITE_URL = "https://www.monaris.co";
 export const X_URL = "https://x.com/monaris_fi";

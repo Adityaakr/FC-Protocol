@@ -132,13 +132,7 @@ const Post = () => (
     <div className="mt-8 flex flex-wrap gap-3">
       <a
         className="cta cta-dark inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold"
-        href="https://docs.monaris.co"
-      >
-        Read the docs
-      </a>
-      <a
-        className="cta cta-ghost inline-flex items-center rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold transition-colors hover:border-ink/30"
-        href="/#cta"
+        href="https://waitlist.monaris.co"
       >
         Launch app
       </a>

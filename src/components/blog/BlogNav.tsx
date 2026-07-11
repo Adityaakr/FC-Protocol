@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import logoMark from "@/assets/monaris/monaris-m-black.png";
-import { DOCS_URL } from "@/components/landing/data";
+import { WAITLIST_URL } from "@/components/landing/data";
 
 // Slim top bar for blog pages. Dark ink glass so it welds into the blog's dark
 // editorial hero band instead of cutting a light strip above it. The landing
@@ -18,9 +18,8 @@ const BlogNav = () => (
         <Link to="/blog" className="flex items-center gap-1.5 rounded-full bg-volt px-4 py-1.5 font-semibold text-ink">
           <span className="h-1.5 w-1.5 rounded-full bg-ink" />Blog
         </Link>
-        <a href={DOCS_URL} className="rounded-full px-4 py-1.5 transition-colors hover:text-paper">Docs</a>
       </div>
-      <a href="/#cta" className="inline-flex items-center gap-2 rounded-full bg-paper py-1.5 pl-4 pr-1.5 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5">
+      <a href={WAITLIST_URL} className="inline-flex items-center gap-2 rounded-full bg-paper py-1.5 pl-4 pr-1.5 text-sm font-semibold text-ink transition-all hover:-translate-y-0.5">
         Launch app{" "}
         <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-ink text-volt">
           <ArrowRight className="h-3.5 w-3.5" />

@@ -1,7 +1,7 @@
-import { ArrowRight, BookOpen, FileText, Globe, Twitter } from "lucide-react";
+import { ArrowRight, Globe, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoMark from "@/assets/monaris/monaris-m-black.png";
-import { DOCS_URL, SITE_URL, X_URL } from "./data";
+import { SITE_URL, WAITLIST_URL, X_URL } from "./data";
 
 /* Internal anchors are written as "/#x" (not "#x") so the footer also works from
    /blog/* routes: same-document fragment nav on the landing, full navigation back
@@ -50,19 +50,13 @@ const Footer = () => (
         </p>
         <div className="animate-fade-rise-delay-2 mt-12 flex flex-wrap justify-center gap-3">
           <a
-            href="/#top"
+            href={WAITLIST_URL}
             className="liquid-glass inline-flex items-center gap-2 whitespace-nowrap rounded-full px-8 py-3.5 text-sm font-semibold transition-transform hover:scale-[1.03]"
           >
             Launch app{" "}
             <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-volt">
               <ArrowRight className="w-3 h-3 text-[#0d0d0d]" />
             </span>
-          </a>
-          <a
-            href={DOCS_URL}
-            className="liquid-glass inline-flex items-center gap-2 whitespace-nowrap rounded-full px-8 py-3.5 text-sm font-semibold transition-transform hover:scale-[1.03]"
-          >
-            <BookOpen className="w-4 h-4" /> Read the docs
           </a>
         </div>
       </div>
@@ -84,8 +78,6 @@ const Footer = () => (
           <h4 className="text-[11px] font-semibold uppercase tracking-[.16em] text-white/50 mb-4">Resources</h4>
           <ul className="space-y-3 text-[14px] font-medium text-white/75">
             <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-            <li><a href={DOCS_URL} className="hover:text-white transition-colors">Documentation</a></li>
-            <li><a href={DOCS_URL} className="hover:text-white transition-colors">API reference</a></li>
             <li><a href="/#treasury" className="hover:text-white transition-colors">How it works</a></li>
           </ul>
         </div>
@@ -100,10 +92,10 @@ const Footer = () => (
         <div>
           <h4 className="text-[11px] font-semibold uppercase tracking-[.16em] text-white/50 mb-4">We'd love to hear from you</h4>
           <a
-            href="mailto:hello@monaris.co"
+            href="mailto:contact@monaris.co"
             className="text-[17px] font-semibold text-white underline decoration-white/30 underline-offset-4 hover:decoration-white transition-colors"
           >
-            hello@monaris.co
+            contact@monaris.co
           </a>
           <div className="mt-5 flex gap-2.5">
             <a href={X_URL} aria-label="X" className="liquid-glass w-9 h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
@@ -111,9 +103,6 @@ const Footer = () => (
             </a>
             <a href={SITE_URL} aria-label="Website" className="liquid-glass w-9 h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
               <Globe className="w-4 h-4" />
-            </a>
-            <a href={DOCS_URL} aria-label="Docs" className="liquid-glass w-9 h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white transition-colors">
-              <FileText className="w-4 h-4" />
             </a>
           </div>
         </div>
